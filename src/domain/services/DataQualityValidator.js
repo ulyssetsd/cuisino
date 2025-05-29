@@ -12,7 +12,7 @@ class DataQualityValidator {
             'cs', 'cc', 'pièce', 'gousse', 'sachet', 'boîte',
             'tranche', 'tige', 'botte', 'cube', 'cm'
         ];
-        
+
         // Mapping des variantes vers les unités standard
         this.unitNormalization = {
             // Cuillères - tout vers cs/cc
@@ -20,11 +20,11 @@ class DataQualityValidator {
             'cuillères à soupe': 'cs',
             'c. à soupe': 'cs',
             'cuillère': 'cs',
-            
+
             'cuillère à café': 'cc',
             'cuillères à café': 'cc',
             'c. à café': 'cc',
-            
+
             // Pièces - tout vers pièce (singulier)
             'pièces': 'pièce',
             'piece': 'pièce',
@@ -33,7 +33,7 @@ class DataQualityValidator {
             'pcs': 'pièce',
             'unité': 'pièce',
             'unités': 'pièce',
-            
+
             // Containers - formes courtes
             'sachets': 'sachet',
             'conserve': 'boîte',
@@ -43,7 +43,7 @@ class DataQualityValidator {
             'barquette': 'boîte',
             'paquet': 'sachet',
             'paquets': 'sachet',
-            
+
             // Végétaux - singulier
             'gousses': 'gousse',
             'tiges': 'tige',
@@ -53,16 +53,17 @@ class DataQualityValidator {
             'branche': 'tige',
             'feuilles': 'tige',
             'feuille': 'tige',
-            
+
             // Anciens formats
             'pièce(s)': 'pièce',
             'sachet(s)': 'sachet',
-            
+
             // Dosage variable - on garde tel quel
             'à doser': 'à doser',
             'à râper': 'à râper',
             'selon votre goût': ''
-        };    }
+        };
+    }
 
     /**
      * Valide la qualité des données d'une recette extraite
@@ -80,15 +81,15 @@ class DataQualityValidator {
         }
 
         console.log('   🔍 Vérification de la qualité des données...');
-        
+
         // Étape 1: Normalisation automatique des unités
         const normalizedRecipe = this.normalizeRecipeUnits(recipe);
-        
+
         // Étape 2: Détection des problèmes restants
         const issues = this.detectDataQualityIssues(normalizedRecipe);
-        
+
         const needsCorrection = issues.length > 0;
-        
+
         if (!needsCorrection) {
             console.log('   ✅ Données de qualité - aucune correction nécessaire');
         } else {
@@ -120,11 +121,11 @@ class DataQualityValidator {
 
             const currentUnit = ingredient.quantity.unit;
             const normalizedUnit = this.normalizeUnit(currentUnit);
-            
+
             if (currentUnit !== normalizedUnit) {
                 normalizedCount++;
                 console.log(`   📝 Normalisation: "${currentUnit}" → "${normalizedUnit}"`);
-                
+
                 return {
                     ...ingredient,
                     quantity: {
@@ -133,7 +134,7 @@ class DataQualityValidator {
                     }
                 };
             }
-            
+
             return ingredient;
         });
 
@@ -154,30 +155,30 @@ class DataQualityValidator {
      */
     detectDataQualityIssues(recipe) {
         const issues = [];
-        
+
         if (!recipe.ingredients || !Array.isArray(recipe.ingredients)) {
             return issues;
         }
 
         recipe.ingredients.forEach((ingredient, index) => {
             const problems = [];
-            
+
             // Vérifier le nom
             if (!ingredient.name || typeof ingredient.name !== 'string' || ingredient.name.trim() === '') {
                 problems.push('nom manquant ou vide');
             }
-            
+
             // Vérifier la quantité
             if (!ingredient.quantity || typeof ingredient.quantity !== 'object') {
                 problems.push('objet quantity manquant');
             } else {
                 const { value, unit } = ingredient.quantity;
-                
+
                 // Vérifier la valeur (doit être un nombre ou null)
                 if (value !== null && (typeof value !== 'number' || isNaN(value))) {
                     problems.push('valeur quantity.value invalide (doit être un nombre ou null)');
                 }
-                
+
                 // Vérifier l'unité
                 if (unit === undefined || unit === null) {
                     problems.push('quantity.unit manquant');
@@ -186,13 +187,13 @@ class DataQualityValidator {
                 } else if (!this.isValidUnit(unit)) {
                     problems.push(`quantity.unit "${unit}" non standard`);
                 }
-                
+
                 // Cas particulier: valeur null mais unité renseignée = données incomplètes
                 if (value === null && unit && unit !== '') {
                     problems.push('valeur quantity.value manquante alors que l\'unité est renseignée');
                 }
             }
-            
+
             if (problems.length > 0) {
                 issues.push({
                     index,
@@ -200,7 +201,7 @@ class DataQualityValidator {
                     problems
                 });
             }
-        });        
+        });
         return issues;
     }
 
@@ -213,19 +214,19 @@ class DataQualityValidator {
         if (!unit || typeof unit !== 'string') {
             return '';
         }
-        
+
         const trimmedUnit = unit.trim();
-        
+
         // Vérifier si l'unité est dans la mapping de normalisation
         if (this.unitNormalization[trimmedUnit]) {
             return this.unitNormalization[trimmedUnit];
         }
-        
+
         // Si déjà dans les unités standard, la retourner telle quelle
         if (this.standardUnits.includes(trimmedUnit)) {
             return trimmedUnit;
         }
-        
+
         // Sinon, retourner l'unité telle quelle (sera marquée comme non standard)
         return trimmedUnit;
     }
@@ -237,7 +238,7 @@ class DataQualityValidator {
         if (!unit || typeof unit !== 'string') {
             return false;
         }
-        
+
         const normalizedUnit = this.normalizeUnit(unit);
         return this.standardUnits.includes(normalizedUnit);
     }
