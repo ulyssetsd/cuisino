@@ -5,47 +5,64 @@ class DataQualityValidator {
         this.openai = openaiClient;
         this.config = config;
         this.model = process.env.OPENAI_MODEL || 'gpt-4o';
-        this.maxTokens = parseInt(process.env.MAX_TOKENS) || 2048; // Moins de tokens pour correction
-          // Unités valides acceptées (basées sur l'analyse de votre base de données - 29 unités trouvées)
-        this.validUnits = [
-            // Unités vides
-            '',
-            
-            // Poids et volume standard
-            'g', 'kg', 'ml', 'cl', 'l', 'dl',
-            
-            // Cuillères (formats courts)
-            'cs', 'cc',
-            
-            // Cuillères (formats longs) - trouvés dans votre DB
-            'c. à soupe', 'c. à café', 'cuillère à soupe', 'cuillère à café',
-            'cuillère', 'cuillères à soupe', 'cuillères à café',
-            
-            // Quantités et pièces
-            'pièce', 'pièces', 'piece', 'pieces', 'unité', 'unités',
-            'pc', 'pcs',
-            
-            // Containers et emballages
-            'sachet', 'sachets', 'boîte', 'conserve', 'pot', 'pots',
-            'flacon', 'barquette', 'paquet', 'paquets',
-            
-            // Parties de plantes/légumes
-            'gousse', 'gousses', 'botte', 'bottes',
-            'tige', 'tiges', 'branche', 'branches', 'feuille', 'feuilles',
-            'tranche', 'tranches',
-            
-            // Autres unités spécialisées
-            'cube', 'cm',
-            
-            // Unités de dosage variables
-            'à doser', 'à râper', 'selon votre goût',
-            
-            // Anciens formats (pour rétrocompatibilité)
-            'pièce(s)', 'sachet(s)'
+        this.maxTokens = parseInt(process.env.MAX_TOKENS) || 2048; // Moins de tokens pour correction        // Unités standards (format court) - pour une base de données cohérente
+        this.standardUnits = [
+            '', 'g', 'kg', 'ml', 'cl', 'l', 'dl',
+            'cs', 'cc', 'pièce', 'gousse', 'sachet', 'boîte',
+            'tranche', 'tige', 'botte', 'cube', 'cm'
         ];
-    }
-
-    /**
+        
+        // Mapping des variantes vers les unités standard
+        this.unitNormalization = {
+            // Cuillères - tout vers cs/cc
+            'cuillère à soupe': 'cs',
+            'cuillères à soupe': 'cs',
+            'c. à soupe': 'cs',
+            'cuillère': 'cs',
+            
+            'cuillère à café': 'cc',
+            'cuillères à café': 'cc',
+            'c. à café': 'cc',
+            
+            // Pièces - tout vers pièce (singulier)
+            'pièces': 'pièce',
+            'piece': 'pièce',
+            'pieces': 'pièce',
+            'pc': 'pièce',
+            'pcs': 'pièce',
+            'unité': 'pièce',
+            'unités': 'pièce',
+            
+            // Containers - formes courtes
+            'sachets': 'sachet',
+            'conserve': 'boîte',
+            'pot': 'boîte',
+            'pots': 'boîte',
+            'flacon': 'boîte',
+            'barquette': 'boîte',
+            'paquet': 'sachet',
+            'paquets': 'sachet',
+            
+            // Végétaux - singulier
+            'gousses': 'gousse',
+            'tiges': 'tige',
+            'bottes': 'botte',
+            'tranches': 'tranche',
+            'branches': 'tige',
+            'branche': 'tige',
+            'feuilles': 'tige',
+            'feuille': 'tige',
+            
+            // Anciens formats
+            'pièce(s)': 'pièce',
+            'sachet(s)': 'sachet',
+            
+            // Dosage variable - on garde tel quel
+            'à doser': 'à doser',
+            'à râper': 'à râper',
+            'selon votre goût': ''
+        };
+    }    /**
      * Valide la qualité des données d'une recette extraite
      * @param {Object} recipe - La recette à valider
      * @param {string} rectoPath - Chemin vers l'image recto
@@ -60,33 +77,37 @@ class DataQualityValidator {
 
         console.log('   🔍 Vérification de la qualité des données...');
         
-        const issues = this.detectDataQualityIssues(recipe);
+        // Étape 1: Normalisation automatique des unités
+        let normalizedRecipe = this.normalizeRecipeUnits(recipe);
+        
+        // Étape 2: Détection des problèmes restants
+        const issues = this.detectDataQualityIssues(normalizedRecipe);
         
         if (issues.length === 0) {
             console.log('   ✅ Données de qualité - aucune correction nécessaire');
-            return recipe;
+            return normalizedRecipe;
         }
 
         // Vérifier si l'auto-correction est activée
         if (!this.config?.dataQuality?.autoCorrection) {
             console.log(`   ⚠️  ${issues.length} problème(s) détecté(s) mais auto-correction désactivée`);
-            return recipe;
+            return normalizedRecipe;
         }
 
         console.log(`   ⚠️  ${issues.length} problème(s) détecté(s) - correction en cours...`);
         
         try {
             const correctedIngredients = await this.fixIngredientsData(
-                recipe.ingredients, 
+                normalizedRecipe.ingredients, 
                 issues, 
                 rectoPath, 
                 versoPath,
-                recipe.title
+                normalizedRecipe.title
             );
             
             // Mettre à jour seulement les ingrédients corrigés
             const updatedRecipe = {
-                ...recipe,
+                ...normalizedRecipe,
                 ingredients: correctedIngredients
             };
             
@@ -96,8 +117,53 @@ class DataQualityValidator {
         } catch (error) {
             console.log(`   ⚠️  Échec de la correction: ${error.message}`);
             console.log('   📝 Conservation des données originales');
+            return normalizedRecipe;
+        }
+    }
+
+    /**
+     * Normalise automatiquement les unités d'une recette
+     * @param {Object} recipe - La recette à normaliser
+     * @returns {Object} - La recette avec unités normalisées
+     */
+    normalizeRecipeUnits(recipe) {
+        if (!recipe.ingredients || !Array.isArray(recipe.ingredients)) {
             return recipe;
         }
+
+        let normalizedCount = 0;
+        const normalizedIngredients = recipe.ingredients.map(ingredient => {
+            if (!ingredient.quantity || !ingredient.quantity.unit) {
+                return ingredient;
+            }
+
+            const currentUnit = ingredient.quantity.unit;
+            const normalizedUnit = this.normalizeUnit(currentUnit);
+            
+            if (currentUnit !== normalizedUnit) {
+                normalizedCount++;
+                console.log(`   📝 Normalisation: "${currentUnit}" → "${normalizedUnit}"`);
+                
+                return {
+                    ...ingredient,
+                    quantity: {
+                        ...ingredient.quantity,
+                        unit: normalizedUnit
+                    }
+                };
+            }
+            
+            return ingredient;
+        });
+
+        if (normalizedCount > 0) {
+            console.log(`   ✨ ${normalizedCount} unité(s) normalisée(s)`);
+        }
+
+        return {
+            ...recipe,
+            ingredients: normalizedIngredients
+        };
     }
 
     /**
@@ -156,16 +222,42 @@ class DataQualityValidator {
         });
         
         return issues;
+    }    /**
+     * Normalise une unité vers son format standard
+     * @param {string} unit - L'unité à normaliser
+     * @returns {string} - L'unité normalisée
+     */
+    normalizeUnit(unit) {
+        if (!unit || typeof unit !== 'string') {
+            return '';
+        }
+        
+        const trimmedUnit = unit.trim();
+        
+        // Vérifier si l'unité est dans la mapping de normalisation
+        if (this.unitNormalization[trimmedUnit]) {
+            return this.unitNormalization[trimmedUnit];
+        }
+        
+        // Si déjà dans les unités standard, la retourner telle quelle
+        if (this.standardUnits.includes(trimmedUnit)) {
+            return trimmedUnit;
+        }
+        
+        // Sinon, retourner l'unité telle quelle (sera marquée comme non standard)
+        return trimmedUnit;
     }
 
     /**
-     * Vérifie si une unité est valide
+     * Vérifie si une unité est valide (standard ou normalisable)
      */
     isValidUnit(unit) {
-        const normalizedUnit = unit.toLowerCase().trim();
-        return this.validUnits.some(validUnit => 
-            validUnit.toLowerCase() === normalizedUnit
-        );
+        if (!unit || typeof unit !== 'string') {
+            return false;
+        }
+        
+        const normalizedUnit = this.normalizeUnit(unit);
+        return this.standardUnits.includes(normalizedUnit);
     }
 
     /**

@@ -108,7 +108,7 @@ SCHÉMA JSON REQUIS:
 
 INSTRUCTIONS SPÉCIFIQUES:
 
-1. **Ingrédients**: Sépare bien la quantité en "value" (nombre) et "unit" (texte). Si une valeur est floue, mets "value": null mais indique l'unité si possible.
+1. **Ingrédients**: Sépare bien la quantité en "value" (nombre) et "unit" (texte).
 
 3. **Difficulté**: Utilise une échelle de 1 à 5 (1 = très facile, 5 = très difficile).
 

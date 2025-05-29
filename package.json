@@ -13,6 +13,8 @@
     "test-setup": "node test-setup.js",
     "test-processing": "node test-processing.js",
     "test-data-quality": "node test-data-quality.js",
+    "test-unit-normalization": "node test-unit-normalization.js",
+    "test-normalization-impact": "node test-normalization-impact.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
