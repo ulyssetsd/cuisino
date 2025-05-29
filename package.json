@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
-    "test-setup": "node test-setup.js",
-    "test-processing": "node test-processing.js",
     "analyze": "node analyze-images.js",
     "clean": "node clean.js",
+    "optimize": "node optimize-images.js",
+    "test-setup": "node test-setup.js",
+    "test-processing": "node test-processing.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "dotenv": "^16.5.0",
     "fs-extra": "^11.3.0",
     "openai": "^4.103.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sharp": "^0.34.2"
   }
 }

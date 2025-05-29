@@ -10,7 +10,7 @@ class RecipeProcessor {
             apiKey: process.env.OPENAI_API_KEY
         });
         
-        this.inputDir = process.env.INPUT_DIR || './recipes/uncompressed';
+        this.inputDir = process.env.INPUT_DIR || './recipes/compressed';
         this.outputDir = process.env.OUTPUT_DIR || './output';
         this.tempDir = process.env.TEMP_DIR || './temp';
         

@@ -10,7 +10,7 @@ async function analyzeImages() {
     
     try {
         const imageProcessor = new ImageProcessor();
-        const inputDir = process.env.INPUT_DIR || './recipes/uncompressed';
+        const inputDir = process.env.INPUT_DIR || './recipes/compressed';
         
         // Analyser les paires d'images
         const images = await imageProcessor.getImagePairs(inputDir);

@@ -7,7 +7,7 @@ async function testSetup() {
     // Vérifier les variables d'environnement
     console.log('📋 Configuration:');
     console.log(`   OPENAI_API_KEY: ${process.env.OPENAI_API_KEY ? '✅ Configurée' : '❌ Manquante'}`);
-    console.log(`   INPUT_DIR: ${process.env.INPUT_DIR || './recipes/uncompressed'}`);
+    console.log(`   INPUT_DIR: ${process.env.INPUT_DIR || './recipes/compressed'}`);
     console.log(`   OUTPUT_DIR: ${process.env.OUTPUT_DIR || './output'}`);
     console.log(`   OPENAI_MODEL: ${process.env.OPENAI_MODEL || 'gpt-4o'}`);
     

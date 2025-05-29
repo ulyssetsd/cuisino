@@ -63,22 +63,36 @@ Ce projet permet d'automatiser l'extraction de données de recettes à partir de
 
 1. Placez toutes les images **recto** (titre, ingrédients) en premier, triées par ordre chronologique
 2. Placez ensuite toutes les images **verso** (instructions, nutrition) dans le même ordre
-3. Les images doivent être dans le dossier `recipes/uncompressed/`
+3. Les images doivent être dans le dossier `recipes/compressed/` (optimisées pour l'API)
+
+### Optimisation des images (recommandé)
+
+Si vous avez des images non optimisées dans `recipes/uncompressed/` :
+
+```bash
+# Optimiser les images (rotation + compression)
+npm run optimize
+
+# Économie : ~54% de réduction de taille
+# Avantage : Division par 2 des coûts API OpenAI
+```
 
 ### Scripts disponibles
 
 ```bash
-# Analyser les images sans traitement
-npm run analyze
+# Traitement principal
+npm start                    # Extraire toutes les recettes
 
-# Tester la configuration
-npm run test-setup
+# Optimisation des images
+npm run optimize            # Rotation + compression (économise 54% API)
 
-# Test de traitement (mode simulation)
-npm run test-processing
+# Analyse et tests
+npm run analyze             # Analyser les images sans traitement
+npm run clean               # Nettoyer les fichiers temporaires
 
-# Traitement complet avec l'API OpenAI
-npm start
+# Tests et configuration
+npm run test-setup          # Tester la configuration
+npm run test-processing     # Test de traitement (mode simulation)
 ```
 
 ### Workflow recommandé
@@ -98,7 +112,7 @@ Les résultats seront générés dans le dossier `output/` :
 Variables d'environnement dans `.env` :
 
 - `OPENAI_API_KEY` : Clé API OpenAI (obligatoire)
-- `INPUT_DIR` : Dossier des images source (défaut: `./recipes/uncompressed`)
+- `INPUT_DIR` : Dossier des images source (défaut: `./recipes/compressed`)
 - `OUTPUT_DIR` : Dossier de sortie (défaut: `./output`)
 - `OPENAI_MODEL` : Modèle OpenAI à utiliser (défaut: `gpt-4o`)
 - `MAX_TOKENS` : Limite de tokens (défaut: `4096`)
@@ -112,7 +126,8 @@ cuisino/
 │   ├── ImageProcessor.js     # Gestion des images et paires
 │   └── RecipeExtractor.js    # Extraction via OpenAI
 ├── recipes/
-│   └── uncompressed/         # Images sources (ignoré par git)
+│   ├── uncompressed/         # Images originales (backup)
+│   └── compressed/           # Images optimisées ✅ UTILISER
 ├── output/                   # Résultats JSON
 ├── temp/                     # Fichiers temporaires
 ├── index.js                  # Point d'entrée
