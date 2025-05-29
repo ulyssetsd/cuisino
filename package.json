@@ -1,34 +1,22 @@
 {
   "name": "cuisino",
   "version": "1.0.0",
-  "description": "Extracteur automatique de recettes HelloFresh à partir de photos recto/verso",
-  "main": "index.js",  "scripts": {    "start": "node main.js",
+  "description": "Automatic HelloFresh recipe extractor from front/back photos",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
     "dev": "node main.js",
-    
     "images:analyze": "node scripts/analyze-images.js",
     "images:optimize": "node scripts/optimize-images.js",
-    
     "extraction:run": "node scripts/extract-only.js",
-    
     "quality:validate": "node scripts/validate-quality.js",
-    
     "analysis:report": "node scripts/generate-report.js",
-    
     "recipes:test": "node recipes/test.js",
     "quality:test": "node quality/test.js",
-    
     "clean:metadata": "node scripts/clean-metadata.js",
-    
-    "test:all": "npm run recipes:test && npm run quality:test",
-    
-    "legacy:start": "node index.js",
-    "legacy:ddd": "node src/main.js",
-    "legacy:analyze": "node analyze-images.js",
-    "legacy:optimize": "node optimize-images.js",
-    
-    "test": "npm run test:all"
+    "test": "npm run recipes:test && npm run quality:test"
   },
-  "keywords": [],
+  "keywords": ["recipes", "hellofresh", "extraction", "ocr", "ai"],
   "author": "",
   "license": "ISC",
   "dependencies": {
