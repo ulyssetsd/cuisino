@@ -14,5 +14,11 @@
     "includeOriginalFilenames": true,
     "validateJson": true,
     "fallbackOnError": true
+  },
+  "dataQuality": {
+    "enabled": true,
+    "validateIngredients": true,
+    "autoCorrection": true,
+    "skipCorrectionIfComplete": true
   }
 }

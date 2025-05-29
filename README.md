@@ -10,6 +10,8 @@ Ce projet permet d'automatiser l'extraction de données de recettes à partir de
 
 - ✅ Lecture automatique des paires d'images recto/verso
 - ✅ Extraction de données via l'API OpenAI GPT-4 Vision
+- ✅ **Vérification automatique de la qualité des données**
+- ✅ **Correction automatique des ingrédients incomplets**
 - ✅ Génération de JSON structuré pour chaque recette
 - ✅ Support des ingrédients avec quantités et unités
 - ✅ Extraction des étapes de préparation
@@ -81,18 +83,20 @@ npm run optimize
 
 ```bash
 # Traitement principal
-npm start                    # Extraire toutes les recettes
+npm start                    # Extraire toutes les recettes (avec vérification qualité)
 
 # Optimisation des images
 npm run optimize            # Rotation + compression (économise 54% API)
 
 # Analyse et tests
 npm run analyze             # Analyser les images sans traitement
+npm run analyze-units       # Analyser les unités dans la base de données existante
 npm run clean               # Nettoyer les fichiers temporaires
 
 # Tests et configuration
 npm run test-setup          # Tester la configuration
 npm run test-processing     # Test de traitement (mode simulation)
+npm run test-data-quality   # Test de vérification qualité des données
 ```
 
 ### Workflow recommandé
@@ -106,6 +110,56 @@ Les résultats seront générés dans le dossier `output/` :
 - `recipe_001.json`, `recipe_002.json`, etc. : recettes individuelles
 - `all_recipes.json` : fichier consolidé avec toutes les recettes
 - `processing_summary.md` : résumé du traitement
+
+## Vérification Qualité des Données
+
+Le système intègre une vérification automatique de la qualité des données extraites :
+
+### Validation des Ingrédients
+
+Pour chaque ingrédient, le système vérifie :
+- **Nom** : chaîne non vide
+- **Quantité** : nombre valide ou `null` si absent
+- **Unité** : renseignée et cohérente parmi 29+ unités supportées (g, ml, pièce, cs, cc, boîte, etc.)
+
+### Unités Supportées
+
+Le système reconnaît automatiquement toutes les unités présentes dans votre base de données :
+- **Standard** : g, kg, ml, cl, l, cs, cc, pièce, sachet, etc.
+- **Variantes** : piece/pièce, pc/pcs, cuillère à soupe/cs
+- **Spécialisées** : boîte, flacon, tige, gousse, cube, cm
+- **Variables** : à doser, à râper, selon votre goût
+
+💡 Utilisez `npm run analyze-units` pour voir toutes les unités dans votre base.
+
+### Correction Automatique
+
+Si des données sont manquantes ou incorrectes :
+1. **Détection** automatique des problèmes
+2. **Appel API ciblé** avec prompt spécialisé
+3. **Correction** uniquement des champs problématiques
+4. **Préservation** des données déjà valides
+
+### Configuration
+
+Dans `config.json` :
+```json
+{
+  "dataQuality": {
+    "enabled": true,              // Activer la vérification
+    "validateIngredients": true,  // Valider les ingrédients
+    "autoCorrection": true,       // Correction automatique
+    "skipCorrectionIfComplete": true
+  }
+}
+```
+
+### Avantages
+
+- ✅ **Qualité fiable** des données d'ingrédients
+- ✅ **Optimisation API** - pas d'appel si données complètes
+- ✅ **Correction ciblée** - seuls les champs problématiques
+- ✅ **Transparence** - logs détaillés des corrections
 
 ## Configuration
 

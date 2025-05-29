@@ -1,14 +1,16 @@
 const ImageProcessor = require('./ImageProcessor');
+const DataQualityValidator = require('./DataQualityValidator');
 
 class RecipeExtractor {
-    constructor(openaiClient) {
+    constructor(openaiClient, config = null) {
         this.openai = openaiClient;
+        this.config = config;
         this.imageProcessor = new ImageProcessor();
+        this.dataQualityValidator = new DataQualityValidator(openaiClient, config);
         this.model = process.env.OPENAI_MODEL || 'gpt-4o';
         this.maxTokens = parseInt(process.env.MAX_TOKENS) || 4096;
     }
-    
-    async extractRecipe(rectoPath, versoPath) {
+      async extractRecipe(rectoPath, versoPath) {
         console.log('   🔄 Conversion des images en base64...');
         
         // Convertir les images en base64
@@ -58,7 +60,10 @@ class RecipeExtractor {
             }
             
             // Extraire le JSON de la réponse
-            const recipe = this.parseRecipeFromResponse(content);
+            let recipe = this.parseRecipeFromResponse(content);
+            
+            // Vérification et correction automatique de la qualité des données
+            recipe = await this.dataQualityValidator.validateAndFixRecipe(recipe, rectoPath, versoPath);
             
             console.log(`   ✅ Recette extraite: "${recipe.title}"`);
             return recipe;
@@ -103,7 +108,7 @@ SCHÉMA JSON REQUIS:
 
 INSTRUCTIONS SPÉCIFIQUES:
 
-1. **Ingrédients**: Sépare bien la quantité en "value" (nombre) et "unit" (texte). Si une valeur est floue, mets "value": null mais indique l'unité si possible.
+1. **Ingrédients**: Sépare bien la quantité en "value" (nombre) et "unit" (texte).
 
 3. **Difficulté**: Utilise une échelle de 1 à 5 (1 = très facile, 5 = très difficile).
 

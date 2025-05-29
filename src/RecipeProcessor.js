@@ -9,16 +9,15 @@ class RecipeProcessor {
         this.openai = new OpenAI({
             apiKey: process.env.OPENAI_API_KEY
         });
-        
-        this.inputDir = process.env.INPUT_DIR || './recipes/compressed';
+          this.inputDir = process.env.INPUT_DIR || './recipes/compressed';
         this.outputDir = process.env.OUTPUT_DIR || './output';
         this.tempDir = process.env.TEMP_DIR || './temp';
         
-        this.imageProcessor = new ImageProcessor();
-        this.recipeExtractor = new RecipeExtractor(this.openai);
-        
-        // Charger la configuration
+        // Charger la configuration AVANT de créer les autres instances
         this.config = this.loadConfig();
+        
+        this.imageProcessor = new ImageProcessor();
+        this.recipeExtractor = new RecipeExtractor(this.openai, this.config);
         
         // Créer les dossiers nécessaires
         this.ensureDirectories();
