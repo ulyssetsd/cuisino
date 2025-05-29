@@ -2,15 +2,15 @@
  * Main Application Orchestrator
  * Simplified main entry point that coordinates all domains
  */
-const config = require('./shared/config');
-const Logger = require('./shared/logger');
+const config = require('./app/shared/config');
+const Logger = require('./app/shared/logger');
 
 // Domain services
-const RecipeRepository = require('./recipes/repository');
-const ExtractionOrchestrator = require('./extraction/orchestrator');
-const QualityValidator = require('./quality/validator');
-const ImageProcessor = require('./images/processor');
-const AnalysisService = require('./analysis/service');
+const RecipeRepository = require('./app/recipes/repository');
+const ExtractionOrchestrator = require('./app/extraction/orchestrator');
+const QualityValidator = require('./app/quality/validator');
+const ImageProcessor = require('./app/images/processor');
+const AnalysisService = require('./app/analysis/service');
 
 class CuisinoApp {
     constructor() {
