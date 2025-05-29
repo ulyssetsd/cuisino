@@ -14,6 +14,9 @@ yarn-error.log*
 # Images non compressées
 recipes/uncompressed/
 
+# Archives zip (trop volumineuses pour GitHub)
+recipes/*.zip
+
 # Output
 output/
 temp/
