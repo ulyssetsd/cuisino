@@ -61,7 +61,7 @@ class DataQualityCorrector {
         }));
 
         // Convertir les images en base64
-        const ImageProcessor = require('./ImageProcessor');
+        const ImageProcessor = require('../../infrastructure/external/ImageProcessor');
         const imageProcessor = new ImageProcessor();
         const rectoBase64 = await imageProcessor.imageToBase64(rectoPath);
         const versoBase64 = await imageProcessor.imageToBase64(versoPath);

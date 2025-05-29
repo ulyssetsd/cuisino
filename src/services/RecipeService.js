@@ -3,12 +3,12 @@
  * Responsabilité: Orchestrer les opérations sur les recettes (extraction, qualité, sauvegarde)
  */
 const OpenAI = require('openai');
-const ConfigManager = require('../ConfigManager');
+const ConfigManager = require('../infrastructure/persistence/ConfigManager');
 const RecipeRepository = require('../infrastructure/RecipeRepository');
 const OpenAIExtractionService = require('./OpenAIExtractionService');
-const DataQualityValidator = require('../DataQualityValidator');
-const DataQualityCorrector = require('../DataQualityCorrector');
-const ErrorManager = require('../ErrorManager');
+const DataQualityValidator = require('../domain/services/DataQualityValidator');
+const DataQualityCorrector = require('../domain/services/DataQualityCorrector');
+const ErrorManager = require('../infrastructure/persistence/ErrorManager');
 
 class RecipeService {
     constructor() {
@@ -227,7 +227,7 @@ class RecipeService {
      * Génère le fichier de résumé Markdown
      */
     async generateSummaryFile(recipes, stats) {
-        const FileManager = require('../FileManager');
+        const FileManager = require('../infrastructure/persistence/FileManager');
         const fileManager = new FileManager(this.paths);
         
         const summary = {

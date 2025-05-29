@@ -3,7 +3,7 @@
  * Nouvelle version simplifiée utilisant RecipeService
  */
 const RecipeService = require('./services/RecipeService');
-const ConfigManager = require('./ConfigManager');
+const ConfigManager = require('./infrastructure/persistence/ConfigManager');
 
 async function main() {
     try {        console.log('🍳 Cuisino Recipe Processor - Architecture DDD');

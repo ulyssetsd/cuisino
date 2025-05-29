@@ -3,7 +3,7 @@
  * Valide le chargement des recettes et l'analyse
  */
 const RecipeRepository = require('./src/infrastructure/RecipeRepository');
-const ConfigManager = require('./src/ConfigManager');
+const ConfigManager = require('./src/infrastructure/persistence/ConfigManager');
 const Recipe = require('./src/domain/Recipe');
 
 async function testArchitecture() {

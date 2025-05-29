@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs-extra');
 
 // Import manual du module ImageProcessor
-const ImageProcessor = require('./src/ImageProcessor');
+const ImageProcessor = require('./src/infrastructure/external/ImageProcessor');
 
 async function analyzeImages() {
     console.log('🔍 Analyse des images...\n');

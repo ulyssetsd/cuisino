@@ -3,7 +3,7 @@
  * Responsabilité: Extraire les données de recettes depuis les images
  */
 const path = require('path');
-const ImageProcessor = require('../ImageProcessor');
+const ImageProcessor = require('../infrastructure/external/ImageProcessor');
 
 class OpenAIExtractionService {
     constructor(openaiClient, config) {
