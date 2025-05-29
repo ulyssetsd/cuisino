@@ -1,0 +1,3916 @@
+{
+  "recipes": [
+    {
+      "title": "Lieu meunière & tombée d'épinards",
+      "subtitle": "avec une purée de lentilles corail au paprika",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Amandes effilées",
+          "quantity": {
+            "value": null,
+            "unit": "sachet"
+          }
+        },
+        {
+          "name": "Paprika fumé en poudre",
+          "quantity": {
+            "value": null,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Lentilles corail",
+          "quantity": {
+            "value": null,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Carotte",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Filet de lieu noir",
+          "quantity": {
+            "value": null,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Épinards",
+          "quantity": {
+            "value": null,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Amandes",
+        "Poisson"
+      ],
+      "steps": [
+        {
+          "text": "Pelez et coupez les carottes et l'oignon en dés. Émincez l'ail. Râpez finement du zeste de citron."
+        },
+        {
+          "text": "Faites chauffer l'huile, ajoutez l'oignon, l'ail et les carottes. Laissez mijoter."
+        },
+        {
+          "text": "Ajoutez les épinards dans la poêle. Faites revenir jusqu'à flétrissement."
+        },
+        {
+          "text": "Faites chauffer de l'huile et cuire le poisson de chaque côté."
+        },
+        {
+          "text": "Ajoutez les lentilles et du paprika au mélange, couvrez d'eau, cuire jusqu'à tendreté."
+        },
+        {
+          "text": "Servez le poisson avec la purée de lentilles et les épinards. Garnissez d'amandes et de zeste de citron."
+        }
+      ],
+      "nutrition": {
+        "calories": "590 kcal",
+        "lipides": "23 g",
+        "acides_gras_satures": "3 g",
+        "glucides": "59 g",
+        "sucres": "15 g",
+        "fibres": "13 g",
+        "proteines": "35 g",
+        "sel": "2.8 g"
+      },
+      "tips": [
+        "Vous pouvez ajouter un peu d'eau si la sauce se concentre trop rapidement."
+      ],
+      "tags": [
+        "Poisson",
+        "Épinards",
+        "Purée",
+        "Paprika"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115832.jpg",
+          "verso": "20250529_120413.jpg"
+        },
+        "processedAt": "2025-05-29T11:02:04.832Z",
+        "recipeIndex": 1
+      }
+    },
+    {
+      "title": "Assiette souvlaki poulet & tzatziki maison",
+      "subtitle": "avec des pitas & des crudités",
+      "duration": "20-25 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Yaourt à la grecque",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Filet de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Oignon séché",
+          "quantity": {
+            "value": 2,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Tomate",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Pain pita",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Concombre",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Cuvée d'huile d'olive",
+          "quantity": {
+            "value": null,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Vinaigre balsamique",
+          "quantity": {
+            "value": null,
+            "unit": "cc"
+          }
+        }
+      ],
+      "allergens": [],
+      "steps": [
+        {
+          "text": "Coupez les tomates et le concombre en petits dés. Emincez l'ail et coupez le citron en quartiers."
+        },
+        {
+          "text": "Dans un saladier, mélangez l'ail, une cuillère d'huile d'olive, le vinaigre et une cuillère d'oignon séché. Ajoutez le poulet en dés, salez et poivrez."
+        },
+        {
+          "text": "Dans une poêle, faites chauffer un filet d'huile d'olive et faites revenir le poulet jusqu'à ce qu'il soit doré."
+        },
+        {
+          "text": "Dans un bol, mélangez le yaourt, un filet d'huile d'olive et l'ail restant. Ajoutez-le au concombre et assaisonnez de sel et de poivre. Servez avec le poulet et les pitas."
+        }
+      ],
+      "nutrition": {
+        "calories": "656 kcal",
+        "lipides": "36 g",
+        "acides_gras_satures": "10 g",
+        "glucides": "35 g",
+        "sucres": "3 g",
+        "fibres": "7 g",
+        "proteines": "36 g",
+        "sel": "2 g"
+      },
+      "tips": [],
+      "tags": [
+        "Rapide",
+        "Vive les légumes"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115845.jpg",
+          "verso": "20250529_120422.jpg"
+        },
+        "processedAt": "2025-05-29T11:02:33.565Z",
+        "recipeIndex": 2
+      }
+    },
+    {
+      "title": "Lieu & sauce curry-citron façon bistrot",
+      "subtitle": "avec une purée de patate douce & persil",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 0.5,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Pommes de terre",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Patate douce",
+          "quantity": {
+            "value": 300,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Filet de lieu noir",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Curry en poudre",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Poisson",
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Le grand bain: Épluchez de 200g de pommes de terre et 300g de patate douce. Coupez-les en morceaux. Faites bouillir une casserole d'eau salée, puis ajoutez les pommes de terre et la patate douce. Faites cuire environ 12-15 minutes jusqu'à tendreté."
+        },
+        {
+          "text": "Un zeste d'éclat: Râpez finement le zeste d’un demi-citron. Taillez ensuite la même quantité de persil finement. Épluchez et hachez finement 1 gousse d’ail."
+        },
+        {
+          "text": "Le secret est dans la sauce: Faites chauffer 1/2 c.s. de beurre dans une casserole à feu moyen. Ajoutez la moitié du curry et l’ail haché. Mélangez bien et laissez infuser 1-2 minutes. Ensuite, ajoutez 100 ml de crème liquide et 1/2 c.s. de jus de citron. Réduisez le feu et faites mijoter 3-5 minutes, puis ajustez l’assaisonnement en sel et poivre."
+        },
+        {
+          "text": "Un R.I.P pour le poisson: Pendant ce temps, assaisonnez les filets de lieu de sel et poivre. Faites chauffer 1/2 c.s. de beurre dans une poêle à feu moyen et déposez-y le poisson. Faites cuire 2-3 minutes de chaque côté jusqu'à cuisson complète."
+        },
+        {
+          "text": "Envoie la purée: Égouttez les pommes de terre et la patate douce. Écrasez-les ensuite avec une fourchette ou un écrase-purée jusqu'à obtention d'une purée lisse. Assaisonnez avec le reste de curry, salez et poivrez. Mélangez avec le zeste de citron et le persil."
+        },
+        {
+          "text": "On s'y croirait: Servez le poisson avec la sauce curry-citron et ajoutez la purée en côté. Garnissez de persil restant. Goûtez avant de rectifier l’assaisonnement. Bon appétit !"
+        }
+      ],
+      "nutrition": {
+        "calories": "650 kcal",
+        "lipides": "29 g",
+        "acides_gras_satures": "19 g",
+        "glucides": "60 g",
+        "sucres": "19 g",
+        "fibres": "7 g",
+        "proteines": "33 g",
+        "sel": "2.3 g"
+      },
+      "tips": [
+        "Pour une meilleure saveur, vous pouvez ajouter un peu de zeste de citron dans la sauce."
+      ],
+      "tags": [
+        "Bistrot",
+        "Poisson",
+        "Curry",
+        "Facile"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115900.jpg",
+          "verso": "20250529_120428.jpg"
+        },
+        "processedAt": "2025-05-29T11:03:27.829Z",
+        "recipeIndex": 3
+      }
+    },
+    {
+      "title": "Poulet & haricots noirs à la mexicaine",
+      "subtitle": "avec de l'avocat & du fromage frais",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Avocat",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Concentré de tomates",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Épices mexicaines",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Filets de poulet",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Carotte",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Coupe d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Fromage à la grecque",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Haricots noirs",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Faites cuire le riz."
+        },
+        {
+          "text": "Épluchez et ciselez finement l'ail. Râpez la carotte."
+        },
+        {
+          "text": "Préparez la sauce qui fait la différence."
+        },
+        {
+          "text": "Coupez l'avocat, émincez le poulet."
+        },
+        {
+          "text": "Ajoutez les haricots noirs aux légumes."
+        },
+        {
+          "text": "Servez le tout avec le riz et l'avocat."
+        }
+      ],
+      "nutrition": {
+        "calories": "717",
+        "lipides": "31 g",
+        "acides_gras_satures": "11 g",
+        "glucides": "79 g",
+        "sucres": "4.1 g",
+        "fibres": "11 g",
+        "proteines": "37 g",
+        "sel": "2.37 g"
+      },
+      "tips": [
+        "Ajoutez une pincée d'épices mexicaines pour relever le goût."
+      ],
+      "tags": [
+        "Mexicain",
+        "Épicé",
+        "Facile"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115908.jpg",
+          "verso": "20250529_120433.jpg"
+        },
+        "processedAt": "2025-05-29T11:03:59.603Z",
+        "recipeIndex": 4
+      }
+    },
+    {
+      "title": "Nouilles au boeuf sautées à la thaï",
+      "subtitle": "avec du piment & de l'oignon nouveau",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Viande hachée de boeuf",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 0.5,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Piment",
+          "quantity": {
+            "value": 0.5,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon nouveau",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Nouilles de blé",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Carotte",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Coriandre",
+          "quantity": {
+            "value": 10,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Sauce asiatique sucrée",
+          "quantity": {
+            "value": 35,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Sauce soja",
+          "quantity": {
+            "value": 20,
+            "unit": "ml"
+          }
+        }
+      ],
+      "allergens": [
+        "Nouilles de blé",
+        "Sauce soja"
+      ],
+      "steps": [
+        {
+          "text": "Faites bouillir une casserole d'eau avec du sel. Ajoutez les nouilles et faites cuire 3 min. Égouttez et réservez."
+        },
+        {
+          "text": "Faites chauffer un filet d'huile dans un wok ou une poêle. Ajoutez l'ail, la carotte et le blanc de l'oignon nouveau, faites sauter 5 min."
+        },
+        {
+          "text": "Épépinez et émincez le piment. Ajoutez le boeuf, faites sauter 2-3 min. Ajoutez la sauce soja et la sauce sucrée. Laissez réduire."
+        },
+        {
+          "text": "Ajoutez les nouilles, mélangez bien, puis servez avec les herbes, le citron en quartiers et le vert d'oignon nouveau."
+        }
+      ],
+      "nutrition": {
+        "calories": "797 kJ / 190 kcal",
+        "lipides": "2 g",
+        "acides_gras_satures": "1 g",
+        "glucides": "26 g",
+        "sucres": "6 g",
+        "fibres": "1 g",
+        "proteines": "14 g",
+        "sel": "1.1 g"
+      },
+      "tips": [
+        "Vérifiez l'intensité du piment avant de l'utiliser pour ajuster à votre goût."
+      ],
+      "tags": [
+        "Rapide",
+        "Cuisine thaïlandaise"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115920.jpg",
+          "verso": "20250529_120439.jpg"
+        },
+        "processedAt": "2025-05-29T11:04:29.628Z",
+        "recipeIndex": 5
+      }
+    },
+    {
+      "title": "Gyudon : bowl de boeuf à la japonaise",
+      "subtitle": "avec du pak-choï, des graines de sésame",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Graines de sésame",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Pak-choï",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": null,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Émincés de boeuf",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Sauce soja",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gingembre frais",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Soja",
+        "Sésame"
+      ],
+      "steps": [
+        {
+          "text": "Coupez l'oignon en fines demi-rondelles et l'ail en petits morceaux. Prélevez le gingembre à l'aide d'une cuillère et taillez-le en fines lamelles."
+        },
+        {
+          "text": "Faites bouillir ½l d'eau dans une casserole et ajoutez le riz. Dès que l'eau bout, couvrez la casserole et laissez cuire 10 à 12 minutes. Égouttez et réservez."
+        },
+        {
+          "text": "Émincez le gingembre et le pak-choï. Faites chauffer l'huile d'olive dans une poêle à feu moyen-vif et ajoutez le pak-choï et le gingembre. Faites revenir 3 à 4 minutes."
+        },
+        {
+          "text": "Faites chauffer un filet d'huile de tournesol dans le wok. Faites revenir le boeuf 1 à 2 minutes. Ajoutez le pak-choï et le mélange de sauce soja et de sésame."
+        },
+        {
+          "text": "Mélangez le tout dans le wok. S'il le faut, ajoutez encore un peu de sauce soja. Ajoutez les graines de sésame et laissez cuire encore 1 à 2 minutes à feu moyen."
+        },
+        {
+          "text": "Servez le riz et le gyudon et parsemez de graines de sésame."
+        }
+      ],
+      "nutrition": {
+        "calories": "725 kcal",
+        "lipides": "31 g",
+        "acides_gras_satures": "3 g",
+        "glucides": "68 g",
+        "sucres": "3 g",
+        "fibres": "4 g",
+        "proteines": "39 g",
+        "sel": "2 g"
+      },
+      "tips": [],
+      "tags": [
+        "Famille",
+        "Calorie Smart"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115926.jpg",
+          "verso": "20250529_120444.jpg"
+        },
+        "processedAt": "2025-05-29T11:04:58.144Z",
+        "recipeIndex": 6
+      }
+    },
+    {
+      "title": "One pot orzo, poulet & herbes de Provence",
+      "subtitle": "avec des épinards & du fromage frais",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Orzo",
+          "quantity": {
+            "value": 170,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Épinards",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 0.5,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Blanc de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Bouillon de volaille",
+          "quantity": {
+            "value": 400,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Fromage frais",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Herbes de Provence",
+          "quantity": {
+            "value": 1,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Amandes effilées",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Amandes"
+      ],
+      "steps": [
+        {
+          "text": "Veillez à réaliser les étapes de découpe listées dans les ingrédients."
+        },
+        {
+          "text": "Faites chauffer une noix de beurre dans une marmite à feu moyen-vif. Ajoutez le poulet et faites-le dorer 3-4 min sur tous les côtés."
+        },
+        {
+          "text": "Ajoutez l'oignon et l'ail avec un filet d'huile d'olive. Rincez-y l'orzo et faites revenir 1-2 min."
+        },
+        {
+          "text": "Ajoutez le fromage frais et remuez 1-2 min. Ajoutez les herbes, le fromage frais, épinards, poulet et orzo."
+        }
+      ],
+      "nutrition": {
+        "calories": "527",
+        "lipides": "22 g",
+        "acides_gras_satures": "5.9 g",
+        "glucides": "42 g",
+        "sucres": "1.2 g",
+        "fibres": "",
+        "proteines": "34 g",
+        "sel": "0.6 g"
+      },
+      "tips": [
+        "Servez dans des assiettes creuses.",
+        "Pressez un peu de citron selon votre goût."
+      ],
+      "tags": [
+        "Familial"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115930.jpg",
+          "verso": "20250529_120448.jpg"
+        },
+        "processedAt": "2025-05-29T11:05:30.191Z",
+        "recipeIndex": 7
+      }
+    },
+    {
+      "title": "Curry bowl de saumon & lentilles corail",
+      "subtitle": "avec du brocoli et du lait de coco",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Filet de saumon avec peau",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Curry en poudre",
+          "quantity": {
+            "value": 1,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Brocoli",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Lait de coco",
+          "quantity": {
+            "value": 250,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Lentilles corail",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Poudre de gingembre",
+          "quantity": {
+            "value": 1,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Gousse d’ail",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Poisson"
+      ],
+      "steps": [
+        {
+          "text": "Coupez le brocoli en petits bouquets et l'oignon en fines demi-lunes. Rincez les lentilles."
+        },
+        {
+          "text": "Chauffez l'huile dans une casserole à feu moyen. Ajoutez l'oignon et le curry en poudre. Faites revenir 2 minutes."
+        },
+        {
+          "text": "Ajoutez le brocoli, les lentilles et le lait de coco. Couvrez et laissez cuire 7 à 10 minutes."
+        },
+        {
+          "text": "Faites cuire le saumon pendant 3-4 minutes par côté et servez le tout chaud."
+        }
+      ],
+      "nutrition": {
+        "calories": "793 kcal",
+        "lipides": "46 g",
+        "acides_gras_satures": "16 g",
+        "glucides": "52 g",
+        "sucres": "9 g",
+        "fibres": "10 g",
+        "proteines": "34 g",
+        "sel": "2 g"
+      },
+      "tips": [
+        "N’ajoutez pas trop d’eau au mélange de lentilles. Attention au temps de cuisson du saumon pour un moelleux parfait."
+      ],
+      "tags": [
+        "Calorie Smart",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115937.jpg",
+          "verso": "20250529_120452.jpg"
+        },
+        "processedAt": "2025-05-29T11:05:52.501Z",
+        "recipeIndex": 8
+      }
+    },
+    {
+      "title": "Poulet croustillant façon katsu japonais",
+      "subtitle": "avec du coleslaw & une mayo au soja",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Chapluche panko",
+          "quantity": {
+            "value": 1,
+            "unit": "sachet"
+          }
+        },
+        {
+          "name": "Huile de sésame",
+          "quantity": {
+            "value": 4,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Sauce soja",
+          "quantity": {
+            "value": 2,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Mayonnaise",
+          "quantity": {
+            "value": 4,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Mix de carotte, chou rouge et blanc",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Filet de poulet",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gomasio",
+          "quantity": {
+            "value": 1,
+            "unit": "sachet"
+          }
+        }
+      ],
+      "allergens": [
+        "Sésame",
+        "Soja"
+      ],
+      "steps": [
+        {
+          "text": "Ouvrez le citron en deux et pressez la moitié. Mélangez le jus avec la mayonnaise. Rincez le riz."
+        },
+        {
+          "text": "Dans une assiette creuse, mélangez la farine, une pincée de sel et l'œuf pour préparer la panure."
+        },
+        {
+          "text": "Faites cuire le poulet dans une poêle avec un peu d'huile jusqu'à ce qu'il soit doré."
+        },
+        {
+          "text": "Versez la mayo au soja dans le saladier de légumes et mélangez bien. Servez avec le riz et le poulet."
+        }
+      ],
+      "nutrition": {
+        "calories": "861 kcal",
+        "lipides": "51 g",
+        "acides_gras_satures": "5 g",
+        "glucides": "72 g",
+        "sucres": "11 g",
+        "fibres": "5 g",
+        "proteines": "32 g",
+        "sel": "2.2 g"
+      },
+      "tips": [
+        "En l’absence de gingembre, utilisez du poivre pour le goût."
+      ],
+      "tags": [
+        "Famille",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115942.jpg",
+          "verso": "20250529_120457.jpg"
+        },
+        "processedAt": "2025-05-29T11:06:19.704Z",
+        "recipeIndex": 9
+      }
+    },
+    {
+      "title": "Bowl d'énergie aux crevettes & poireaux",
+      "subtitle": "avec un beurre épicé au curry & des noix de cajou",
+      "duration": "35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Noix de cajou concassées",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Crevettes",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Curry en poudre",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Poireau",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Crustacés",
+        "Fruits à coque"
+      ],
+      "steps": [
+        {
+          "text": "Le riz passe à casserole. Portez une casserole d'eau salée à ébullition pour le riz."
+        },
+        {
+          "text": "Le poireau en tête. Émincez l'ail et ciselez le persil. Coupez le poireau en fines demi-rondelles."
+        },
+        {
+          "text": "Chaud devant ! Égouttez les crevettes sous le robinet puis séchez-les."
+        },
+        {
+          "text": "À vos fourchettes ! Supprimez les poux, disposez le reste."
+        }
+      ],
+      "nutrition": {
+        "calories": "571 kJ",
+        "lipides": "12 g",
+        "acides_gras_satures": "3 g",
+        "glucides": "36 g",
+        "sucres": "5 g",
+        "fibres": "2 g",
+        "proteines": "25 g",
+        "sel": "1.2 g"
+      },
+      "tips": [
+        "Pour que le riz soit plus savoureux, vous pouvez ajouter un peu de beurre."
+      ],
+      "tags": [
+        "Calorie smart",
+        "Famille",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115949.jpg",
+          "verso": "20250529_120502.jpg"
+        },
+        "processedAt": "2025-05-29T11:06:46.382Z",
+        "recipeIndex": 10
+      }
+    },
+    {
+      "title": "Pizza Regina sur naan",
+      "subtitle": "avec du jambon, de l'origan & des champignons",
+      "duration": "20-25 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Salade",
+          "quantity": {
+            "value": null,
+            "unit": " "
+          }
+        },
+        {
+          "name": "Pain naan",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Chair de tomates",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Origan séché",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Champignons de Paris",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Jambon blanc",
+          "quantity": {
+            "value": 2,
+            "unit": "tranche"
+          }
+        },
+        {
+          "name": "Échalote",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Fromage râpé à l'italienne",
+          "quantity": {
+            "value": 25,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Gluten"
+      ],
+      "steps": [
+        {
+          "text": "Préchauffez le four à 200°C (220°C chaleur tournante). Écrasez l'ail et hachez finement l'échalote."
+        },
+        {
+          "text": "Faites chauffer l'huile d'olive dans une poêle à feu moyen. Faites-y revenir l'échalote et l'ail 1-2 min. Ajoutez la chair de tomates et laissez mijoter 5-6 min. Salez, poivrez et ajoutez l'origan."
+        },
+        {
+          "text": "Placez le naan sur une plaque de cuisson recouverte de papier sulfurisé. Étalez la sauce tomate puis disposez les champignons et le jambon. Parsemez de fromage."
+        },
+        {
+          "text": "Enfournez les pizzas 5-7 min ou jusqu'à ce que le fromage soit fondu. Servez avec la salade mélangée à une vinaigrette balsamique."
+        }
+      ],
+      "nutrition": {
+        "calories": "574",
+        "lipides": "21 g",
+        "acides_gras_satures": "7 g",
+        "glucides": "65 g",
+        "sucres": "6 g",
+        "fibres": "6 g",
+        "proteines": "27 g",
+        "sel": "2.5 g"
+      },
+      "tips": [],
+      "tags": [
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_115955.jpg",
+          "verso": "20250529_120508.jpg"
+        },
+        "processedAt": "2025-05-29T11:07:12.775Z",
+        "recipeIndex": 11
+      }
+    },
+    {
+      "title": "Burrito au porc mariné à la mexicaine",
+      "subtitle": "avec des haricots noirs & du cheddar",
+      "duration": "20-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Cheddar râpé",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Crème épaisse",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Sucrine",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Épices mexicaines",
+          "quantity": {
+            "value": 1,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Tortillas",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Chair de tomates",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Enchiladas de porc marinées à la mexicaine",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Haricots noirs",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Coupez l'oignon en fines demi-rondelles. Émincez l'ail. Préchauffez le four à 180°C."
+        },
+        {
+          "text": "Faites chauffer un filet d'huile dans une grande poêle à feu moyen-vif. Ajoutez l'oignon et l'émincé de porc, puis faites cuire 3-4 minutes."
+        },
+        {
+          "text": "Préparez la touche vinaigrée en mélangeant l'huile d'olive et le vinaigre balsamique blanc."
+        },
+        {
+          "text": "Garnissez les tortillas avec le mélange de porc, de haricots noirs égouttés et de cheddar. Servez avec la salade sucrine."
+        }
+      ],
+      "nutrition": {
+        "calories": "592 kJ",
+        "lipides": "17.6 g",
+        "acides_gras_satures": "8.3 g",
+        "glucides": "52.9 g",
+        "sucres": "12.1 g",
+        "fibres": "6.2 g",
+        "proteines": "30.2 g",
+        "sel": "2.3 g"
+      },
+      "tips": [
+        "Ajustez le goût de la vinaigrette selon vos préférences."
+      ],
+      "tags": [
+        "Famille",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120002.jpg",
+          "verso": "20250529_120512.jpg"
+        },
+        "processedAt": "2025-05-29T11:07:33.273Z",
+        "recipeIndex": 12
+      }
+    },
+    {
+      "title": "Poulet à la crème de poireau & muscade",
+      "subtitle": "avec du gouda, du riz & du persil",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Gouda râpé",
+          "quantity": {
+            "value": 25,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 2,
+            "unit": "tige"
+          }
+        },
+        {
+          "name": "Filet de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Noix de muscade",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Gousse d’ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Poireau",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Coupez le poireau en fines rondelles. Émincez l’ail."
+        },
+        {
+          "text": "Coupez le poulet en dés de 2 cm, faites chauffer la moitié de l’huile d’olive dans une poêle."
+        },
+        {
+          "text": "Ajoutez le poireau et cuire jusqu’à ce qu’il soit fondant."
+        },
+        {
+          "text": "Ajouter la crème liquide et cuire le tout quelques minutes."
+        }
+      ],
+      "nutrition": {
+        "calories": "307",
+        "lipides": "19",
+        "acides_gras_satures": "10",
+        "glucides": "19",
+        "sucres": "7.5",
+        "fibres": "1.1",
+        "proteines": "31",
+        "sel": "1.1"
+      },
+      "tips": [
+        "Veillez à bien cuire le riz.",
+        "Ajoutez un peu d’eau si nécessaire pour atteindre la texture désirée."
+      ],
+      "tags": [
+        "Rapide",
+        "Familiale"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120008.jpg",
+          "verso": "20250529_120526.jpg"
+        },
+        "processedAt": "2025-05-29T11:07:57.725Z",
+        "recipeIndex": 13
+      }
+    },
+    {
+      "title": "Combo fulgurant: tagliata de boeuf & rigatoni",
+      "subtitle": "avec des champignons crémeux & du thym",
+      "duration": "35-45 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Thym séché",
+          "quantity": {
+            "value": null,
+            "unit": "à doser"
+          }
+        },
+        {
+          "name": "Pavé de boeuf",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Champignons de Paris",
+          "quantity": {
+            "value": 250,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Rigatoni",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Émincez l'ail et l'oignon en petits dés."
+        },
+        {
+          "text": "Faites dorer le pavé de boeuf et l'ail dans de l'huile."
+        },
+        {
+          "text": "Ajoutez les rigatoni à la sauce et mélangez."
+        },
+        {
+          "text": "Servez la tagliata de boeuf avec les rigatoni."
+        }
+      ],
+      "nutrition": {
+        "calories": "797 kJ / 190 kcal",
+        "lipides": "13 g",
+        "acides_gras_satures": "6.5 g",
+        "glucides": "6 g",
+        "sucres": "2 g",
+        "fibres": "2.5 g",
+        "proteines": "20 g",
+        "sel": "0.6 g"
+      },
+      "tips": [
+        "Assurez-vous de bien couvrir la viande pour la garder au chaud."
+      ],
+      "tags": [
+        "Super Sonic",
+        "Facile"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120011.jpg",
+          "verso": "20250529_120531.jpg"
+        },
+        "processedAt": "2025-05-29T11:08:19.393Z",
+        "recipeIndex": 14
+      }
+    },
+    {
+      "title": "Croque poulet & pesto rosso vitesse turbo",
+      "subtitle": "avec du gouda fondant & de la sucrine",
+      "duration": "15-20 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Pain de campagne",
+          "quantity": {
+            "value": 2,
+            "unit": "tranche"
+          }
+        },
+        {
+          "name": "Émincés de filet de poulet",
+          "quantity": {
+            "value": 70,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gouda au lait de vache",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Pesto rosso",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Carotte",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Sucrine",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Gluten"
+      ],
+      "steps": [
+        {
+          "text": "Émincez les filets de poulet et râpez le gouda."
+        },
+        {
+          "text": "Étalez le pesto sur les tranches de pain, ajoutez le poulet et le gouda. Fermez les croques."
+        },
+        {
+          "text": "Cuisez les croques au four jusqu'à ce qu'ils soient dorés."
+        },
+        {
+          "text": "Coupez les carottes en julienne, mélangez avec la sucrine émincée, assaisonnez."
+        }
+      ],
+      "nutrition": {
+        "calories": "370 kcal",
+        "lipides": "23 g",
+        "acides_gras_satures": "15 g",
+        "glucides": "15 g",
+        "sucres": "3.5 g",
+        "fibres": "2 g",
+        "proteines": "20 g",
+        "sel": "3 g"
+      },
+      "tips": [
+        "Utilisez des restes de poulet rôti pour plus de saveur."
+      ],
+      "tags": [
+        "Rapide",
+        "Simple",
+        "Poulet"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120017.jpg",
+          "verso": "20250529_120536.jpg"
+        },
+        "processedAt": "2025-05-29T11:08:42.842Z",
+        "recipeIndex": 15
+      }
+    },
+    {
+      "title": "Filet de lieu & fondue légère de poireaux",
+      "subtitle": "Avec une pointe de moutarde & des grenailles",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Filet de lieu noir",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Thym séché",
+          "quantity": {
+            "value": null,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Grenailles",
+          "quantity": {
+            "value": 400,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Poireau",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Poisson",
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Préchauffez le four à 200°C. Coupez les grenailles en deux et placez-les sur une plaque recouverte de papier sulfurisé. Arrosez-les d'huile d'olive, salez et poivrez. Enfournez 25-30 min."
+        },
+        {
+          "text": "Lavez et coupez le poireau en demi-cercles. Faites fondre une noix de beurre dans une poêle à feu moyen et ajoutez le poireau. Faites cuire 5-7 min."
+        },
+        {
+          "text": "Ajoutez la crème liquide et la moutarde dans la poêle avec le poireau. Laissez mijoter 2-3 min. Salez, poivrez."
+        },
+        {
+          "text": "Faites chauffer un filet d'huile dans une poêle à feu moyen et faites cuire le filet de lieu 2-3 min de chaque côté."
+        },
+        {
+          "text": "Disposez les grenailles dans les assiettes. Servez le poisson avec la fondue de poireaux. Arrosez d'un filet de citron."
+        },
+        {
+          "text": "Servez avec un peu de thym séché."
+        }
+      ],
+      "nutrition": {
+        "calories": "625 kcal",
+        "lipides": "37 g",
+        "acides_gras_satures": "11 g",
+        "glucides": "40 g",
+        "sucres": "6 g",
+        "fibres": "7 g",
+        "proteines": "30 g",
+        "sel": "1.5 g"
+      },
+      "tips": [
+        "Pour une sauce plus épaisse, laissez mijoter plus longtemps.",
+        "Ajoutez du citron selon votre goût."
+      ],
+      "tags": [
+        "Poisson",
+        "Calorie Smart"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120026.jpg",
+          "verso": "20250529_120542.jpg"
+        },
+        "processedAt": "2025-05-29T11:09:12.377Z",
+        "recipeIndex": 16
+      }
+    },
+    {
+      "title": "Mafé revisité au poulet & carotte",
+      "subtitle": "avec des cacahuètes & du gingembre",
+      "duration": "15-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Carotte",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Filet de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Concentré de tomates",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Gingembre frais",
+          "quantity": {
+            "value": 2,
+            "unit": "cm"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Mélange d'épices africaines",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Bouillon de volaille",
+          "quantity": {
+            "value": 1,
+            "unit": "cube"
+          }
+        },
+        {
+          "name": "Beurre de cacahuètes",
+          "quantity": {
+            "value": 2,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Cacahuètes non salées",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Cacahuètes"
+      ],
+      "steps": [
+        {
+          "text": "Portez une casserole d'eau salée à ébullition pour le riz."
+        },
+        {
+          "text": "Coupez l'oignon et l'ail finement. Épluchez la carotte et coupez-la en rondelles."
+        },
+        {
+          "text": "Faites cuire l'oignon, l'ail et la carotte dans une casserole avec un peu d'huile."
+        },
+        {
+          "text": "Ajoutez le poulet et les épices. Faites cuire à feu moyen."
+        }
+      ],
+      "nutrition": {
+        "calories": "739",
+        "lipides": "20 g",
+        "acides_gras_satures": "5 g",
+        "glucides": "95 g",
+        "sucres": "11 g",
+        "fibres": "8 g",
+        "proteines": "36 g",
+        "sel": "1.5 g"
+      },
+      "tips": [
+        "Utilisez du riz parfumé pour encore plus de saveurs."
+      ],
+      "tags": [
+        "Épicé",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120030.jpg",
+          "verso": "20250529_120548.jpg"
+        },
+        "processedAt": "2025-05-29T11:09:39.266Z",
+        "recipeIndex": 17
+      }
+    },
+    {
+      "title": "Velouté épicé patate douce coco & curcuma",
+      "subtitle": "servi avec un pain à l'ail & au persil",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Demi-baguette",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Curry en poudre",
+          "quantity": {
+            "value": 2,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Lait de coco",
+          "quantity": {
+            "value": 150,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Carotte",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Yaourt à la grecque",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Curcuma en poudre",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Patate douce",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousses d'ail",
+          "quantity": {
+            "value": 2,
+            "unit": "gousse"
+          }
+        }
+      ],
+      "allergens": [],
+      "steps": [
+        {
+          "text": "Préparez l'oignon et la carotte. Hachez l'ail."
+        },
+        {
+          "text": "Faites cuire l'oignon, la carotte et la patate douce dans une casserole."
+        },
+        {
+          "text": "Faites toaster la baguette avec de l'ail et du persil."
+        },
+        {
+          "text": "Mélangez le yaourt avec le curcuma et réservez."
+        },
+        {
+          "text": "Mixez les légumes avec le lait de coco et le curry."
+        },
+        {
+          "text": "Servez le velouté avec le yaourt épicé et le pain à l'ail."
+        }
+      ],
+      "nutrition": {
+        "calories": "517 kcal",
+        "lipides": "31.7 g",
+        "acides_gras_satures": "17.2 g",
+        "glucides": "44.6 g",
+        "sucres": "17.8 g",
+        "fibres": "6.6 g",
+        "proteines": "7.9 g",
+        "sel": "1.4 g"
+      },
+      "tips": [
+        "Ajoutez du persil frais selon vos goûts."
+      ],
+      "tags": [
+        "Végétarien",
+        "Facile"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120035.jpg",
+          "verso": "20250529_120556.jpg"
+        },
+        "processedAt": "2025-05-29T11:10:33.694Z",
+        "recipeIndex": 18
+      }
+    },
+    {
+      "title": "One Pot Pasta: saucisse et champis",
+      "subtitle": "avec de la crème, du fromage râpé et du persil",
+      "duration": "15-20 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Conchiglie",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Champignons de Paris",
+          "quantity": {
+            "value": 250,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 150,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Saucisse de porc",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Fromage râpé",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Huile de tournesol",
+          "quantity": {
+            "value": 1,
+            "unit": "cs"
+          }
+        },
+        {
+          "name": "Bouillon de volaille",
+          "quantity": {
+            "value": 300,
+            "unit": "ml"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait (milk)"
+      ],
+      "steps": [
+        {
+          "text": "Faites chauffer une grande casserole à feu moyen avec un filet d'huile de tournesol. Ajoutez les Saucisses émiettées. Faites-les dorer 5 à 6 min."
+        },
+        {
+          "text": "Pendant ce temps, épluchez et émincez l'ail et l'oignon. Nettoyez et coupez les champignons en fines tranches. Ajoutez l'ail, l'oignon et les champignons à la marmite et faites cuire 2-3 min avec la viande."
+        },
+        {
+          "text": "Ajoutez la crème, le bouillon de volaille, puis les Conchiglie dans la marmite. Salez, poivrez et portez à ébullition. Baissez le feu et laissez mijoter 11-12 min en remuant souvent."
+        },
+        {
+          "text": "Remuez de temps en temps jusqu'à ce que les pâtes soient cuites et la sauce épaissie. Servez la pasta dans les assiettes. Parsemez de fromage râpé et de persil."
+        }
+      ],
+      "nutrition": {
+        "calories": "785 kcal",
+        "lipides": "45 g",
+        "acides_gras_satures": "26 g",
+        "glucides": "72 g",
+        "sucres": "7 g",
+        "fibres": "8 g",
+        "proteines": "38 g",
+        "sel": "3 g"
+      },
+      "tips": [
+        "Salez légèrement pour ne pas trop saler.",
+        "Ajoutez un peu d'eau si nécessaire.",
+        "Régalez-vous avant d'ajuster la quantité de sel."
+      ],
+      "tags": [
+        "Peu de cuisine",
+        "One pot",
+        "Saucisse",
+        "Italien"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120041.jpg",
+          "verso": "20250529_120602.jpg"
+        },
+        "processedAt": "2025-05-29T11:10:59.112Z",
+        "recipeIndex": 19
+      }
+    },
+    {
+      "title": "Mijoté extra-rapide au poulet crémeux",
+      "subtitle": "avec des haricots blancs & des épinards",
+      "duration": "15-20 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Blanc de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Épinards",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Haricots blancs",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Thym séché",
+          "quantity": {
+            "value": 0.5,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Fricassée de champignons émincés",
+          "quantity": {
+            "value": 125,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [],
+      "steps": [
+        {
+          "text": "Préparez l'ensemble de vos ingrédients selon les instructions. Émincez l'oignon et l'ail. Coupez le poulet en morceaux."
+        },
+        {
+          "text": "Faites chauffer de l'huile dans une casserole à feu moyen-vif. Ajoutez l'oignon, l'ail, les épinards, et la fricassée de champignons. Faites revenir 2-3 minutes."
+        },
+        {
+          "text": "Ajoutez le poulet, les haricots blancs égouttés et la crème. Saupoudrez de thym. Faites mijoter 2-3 minutes. Salez et poivrez."
+        },
+        {
+          "text": "Servez dans des assiettes creuses. Saupoudrez de persil. Dégustez à toute vitesse!"
+        }
+      ],
+      "nutrition": {
+        "calories": "335",
+        "lipides": "17",
+        "acides_gras_satures": "9",
+        "glucides": "12",
+        "sucres": "3",
+        "fibres": "2",
+        "proteines": "31",
+        "sel": "2.2"
+      },
+      "tips": [
+        "Essayez avec des pâtes pour une version plus consistante."
+      ],
+      "tags": [
+        "Super Rapide",
+        "Familial"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120047.jpg",
+          "verso": "20250529_120607.jpg"
+        },
+        "processedAt": "2025-05-29T11:11:20.714Z",
+        "recipeIndex": 20
+      }
+    },
+    {
+      "title": "La Méditerranéenne : penne, thon & olives",
+      "subtitle": "avec du fromage à la grecque & des radis",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Penne",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Salade",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Radis",
+          "quantity": {
+            "value": 6,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Thon au naturel",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Olives noires dénoyautées",
+          "quantity": {
+            "value": 30,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Fromage à la grecque",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Bouillon de légumes",
+          "quantity": {
+            "value": 0.5,
+            "unit": "cube"
+          }
+        },
+        {
+          "name": "Origan séché",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Prélevez le zeste du citron. Faites cuire les penne pendant 12 min dans une grande casserole d’eau bouillante avec le bouillon. Effeuillez et ciselez la menthe et le persil."
+        },
+        {
+          "text": "Coupez les radis en rondelles et le citron en quarts."
+        },
+        {
+          "text": "Mélangez la salade avec l’origan, les radis, le thon émietté, les olives, le fromage à la grecque en morceaux, un filet d’huile d’olive et le jus de citron selon votre goût."
+        },
+        {
+          "text": "Servez le tout avec les penne chaudes ou froides."
+        }
+      ],
+      "nutrition": {
+        "calories": "650 kcal",
+        "lipides": "24 g",
+        "acides_gras_satures": "6 g",
+        "glucides": "67 g",
+        "sucres": "7 g",
+        "fibres": "7 g",
+        "proteines": "39 g",
+        "sel": "2.6 g"
+      },
+      "tips": [
+        "Ajoutez du fromage à la grecque selon votre goût."
+      ],
+      "tags": [
+        "Rapide",
+        "Salade",
+        "Méditerranéen"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120052.jpg",
+          "verso": "20250529_120611.jpg"
+        },
+        "processedAt": "2025-05-29T11:11:48.110Z",
+        "recipeIndex": 21
+      }
+    },
+    {
+      "title": "Rigatoni bacon & crème de bleu",
+      "subtitle": "avec de la ciboulette & des noix concassées",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Noix concassées",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Rigatoni",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Tranches de poitrine fumée",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Ciboulette",
+          "quantity": {
+            "value": 3,
+            "unit": "tige"
+          }
+        },
+        {
+          "name": "Fromage bleu",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait (lactose)",
+        "Fruits à coque"
+      ],
+      "steps": [
+        {
+          "text": "Coupez finement l'oignon. Ciselez la ciboulette. Coupez les tranches de poitrine fumée en lanières et faites-les revenir 4-5 min."
+        },
+        {
+          "text": "Portez une grande casserole d'eau salée à ébullition pour les pâtes. En attendant, faites chauffer une grande sauteuse à feu moyen-vif. Ajoutez-y l'oignon, la crème liquide et faites mijoter 2-3 min."
+        },
+        {
+          "text": "Ajoutez le fromage bleu, puis les pâtes égouttées à la sauteuse. Mélangez 2-3 min jusqu'à ce que le fromage ait bien fondu."
+        },
+        {
+          "text": "Servez les rigatoni en sauce dans les assiettes. Saupoudrez de noix concassées."
+        }
+      ],
+      "nutrition": {
+        "calories": "791",
+        "lipides": "47.6",
+        "acides_gras_satures": "20.6",
+        "glucides": "66.2",
+        "sucres": "6.2",
+        "fibres": "3.6",
+        "proteines": "26.1",
+        "sel": "2.6"
+      },
+      "tips": [
+        "Ajustez la quantité de poivre selon votre goût."
+      ],
+      "tags": [
+        "Rapide",
+        "Confort food"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120102.jpg",
+          "verso": "20250529_120616.jpg"
+        },
+        "processedAt": "2025-05-29T11:12:13.608Z",
+        "recipeIndex": 22
+      }
+    },
+    {
+      "title": "Risotto D'Amore saveur truffe",
+      "subtitle": "avec du Parmigiano Reggiano AOP & du persil",
+      "duration": "35-45 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Poudre de champignons",
+          "quantity": {
+            "value": null,
+            "unit": "sachet"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": null,
+            "unit": "botte"
+          }
+        },
+        {
+          "name": "Riz pour risotto",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Huile d'olive saveur truffe",
+          "quantity": {
+            "value": null,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Parmigiano Reggiano AOP",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Champignons de Paris",
+          "quantity": {
+            "value": 250,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Échalote",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait (y compris lactose)"
+      ],
+      "steps": [
+        {
+          "text": "Faites chauffer un filet d'huile d'olive dans une sauteuse à feu moyen. Faites-y revenir les champignons 5-6 min puis ajoutez l'ail et la moitié de l'échalote 2-3 min."
+        },
+        {
+          "text": "Ajoutez le riz et faites revenir 1 min. Déglacez avec un peu d'eau bouillante ou de bouillon et continuez à ajouter du liquide au fur et à mesure 20-25 min."
+        },
+        {
+          "text": "Ciselez le persil (tiges et feuilles). Émincez l'autre moitié de l'échalote."
+        },
+        {
+          "text": "Ajoutez l'échalote restante 2 min après la dernière portion de bouillon ou faites fondre tout le beurre. Ajoutez les champignons."
+        },
+        {
+          "text": "Enlevez la sauteuse du feu, incorporez le Parmigiano Reggiano, 1 filet d'huile d'olive et 1 filet d'huile de truffe. Laissez reposer 2 min à couvert. Ajustez l'assaisonnement."
+        },
+        {
+          "text": "Servez le risotto dans des assiettes creuses et parsemez de persil ciselé et de parmigiano reggiano râpé. Arrosez d'un filet d'huile d'olive saveur truffe."
+        }
+      ],
+      "nutrition": {
+        "calories": "759 kcal",
+        "lipides": "32.5 g",
+        "acides_gras_satures": "8.9 g",
+        "glucides": "90.3 g",
+        "sucres": "5 g",
+        "fibres": "3.8 g",
+        "proteines": "28.3 g",
+        "sel": "1.9 g"
+      },
+      "tips": [
+        "Ajoutez plus de Parmesan ou de sel selon votre goût."
+      ],
+      "tags": [
+        "Végétarien",
+        "Saint-Valentin"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120107.jpg",
+          "verso": "20250529_120620.jpg"
+        },
+        "processedAt": "2025-05-29T11:12:47.598Z",
+        "recipeIndex": 23
+      }
+    },
+    {
+      "title": "Saucisse de Toulouse & purée au cantal AOP",
+      "subtitle": "avec des oignons confits & des champignons",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Saucisses de Toulouse",
+          "quantity": {
+            "value": 2,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Cantal AOP",
+          "quantity": {
+            "value": 75,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Champignons émincés",
+          "quantity": {
+            "value": 125,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Pommes de terre",
+          "quantity": {
+            "value": 300,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Thym séché",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait (y compris lactose)"
+      ],
+      "steps": [
+        {
+          "text": "Épluchez et coupez les pommes de terre en morceaux."
+        },
+        {
+          "text": "Faites cuire les pommes de terre dans une casserole d'eau salée pendant 12-15 minutes."
+        },
+        {
+          "text": "Égouttez les pommes de terre puis écrasez-les avec une presse-purée. Ajoutez le cantal. Remuez bien."
+        },
+        {
+          "text": "Faites dorer les saucisses à la poêle puis réservez."
+        },
+        {
+          "text": "Dorez les champignons et l'oignon dans la même poêle. Ajoutez le thym."
+        },
+        {
+          "text": "Servez les saucisses avec la purée et les légumes."
+        }
+      ],
+      "nutrition": {
+        "calories": "705 kcal",
+        "lipides": "50 g",
+        "acides_gras_satures": "20 g",
+        "glucides": "38 g",
+        "sucres": "7 g",
+        "fibres": "4 g",
+        "proteines": "25 g",
+        "sel": "3 g"
+      },
+      "tips": [
+        "Utilisez une presse-purée pour une texture plus lisse.",
+        "Ajoutez plus de thym si vous aimez son goût."
+      ],
+      "tags": [
+        "Famille",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120112.jpg",
+          "verso": "20250529_120625.jpg"
+        },
+        "processedAt": "2025-05-29T11:13:12.368Z",
+        "recipeIndex": 24
+      }
+    },
+    {
+      "title": "Gratin d'enfance de pâtes aux lardons",
+      "subtitle": "avec une crème au gouda & du persil",
+      "duration": "15-20 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Pâtes cavatelli",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gouda râpé",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Thym séché",
+          "quantity": {
+            "value": 1,
+            "unit": "sachet"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Lardons fumés",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Carotte râpée",
+          "quantity": {
+            "value": 1,
+            "unit": "sachet"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": null,
+            "unit": "tige"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Gluten"
+      ],
+      "steps": [
+        {
+          "text": "Portez une grande casserole d'eau salée à ébullition pour les pâtes. Épluchez et coupez l'oignon."
+        },
+        {
+          "text": "Faites cuire les cavatelli 10 à 12 min. Égouttez, rincez à l'eau froide."
+        },
+        {
+          "text": "Dans une poêle, faites chauffer un filet d'huile. Ajoutez les lardons, l'oignon et faites revenir quelques minutes."
+        },
+        {
+          "text": "Ajoutez l'ail écrasé, la crème liquide et le gouda râpé. Mélangez jusqu'à épaississement."
+        },
+        {
+          "text": "Ajoutez les pâtes, mélangez bien et rectifiez l'assaisonnement. Parsemez de persil avant de servir."
+        }
+      ],
+      "nutrition": {
+        "calories": "696 kcal",
+        "lipides": "43 g",
+        "acides_gras_satures": "23 g",
+        "glucides": "56 g",
+        "sucres": "7 g",
+        "fibres": "0.5 g",
+        "proteines": "22 g",
+        "sel": "2.3 g"
+      },
+      "tips": [
+        "Vous pouvez ajouter un peu d'eau de cuisson des pâtes pour un gratin plus onctueux."
+      ],
+      "tags": [
+        "Peu de cuisine",
+        "Plat principal"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120122.jpg",
+          "verso": "20250529_120629.jpg"
+        },
+        "processedAt": "2025-05-29T11:13:35.682Z",
+        "recipeIndex": 25
+      }
+    },
+    {
+      "title": "Rigatoni gourmands au pesto vert & burrata",
+      "subtitle": "avec des épinards & des noisettes grillées",
+      "duration": "35-40 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Pesto vert à la genovese",
+          "quantity": {
+            "value": null,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Citron",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Rigatoni",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Burrata",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Épinards",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Noisettes grillées",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Fruits à coque"
+      ],
+      "steps": [
+        {
+          "text": "Portez l’eau à ébullition dans la casserole pour les rigatoni."
+        },
+        {
+          "text": "Faites revenir l'ail et l'oignon dans une poêle avec l'huile d'olive."
+        },
+        {
+          "text": "Ajoutez les rigatoni cuits à la poêle."
+        },
+        {
+          "text": "Servez les rigatoni avec le pesto et la burrata."
+        }
+      ],
+      "nutrition": {
+        "calories": "909 kJ / 217 kcal",
+        "lipides": "10.5 g",
+        "acides_gras_satures": "2.4 g",
+        "glucides": "25.8 g",
+        "sucres": "2.4 g",
+        "fibres": "2.2 g",
+        "proteines": "7.2 g",
+        "sel": "0.6 g"
+      },
+      "tips": [
+        "Ajoutez le zeste de citron pour plus de saveur."
+      ],
+      "tags": [
+        "Famille",
+        "Rapide",
+        "Végé"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120128.jpg",
+          "verso": "20250529_120633.jpg"
+        },
+        "processedAt": "2025-05-29T11:14:02.274Z",
+        "recipeIndex": 26
+      }
+    },
+    {
+      "title": "Poulet à la crème de poireau & muscade",
+      "subtitle": "avec du gouda, du riz & du persil",
+      "duration": "20-25 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Poireau",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Filet de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 100,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Gouda râpé",
+          "quantity": {
+            "value": 25,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Noix de muscade",
+          "quantity": {
+            "value": null,
+            "unit": "à râper"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait"
+      ],
+      "steps": [
+        {
+          "text": "Coupez le poireau en fines rondelles. Pressez ou émincez l'ail."
+        },
+        {
+          "text": "Coupez le poulet en dés de 2 cm."
+        },
+        {
+          "text": "Ajoutez le poireau et l'ail au poulet et faites-les revenir 10 minutes à feu moyen."
+        },
+        {
+          "text": "Versez la crème, ajoutez le gouda et laissez épaissir jusqu'à consistance désirée."
+        }
+      ],
+      "nutrition": {
+        "calories": "710",
+        "lipides": "39.7 g",
+        "acides_gras_satures": "19.9 g",
+        "glucides": "55.1 g",
+        "sucres": "5.1 g",
+        "fibres": "5.4 g",
+        "proteines": "49.6 g",
+        "sel": "1.1 g"
+      },
+      "tips": [
+        "Servez ce plat avec un bon vin blanc.",
+        "Ajoutez de la muscade selon votre goût."
+      ],
+      "tags": [
+        "Famille",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120135.jpg",
+          "verso": "20250529_120637.jpg"
+        },
+        "processedAt": "2025-05-29T11:14:26.264Z",
+        "recipeIndex": 27
+      }
+    },
+    {
+      "title": "Burrito bowl tex-mex au poulet",
+      "subtitle": "avec de la coriandre & des pickles d'oignon",
+      "duration": "35-45 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Yaourt à la grecque",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Avocat",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Coriandre",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Blanc de poulet",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Épices mexicaines",
+          "quantity": {
+            "value": 1,
+            "unit": "sachet"
+          }
+        },
+        {
+          "name": "Maïs en conserve",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Riz",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "lait"
+      ],
+      "steps": [
+        {
+          "text": "Coupez l'oignon en fines demi-lunes et épluchez l'ail. Ajoutez l'ail et les épices mexicaines au riz."
+        },
+        {
+          "text": "Dans une casserole, ajoutez le riz et faites revenir à feu moyen. Ajoutez 300 ml d'eau, portez à ébullition et laissez cuire."
+        },
+        {
+          "text": "Épluchez et coupez l'avocat en dés. Effeuillez la coriandre."
+        },
+        {
+          "text": "Servez le tout, ajoutez le maïs et la coriandre sur le dessus. Assaisonnez avec le yaourt."
+        }
+      ],
+      "nutrition": {
+        "calories": "609 kcal",
+        "lipides": "23.5 g",
+        "acides_gras_satures": "4.1 g",
+        "glucides": "62.9 g",
+        "sucres": "7.7 g",
+        "fibres": "8.3 g",
+        "proteines": "39.6 g",
+        "sel": "2.5 g"
+      },
+      "tips": [
+        "Assurez-vous que le riz ne colle pas en remuant régulièrement."
+      ],
+      "tags": [
+        "Rapide",
+        "Tex-Mex",
+        "Plat principal"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120152.jpg",
+          "verso": "20250529_120643.jpg"
+        },
+        "processedAt": "2025-05-29T11:14:46.362Z",
+        "recipeIndex": 28
+      }
+    },
+    {
+      "title": "One Pot Pasta saucisse & champis à la crème",
+      "subtitle": "avec du fromage râpé & du persil",
+      "duration": "25-30 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Conchiglie",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Herbes de Provence",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Cubes d'ail",
+          "quantity": {
+            "value": 2,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Chair à saucisse",
+          "quantity": {
+            "value": 160,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Champignons de Paris",
+          "quantity": {
+            "value": 250,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": 200,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Fromage râpé",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Moutarde"
+      ],
+      "steps": [
+        {
+          "text": "Préparez l'oignon, coupez les champignons en tranches."
+        },
+        {
+          "text": "Cuire l'oignon et les champignons dans une grande marmite."
+        },
+        {
+          "text": "Ajoutez la chair à saucisse et les herbes de Provence."
+        },
+        {
+          "text": "Ajoutez la crème liquide et les conchiglie, puis laissez mijoter."
+        },
+        {
+          "text": "Ajoutez le fromage râpé et le persil avant de servir."
+        }
+      ],
+      "nutrition": {
+        "calories": "621 kcal",
+        "lipides": "35.9 g",
+        "acides_gras_satures": "19.1 g",
+        "glucides": "57.3 g",
+        "sucres": "5.3 g",
+        "fibres": "3.0 g",
+        "proteines": "27.1 g",
+        "sel": "1.56 g"
+      },
+      "tips": [
+        "Astuce: Assaisonnez à votre goût."
+      ],
+      "tags": [
+        "Famille",
+        "Peu de cuisine"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120201.jpg",
+          "verso": "20250529_120649.jpg"
+        },
+        "processedAt": "2025-05-29T11:15:14.787Z",
+        "recipeIndex": 29
+      }
+    },
+    {
+      "title": "Gnocchi, sauce au bleu & poireau fondant",
+      "subtitle": "avec de la muscade & une salade aux noix",
+      "duration": "25-30 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Salade",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Fromage bleu",
+          "quantity": {
+            "value": 50,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Crème épaisse",
+          "quantity": {
+            "value": 100,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gnocchi",
+          "quantity": {
+            "value": 300,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Noix concassées",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Noix de muscade",
+          "quantity": {
+            "value": null,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Poireau",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Beurre",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        }
+      ],
+      "allergens": [
+        "Lactose"
+      ],
+      "steps": [
+        {
+          "text": "Coupez le poireau."
+        },
+        {
+          "text": "Faites chauffer du beurre dans une poêle à feu moyen. Ajoutez le poireau et l'ail. Faites revenir 7 min."
+        },
+        {
+          "text": "Ajoutez la crème et le fromage. Faites revenir 2-3 min à feu moyen. Râpez de la noix de muscade."
+        },
+        {
+          "text": "Mélangez dans un saladier le vinaigre avec de l'huile. Ajoutez la salade. Servez le gnocchi avec la salade."
+        }
+      ],
+      "nutrition": {
+        "calories": "763 kcal",
+        "lipides": "50 g",
+        "acides_gras_satures": "25 g",
+        "glucides": "57 g",
+        "sucres": "8 g",
+        "fibres": "6 g",
+        "proteines": "20 g",
+        "sel": "2 g"
+      },
+      "tips": [],
+      "tags": [
+        "Rapide",
+        "Veggie",
+        "Calorie Smart"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120207.jpg",
+          "verso": "20250529_120657.jpg"
+        },
+        "processedAt": "2025-05-29T11:15:34.196Z",
+        "recipeIndex": 30
+      }
+    },
+    {
+      "title": "Nouilles au bœuf haché façon Dan Dan",
+      "subtitle": "avec du piment, du pak choï et des cacahuètes",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Viande hachée au bœuf",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Sauce soja",
+          "quantity": {
+            "value": 15,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Pak choï",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Piment",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Nouilles de blé",
+          "quantity": {
+            "value": 150,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Coriandre moulue",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Beurre de cacahuètes",
+          "quantity": {
+            "value": 20,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Cacahuètes non salées",
+          "quantity": {
+            "value": 10,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gingembre frais",
+          "quantity": {
+            "value": 10,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "blé",
+        "soja",
+        "arachides"
+      ],
+      "steps": [
+        {
+          "text": "Préparez les ingrédients : Émincez l'oignon, ciselez le piment. Concassez les cacahuètes."
+        },
+        {
+          "text": "Cuisez le bœuf avec l'ail et le gingembre jusqu’à ce qu’il soit doré."
+        },
+        {
+          "text": "Cuisez les nouilles dans l'eau bouillante selon les instructions."
+        },
+        {
+          "text": "Mélangez le bœuf et le pak choï avec les nouilles, ajoutez les cacahuètes. Servez."
+        }
+      ],
+      "nutrition": {
+        "calories": "736 kcal",
+        "lipides": "37 g",
+        "acides_gras_satures": "10 g",
+        "glucides": "56 g",
+        "sucres": "12 g",
+        "fibres": "5 g",
+        "proteines": "42 g",
+        "sel": "3.2 g"
+      },
+      "tips": [
+        "Utilisez des baguettes pour un repas authentique."
+      ],
+      "tags": [
+        "Rapide",
+        "Asiatique",
+        "Épicé"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120215.jpg",
+          "verso": "20250529_120702.jpg"
+        },
+        "processedAt": "2025-05-29T11:16:02.918Z",
+        "recipeIndex": 31
+      }
+    },
+    {
+      "title": "One pot crevettes & orzo à la toscane",
+      "subtitle": "avec du grana padano AOP & des épinards",
+      "duration": "25-35 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Épinards",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Grana Padano AOP",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Orzo",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crevettes",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": null,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Épices Italiennes",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Tomates semi-séchées",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Grana Padano AOP"
+      ],
+      "steps": [
+        {
+          "text": "Coupez l'oignon et l'ail. Coupez les tomates séchées en fines lamelles."
+        },
+        {
+          "text": "Faites chauffer une poêle à feu moyen-vif avec un filet d'huile d'olive et faites-y cuire les crevettes."
+        },
+        {
+          "text": "Ajoutez l'orzo, l'oignon et l'ail. Faites cuire 2-3 min."
+        },
+        {
+          "text": "Ajoutez le bouillon avec de l'eau. Laissez cuire 12-15 min."
+        },
+        {
+          "text": "Ajoutez le mélange de crème avec les épinards et le grana padano. Mélangez bien."
+        },
+        {
+          "text": "Disposez l'orzo dans les assiettes creuses et garnissez avec le reste des copeaux de grana padano."
+        }
+      ],
+      "nutrition": {
+        "calories": "557",
+        "lipides": "13 g",
+        "acides_gras_satures": "6 g",
+        "glucides": "73 g",
+        "sucres": "5 g",
+        "fibres": "7 g",
+        "proteines": "36 g",
+        "sel": "3 g"
+      },
+      "tips": [
+        "Vérifiez que les crevettes sont bien cuites.",
+        "Ajoutez du parmesan selon votre goût."
+      ],
+      "tags": [
+        "Calorie smart",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120219.jpg",
+          "verso": "20250529_120707.jpg"
+        },
+        "processedAt": "2025-05-29T11:16:30.040Z",
+        "recipeIndex": 32
+      }
+    },
+    {
+      "title": "Linguine chorizo & crème à l'espagnole",
+      "subtitle": "avec des noix & des épinards",
+      "duration": "15-25 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Fermier râpé à l'italienne",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Paprika fumé en poudre",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Dés de chorizo",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Crème liquide",
+          "quantity": {
+            "value": null,
+            "unit": "ml"
+          }
+        },
+        {
+          "name": "Noix concassées",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Épinards",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": null,
+            "unit": "gousse"
+          }
+        },
+        {
+          "name": "Linguine",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Oignon",
+          "quantity": {
+            "value": null,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Lait",
+        "Noix"
+      ],
+      "steps": [
+        {
+          "text": "Préchauffez une grande poêle sèche et faites-y dorer l'oignon et la gousse d'ail avec la crème liquide. Cuisez à feu doux, à couvert, environ 3-5 minutes, ou jusqu'à ce qu'ils soient croustillants."
+        },
+        {
+          "text": "Faites cuire les linguine dans une casserole d'eau bouillante salée pendant 10 à 12 minutes. Égouttez-les, puis ajoutez la sauce."
+        },
+        {
+          "text": "Ajoutez les épinards, une noisette de beurre et laissez cuire 3 à 5 minutes de plus. Ajustez le goût avec du sel et du poivre."
+        },
+        {
+          "text": "Servez les linguine avec les dés de chorizo grillés et saupoudrez de noix. Parsemez de fromage râpé avant de savourer."
+        }
+      ],
+      "nutrition": {
+        "calories": "759",
+        "lipides": "39 g",
+        "acides_gras_satures": "13 g",
+        "glucides": "61 g",
+        "sucres": "5 g",
+        "fibres": "6 g",
+        "proteines": "41 g",
+        "sel": "2.87 g"
+      },
+      "tips": [
+        "Ajoutez une noisette de beurre pour un goût plus riche.",
+        "Servez avec du fromage râpé pour une touche finale."
+      ],
+      "tags": [
+        "Famille",
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120224.jpg",
+          "verso": "20250529_120717.jpg"
+        },
+        "processedAt": "2025-05-29T11:16:53.280Z",
+        "recipeIndex": 33
+      }
+    },
+    {
+      "title": "Tagliatelle aux crevettes pimentées",
+      "subtitle": "Avec une sauce tomate, de l'ail & du persil",
+      "duration": "15-25 min",
+      "difficulty": 2,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Chut de tomates",
+          "quantity": {
+            "value": 1,
+            "unit": "boîte"
+          }
+        },
+        {
+          "name": "Tagliatelle fraîches",
+          "quantity": {
+            "value": 200,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Piment",
+          "quantity": {
+            "value": 1,
+            "unit": "cc"
+          }
+        },
+        {
+          "name": "Crevettes",
+          "quantity": {
+            "value": 180,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Persil",
+          "quantity": {
+            "value": 5,
+            "unit": "g"
+          }
+        },
+        {
+          "name": "Gousse d'ail",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        },
+        {
+          "name": "Échalote",
+          "quantity": {
+            "value": 1,
+            "unit": "pièce"
+          }
+        }
+      ],
+      "allergens": [
+        "Crustacés"
+      ],
+      "steps": [
+        {
+          "text": "Épluchez et émincez l'échalote. Effeuillez et ciselez le persil."
+        },
+        {
+          "text": "Portez une casserole d'eau bouillante à ébullition et cuire les tagliatelles 4-6 min."
+        },
+        {
+          "text": "Égouttez les crevettes et faites chauffer un filet d'huile d'olive dans une grande poêle à feu moyen-vif."
+        },
+        {
+          "text": "Ajoutez le chut de tomates, l'ail et du piment à la sauteuse et faites chauffer à feu moyen 2-3 min."
+        }
+      ],
+      "nutrition": {
+        "calories": "787 kcal",
+        "lipides": "25 g",
+        "acides_gras_satures": "3.3 g",
+        "glucides": "112.2 g",
+        "sucres": "9.2 g",
+        "fibres": "10.8 g",
+        "proteines": "37 g",
+        "sel": "3.5 g"
+      },
+      "tips": [
+        "Servez avec des extra crevettes.",
+        "Versez un trait d'huile d'olive avant de servir."
+      ],
+      "tags": [
+        "Rapide"
+      ],
+      "source": "HelloFresh",
+      "metadata": {
+        "originalFiles": {
+          "recto": "20250529_120232.jpg",
+          "verso": "20250529_120723.jpg"
+        },
+        "processedAt": "2025-05-29T11:17:18.375Z",
+        "recipeIndex": 34
+      }
+    }
+  ],
+  "metadata": {
+    "totalRecipes": 34,
+    "totalErrors": 0,
+    "successRate": "100%",
+    "processingTimeSeconds": 944,
+    "processedAt": "2025-05-29T11:17:18.386Z",
+    "source": "HelloFresh",
+    "errors": []
+  }
+}
