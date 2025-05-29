@@ -10,11 +10,7 @@
     "analyze": "node analyze-images.js",
     "analyze-units": "node analyze-units.js",
     "clean": "node clean.js",
-    "optimize": "node optimize-images.js",
-    "test-ddd": "node test-ddd-architecture.js",
-    "test-unit-normalization": "node test-unit-normalization.js",
-    "test-normalization-impact": "node test-normalization-impact.js",
-    "audit-quality": "node audit-data-quality.js",
+    "optimize": "node optimize-images.js",    "test-ddd": "node test-ddd-architecture.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
