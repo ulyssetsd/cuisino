@@ -6,9 +6,11 @@ class RecipeExtractor {
         this.imageProcessor = new ImageProcessor();
         this.model = openaiConfig.model;
         this.maxTokens = openaiConfig.maxTokens;
-    }    async extractRecipe(rectoPath, versoPath) {
+    }
+
+    async extractRecipe(rectoPath, versoPath) {
         console.log('   🔄 Conversion des images en base64...');
-        
+
         // Convertir les images en base64
         const rectoBase64 = await this.imageProcessor.imageToBase64(rectoPath);
         const versoBase64 = await this.imageProcessor.imageToBase64(versoPath);

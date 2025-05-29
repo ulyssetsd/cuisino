@@ -12,7 +12,7 @@ const ProcessingAnalyzer = require('./application/services/ProcessingAnalyzer');
 const ImageProcessor = require('./infrastructure/external/ImageProcessor');
 const SimpleRecipeExtractor = require('./SimpleRecipeExtractor');
 const DataQualityValidator = require('./domain/services/DataQualityValidator');
-const DataQualityCorrector = require('./domain/services/DataQualityCorrector');
+const DataQualityCorrector = require('./application/services/DataQualityCorrector');
 
 class SimpleRecipeProcessor {
     constructor() {

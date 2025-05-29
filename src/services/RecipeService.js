@@ -7,7 +7,7 @@ const ConfigManager = require('../infrastructure/persistence/ConfigManager');
 const RecipeRepository = require('../infrastructure/RecipeRepository');
 const OpenAIExtractionService = require('./OpenAIExtractionService');
 const DataQualityValidator = require('../domain/services/DataQualityValidator');
-const DataQualityCorrector = require('../domain/services/DataQualityCorrector');
+const DataQualityCorrector = require('../application/services/DataQualityCorrector');
 const ErrorManager = require('../infrastructure/persistence/ErrorManager');
 
 class RecipeService {
