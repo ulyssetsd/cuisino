@@ -21,13 +21,10 @@ async function validateQuality() {
             Logger.warning('No existing recipes found. Run extraction first.');
             return;
         }
+          validator.validateRecipes(recipes);
         
-        validator.validateRecipes(recipes);
-        
-        // Save updated recipes
-        for (const recipe of recipes) {
-            await recipeRepo.saveRecipe(recipe);
-        }
+        // Save updated recipes in batch
+        await recipeRepo.saveRecipes(recipes);
         
         Logger.success('Quality validation completed!');
         

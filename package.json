@@ -2,8 +2,7 @@
   "name": "cuisino",
   "version": "1.0.0",
   "description": "Extracteur automatique de recettes HelloFresh à partir de photos recto/verso",
-  "main": "index.js",  "scripts": {
-    "start": "node main.js",
+  "main": "index.js",  "scripts": {    "start": "node main.js",
     "dev": "node main.js",
     
     "images:analyze": "node scripts/analyze-images.js",
@@ -17,6 +16,8 @@
     
     "recipes:test": "node recipes/test.js",
     "quality:test": "node quality/test.js",
+    
+    "clean:metadata": "node scripts/clean-metadata.js",
     
     "test:all": "npm run recipes:test && npm run quality:test",
     

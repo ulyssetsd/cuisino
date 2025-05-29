@@ -11,8 +11,8 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Images recettes
-recipes/*
+# Input
+input/
 
 # Output
 output/*

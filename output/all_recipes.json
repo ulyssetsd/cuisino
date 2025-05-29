@@ -1,6 +1,13 @@
 {
+  "metadata": {
+    "totalRecipes": 34,
+    "generatedAt": "2025-05-29T21:08:17.959Z",
+    "testRun": true,
+    "testTimestamp": "2025-05-29T21:08:17.959Z"
+  },
   "recipes": [
     {
+      "id": "001",
       "title": "Lieu meunière & tombée d'épinards",
       "subtitle": "avec une purée de lentilles corail au paprika",
       "duration": "25-35 min",
@@ -71,10 +78,6 @@
           }
         }
       ],
-      "allergens": [
-        "Amandes",
-        "Poisson"
-      ],
       "steps": [
         {
           "text": "Pelez et coupez les carottes et l'oignon en dés. Émincez l'ail. Râpez finement du zeste de citron."
@@ -105,6 +108,10 @@
         "proteines": "35 g",
         "sel": "2.8 g"
       },
+      "allergens": [
+        "Amandes",
+        "Poisson"
+      ],
       "tips": [
         "Vous pouvez ajouter un peu d'eau si la sauce se concentre trop rapidement."
       ],
@@ -122,10 +129,15 @@
           "verso": "20250529_120413.jpg"
         },
         "processedAt": "2025-05-29T11:02:04.832Z",
-        "recipeIndex": 1
+        "recipeIndex": 1,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:02:04.832Z",
+        "error": null
       }
     },
     {
+      "id": "002",
       "title": "Assiette souvlaki poulet & tzatziki maison",
       "subtitle": "avec des pitas & des crudités",
       "duration": "20-25 min",
@@ -203,7 +215,6 @@
           }
         }
       ],
-      "allergens": [],
       "steps": [
         {
           "text": "Coupez les tomates et le concombre en petits dés. Emincez l'ail et coupez le citron en quartiers."
@@ -228,6 +239,7 @@
         "proteines": "36 g",
         "sel": "2 g"
       },
+      "allergens": [],
       "tips": [],
       "tags": [
         "Rapide",
@@ -241,10 +253,15 @@
           "verso": "20250529_120422.jpg"
         },
         "processedAt": "2025-05-29T11:02:33.565Z",
-        "recipeIndex": 2
+        "recipeIndex": 2,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:02:33.565Z",
+        "error": null
       }
     },
     {
+      "id": "003",
       "title": "Lieu & sauce curry-citron façon bistrot",
       "subtitle": "avec une purée de patate douce & persil",
       "duration": "35-40 min",
@@ -308,10 +325,6 @@
           }
         }
       ],
-      "allergens": [
-        "Poisson",
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Le grand bain: Épluchez de 200g de pommes de terre et 300g de patate douce. Coupez-les en morceaux. Faites bouillir une casserole d'eau salée, puis ajoutez les pommes de terre et la patate douce. Faites cuire environ 12-15 minutes jusqu'à tendreté."
@@ -342,6 +355,10 @@
         "proteines": "33 g",
         "sel": "2.3 g"
       },
+      "allergens": [
+        "Poisson",
+        "Lait"
+      ],
       "tips": [
         "Pour une meilleure saveur, vous pouvez ajouter un peu de zeste de citron dans la sauce."
       ],
@@ -359,10 +376,15 @@
           "verso": "20250529_120428.jpg"
         },
         "processedAt": "2025-05-29T11:03:27.829Z",
-        "recipeIndex": 3
+        "recipeIndex": 3,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:03:27.829Z",
+        "error": null
       }
     },
     {
+      "id": "004",
       "title": "Poulet & haricots noirs à la mexicaine",
       "subtitle": "avec de l'avocat & du fromage frais",
       "duration": "35-40 min",
@@ -440,9 +462,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Faites cuire le riz."
@@ -473,6 +492,9 @@
         "proteines": "37 g",
         "sel": "2.37 g"
       },
+      "allergens": [
+        "Lait"
+      ],
       "tips": [
         "Ajoutez une pincée d'épices mexicaines pour relever le goût."
       ],
@@ -489,10 +511,15 @@
           "verso": "20250529_120433.jpg"
         },
         "processedAt": "2025-05-29T11:03:59.603Z",
-        "recipeIndex": 4
+        "recipeIndex": 4,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:03:59.603Z",
+        "error": null
       }
     },
     {
+      "id": "005",
       "title": "Nouilles au boeuf sautées à la thaï",
       "subtitle": "avec du piment & de l'oignon nouveau",
       "duration": "25-35 min",
@@ -570,10 +597,6 @@
           }
         }
       ],
-      "allergens": [
-        "Nouilles de blé",
-        "Sauce soja"
-      ],
       "steps": [
         {
           "text": "Faites bouillir une casserole d'eau avec du sel. Ajoutez les nouilles et faites cuire 3 min. Égouttez et réservez."
@@ -598,6 +621,10 @@
         "proteines": "14 g",
         "sel": "1.1 g"
       },
+      "allergens": [
+        "Nouilles de blé",
+        "Sauce soja"
+      ],
       "tips": [
         "Vérifiez l'intensité du piment avant de l'utiliser pour ajuster à votre goût."
       ],
@@ -613,10 +640,15 @@
           "verso": "20250529_120439.jpg"
         },
         "processedAt": "2025-05-29T11:04:29.628Z",
-        "recipeIndex": 5
+        "recipeIndex": 5,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:04:29.628Z",
+        "error": null
       }
     },
     {
+      "id": "006",
       "title": "Gyudon : bowl de boeuf à la japonaise",
       "subtitle": "avec du pak-choï, des graines de sésame",
       "duration": "35-40 min",
@@ -680,10 +712,6 @@
           }
         }
       ],
-      "allergens": [
-        "Soja",
-        "Sésame"
-      ],
       "steps": [
         {
           "text": "Coupez l'oignon en fines demi-rondelles et l'ail en petits morceaux. Prélevez le gingembre à l'aide d'une cuillère et taillez-le en fines lamelles."
@@ -714,6 +742,10 @@
         "proteines": "39 g",
         "sel": "2 g"
       },
+      "allergens": [
+        "Soja",
+        "Sésame"
+      ],
       "tips": [],
       "tags": [
         "Famille",
@@ -727,10 +759,15 @@
           "verso": "20250529_120444.jpg"
         },
         "processedAt": "2025-05-29T11:04:58.144Z",
-        "recipeIndex": 6
+        "recipeIndex": 6,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:04:58.144Z",
+        "error": null
       }
     },
     {
+      "id": "007",
       "title": "One pot orzo, poulet & herbes de Provence",
       "subtitle": "avec des épinards & du fromage frais",
       "duration": "25-35 min",
@@ -808,10 +845,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Amandes"
-      ],
       "steps": [
         {
           "text": "Veillez à réaliser les étapes de découpe listées dans les ingrédients."
@@ -836,6 +869,10 @@
         "proteines": "34 g",
         "sel": "0.6 g"
       },
+      "allergens": [
+        "Lait",
+        "Amandes"
+      ],
       "tips": [
         "Servez dans des assiettes creuses.",
         "Pressez un peu de citron selon votre goût."
@@ -851,10 +888,15 @@
           "verso": "20250529_120448.jpg"
         },
         "processedAt": "2025-05-29T11:05:30.191Z",
-        "recipeIndex": 7
+        "recipeIndex": 7,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:05:30.191Z",
+        "error": null
       }
     },
     {
+      "id": "008",
       "title": "Curry bowl de saumon & lentilles corail",
       "subtitle": "avec du brocoli et du lait de coco",
       "duration": "35-40 min",
@@ -918,9 +960,6 @@
           }
         }
       ],
-      "allergens": [
-        "Poisson"
-      ],
       "steps": [
         {
           "text": "Coupez le brocoli en petits bouquets et l'oignon en fines demi-lunes. Rincez les lentilles."
@@ -945,6 +984,9 @@
         "proteines": "34 g",
         "sel": "2 g"
       },
+      "allergens": [
+        "Poisson"
+      ],
       "tips": [
         "N’ajoutez pas trop d’eau au mélange de lentilles. Attention au temps de cuisson du saumon pour un moelleux parfait."
       ],
@@ -960,10 +1002,15 @@
           "verso": "20250529_120452.jpg"
         },
         "processedAt": "2025-05-29T11:05:52.501Z",
-        "recipeIndex": 8
+        "recipeIndex": 8,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:05:52.501Z",
+        "error": null
       }
     },
     {
+      "id": "009",
       "title": "Poulet croustillant façon katsu japonais",
       "subtitle": "avec du coleslaw & une mayo au soja",
       "duration": "25-35 min",
@@ -1034,10 +1081,6 @@
           }
         }
       ],
-      "allergens": [
-        "Sésame",
-        "Soja"
-      ],
       "steps": [
         {
           "text": "Ouvrez le citron en deux et pressez la moitié. Mélangez le jus avec la mayonnaise. Rincez le riz."
@@ -1062,6 +1105,10 @@
         "proteines": "32 g",
         "sel": "2.2 g"
       },
+      "allergens": [
+        "Sésame",
+        "Soja"
+      ],
       "tips": [
         "En l’absence de gingembre, utilisez du poivre pour le goût."
       ],
@@ -1077,10 +1124,15 @@
           "verso": "20250529_120457.jpg"
         },
         "processedAt": "2025-05-29T11:06:19.704Z",
-        "recipeIndex": 9
+        "recipeIndex": 9,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:06:19.704Z",
+        "error": null
       }
     },
     {
+      "id": "010",
       "title": "Bowl d'énergie aux crevettes & poireaux",
       "subtitle": "avec un beurre épicé au curry & des noix de cajou",
       "duration": "35 min",
@@ -1137,10 +1189,6 @@
           }
         }
       ],
-      "allergens": [
-        "Crustacés",
-        "Fruits à coque"
-      ],
       "steps": [
         {
           "text": "Le riz passe à casserole. Portez une casserole d'eau salée à ébullition pour le riz."
@@ -1165,6 +1213,10 @@
         "proteines": "25 g",
         "sel": "1.2 g"
       },
+      "allergens": [
+        "Crustacés",
+        "Fruits à coque"
+      ],
       "tips": [
         "Pour que le riz soit plus savoureux, vous pouvez ajouter un peu de beurre."
       ],
@@ -1181,10 +1233,15 @@
           "verso": "20250529_120502.jpg"
         },
         "processedAt": "2025-05-29T11:06:46.382Z",
-        "recipeIndex": 10
+        "recipeIndex": 10,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:06:46.382Z",
+        "error": null
       }
     },
     {
+      "id": "011",
       "title": "Pizza Regina sur naan",
       "subtitle": "avec du jambon, de l'origan & des champignons",
       "duration": "20-25 min",
@@ -1255,10 +1312,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Gluten"
-      ],
       "steps": [
         {
           "text": "Préchauffez le four à 200°C (220°C chaleur tournante). Écrasez l'ail et hachez finement l'échalote."
@@ -1283,6 +1336,10 @@
         "proteines": "27 g",
         "sel": "2.5 g"
       },
+      "allergens": [
+        "Lait",
+        "Gluten"
+      ],
       "tips": [],
       "tags": [
         "Rapide"
@@ -1295,10 +1352,15 @@
           "verso": "20250529_120508.jpg"
         },
         "processedAt": "2025-05-29T11:07:12.775Z",
-        "recipeIndex": 11
+        "recipeIndex": 11,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:07:12.775Z",
+        "error": null
       }
     },
     {
+      "id": "012",
       "title": "Burrito au porc mariné à la mexicaine",
       "subtitle": "avec des haricots noirs & du cheddar",
       "duration": "20-35 min",
@@ -1376,9 +1438,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Coupez l'oignon en fines demi-rondelles. Émincez l'ail. Préchauffez le four à 180°C."
@@ -1403,6 +1462,9 @@
         "proteines": "30.2 g",
         "sel": "2.3 g"
       },
+      "allergens": [
+        "Lait"
+      ],
       "tips": [
         "Ajustez le goût de la vinaigrette selon vos préférences."
       ],
@@ -1418,10 +1480,15 @@
           "verso": "20250529_120512.jpg"
         },
         "processedAt": "2025-05-29T11:07:33.273Z",
-        "recipeIndex": 12
+        "recipeIndex": 12,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:07:33.273Z",
+        "error": null
       }
     },
     {
+      "id": "013",
       "title": "Poulet à la crème de poireau & muscade",
       "subtitle": "avec du gouda, du riz & du persil",
       "duration": "25-35 min",
@@ -1485,9 +1552,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Coupez le poireau en fines rondelles. Émincez l’ail."
@@ -1512,6 +1576,9 @@
         "proteines": "31",
         "sel": "1.1"
       },
+      "allergens": [
+        "Lait"
+      ],
       "tips": [
         "Veillez à bien cuire le riz.",
         "Ajoutez un peu d’eau si nécessaire pour atteindre la texture désirée."
@@ -1528,10 +1595,15 @@
           "verso": "20250529_120526.jpg"
         },
         "processedAt": "2025-05-29T11:07:57.725Z",
-        "recipeIndex": 13
+        "recipeIndex": 13,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:07:57.725Z",
+        "error": null
       }
     },
     {
+      "id": "014",
       "title": "Combo fulgurant: tagliata de boeuf & rigatoni",
       "subtitle": "avec des champignons crémeux & du thym",
       "duration": "35-45 min",
@@ -1588,9 +1660,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Émincez l'ail et l'oignon en petits dés."
@@ -1615,6 +1684,9 @@
         "proteines": "20 g",
         "sel": "0.6 g"
       },
+      "allergens": [
+        "Lait"
+      ],
       "tips": [
         "Assurez-vous de bien couvrir la viande pour la garder au chaud."
       ],
@@ -1630,10 +1702,15 @@
           "verso": "20250529_120531.jpg"
         },
         "processedAt": "2025-05-29T11:08:19.393Z",
-        "recipeIndex": 14
+        "recipeIndex": 14,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:08:19.393Z",
+        "error": null
       }
     },
     {
+      "id": "015",
       "title": "Croque poulet & pesto rosso vitesse turbo",
       "subtitle": "avec du gouda fondant & de la sucrine",
       "duration": "15-20 min",
@@ -1683,10 +1760,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Gluten"
-      ],
       "steps": [
         {
           "text": "Émincez les filets de poulet et râpez le gouda."
@@ -1711,6 +1784,10 @@
         "proteines": "20 g",
         "sel": "3 g"
       },
+      "allergens": [
+        "Lait",
+        "Gluten"
+      ],
       "tips": [
         "Utilisez des restes de poulet rôti pour plus de saveur."
       ],
@@ -1727,10 +1804,15 @@
           "verso": "20250529_120536.jpg"
         },
         "processedAt": "2025-05-29T11:08:42.842Z",
-        "recipeIndex": 15
+        "recipeIndex": 15,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:08:42.842Z",
+        "error": null
       }
     },
     {
+      "id": "016",
       "title": "Filet de lieu & fondue légère de poireaux",
       "subtitle": "Avec une pointe de moutarde & des grenailles",
       "duration": "35-40 min",
@@ -1787,10 +1869,6 @@
           }
         }
       ],
-      "allergens": [
-        "Poisson",
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Préchauffez le four à 200°C. Coupez les grenailles en deux et placez-les sur une plaque recouverte de papier sulfurisé. Arrosez-les d'huile d'olive, salez et poivrez. Enfournez 25-30 min."
@@ -1821,6 +1899,10 @@
         "proteines": "30 g",
         "sel": "1.5 g"
       },
+      "allergens": [
+        "Poisson",
+        "Lait"
+      ],
       "tips": [
         "Pour une sauce plus épaisse, laissez mijoter plus longtemps.",
         "Ajoutez du citron selon votre goût."
@@ -1837,10 +1919,15 @@
           "verso": "20250529_120542.jpg"
         },
         "processedAt": "2025-05-29T11:09:12.377Z",
-        "recipeIndex": 16
+        "recipeIndex": 16,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:09:12.377Z",
+        "error": null
       }
     },
     {
+      "id": "017",
       "title": "Mafé revisité au poulet & carotte",
       "subtitle": "avec des cacahuètes & du gingembre",
       "duration": "15-35 min",
@@ -1925,9 +2012,6 @@
           }
         }
       ],
-      "allergens": [
-        "Cacahuètes"
-      ],
       "steps": [
         {
           "text": "Portez une casserole d'eau salée à ébullition pour le riz."
@@ -1952,6 +2036,9 @@
         "proteines": "36 g",
         "sel": "1.5 g"
       },
+      "allergens": [
+        "Cacahuètes"
+      ],
       "tips": [
         "Utilisez du riz parfumé pour encore plus de saveurs."
       ],
@@ -1967,10 +2054,15 @@
           "verso": "20250529_120548.jpg"
         },
         "processedAt": "2025-05-29T11:09:39.266Z",
-        "recipeIndex": 17
+        "recipeIndex": 17,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:09:39.266Z",
+        "error": null
       }
     },
     {
+      "id": "018",
       "title": "Velouté épicé patate douce coco & curcuma",
       "subtitle": "servi avec un pain à l'ail & au persil",
       "duration": "35-40 min",
@@ -2048,7 +2140,6 @@
           }
         }
       ],
-      "allergens": [],
       "steps": [
         {
           "text": "Préparez l'oignon et la carotte. Hachez l'ail."
@@ -2079,6 +2170,7 @@
         "proteines": "7.9 g",
         "sel": "1.4 g"
       },
+      "allergens": [],
       "tips": [
         "Ajoutez du persil frais selon vos goûts."
       ],
@@ -2094,10 +2186,15 @@
           "verso": "20250529_120556.jpg"
         },
         "processedAt": "2025-05-29T11:10:33.694Z",
-        "recipeIndex": 18
+        "recipeIndex": 18,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:10:33.694Z",
+        "error": null
       }
     },
     {
+      "id": "019",
       "title": "One Pot Pasta: saucisse et champis",
       "subtitle": "avec de la crème, du fromage râpé et du persil",
       "duration": "15-20 min",
@@ -2175,9 +2272,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait (milk)"
-      ],
       "steps": [
         {
           "text": "Faites chauffer une grande casserole à feu moyen avec un filet d'huile de tournesol. Ajoutez les Saucisses émiettées. Faites-les dorer 5 à 6 min."
@@ -2202,6 +2296,9 @@
         "proteines": "38 g",
         "sel": "3 g"
       },
+      "allergens": [
+        "Lait (milk)"
+      ],
       "tips": [
         "Salez légèrement pour ne pas trop saler.",
         "Ajoutez un peu d'eau si nécessaire.",
@@ -2221,10 +2318,15 @@
           "verso": "20250529_120602.jpg"
         },
         "processedAt": "2025-05-29T11:10:59.112Z",
-        "recipeIndex": 19
+        "recipeIndex": 19,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:10:59.112Z",
+        "error": null
       }
     },
     {
+      "id": "020",
       "title": "Mijoté extra-rapide au poulet crémeux",
       "subtitle": "avec des haricots blancs & des épinards",
       "duration": "15-20 min",
@@ -2295,7 +2397,6 @@
           }
         }
       ],
-      "allergens": [],
       "steps": [
         {
           "text": "Préparez l'ensemble de vos ingrédients selon les instructions. Émincez l'oignon et l'ail. Coupez le poulet en morceaux."
@@ -2320,6 +2421,7 @@
         "proteines": "31",
         "sel": "2.2"
       },
+      "allergens": [],
       "tips": [
         "Essayez avec des pâtes pour une version plus consistante."
       ],
@@ -2335,10 +2437,15 @@
           "verso": "20250529_120607.jpg"
         },
         "processedAt": "2025-05-29T11:11:20.714Z",
-        "recipeIndex": 20
+        "recipeIndex": 20,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:11:20.714Z",
+        "error": null
       }
     },
     {
+      "id": "021",
       "title": "La Méditerranéenne : penne, thon & olives",
       "subtitle": "avec du fromage à la grecque & des radis",
       "duration": "25-35 min",
@@ -2409,9 +2516,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Prélevez le zeste du citron. Faites cuire les penne pendant 12 min dans une grande casserole d’eau bouillante avec le bouillon. Effeuillez et ciselez la menthe et le persil."
@@ -2436,6 +2540,9 @@
         "proteines": "39 g",
         "sel": "2.6 g"
       },
+      "allergens": [
+        "Lait"
+      ],
       "tips": [
         "Ajoutez du fromage à la grecque selon votre goût."
       ],
@@ -2452,10 +2559,15 @@
           "verso": "20250529_120611.jpg"
         },
         "processedAt": "2025-05-29T11:11:48.110Z",
-        "recipeIndex": 21
+        "recipeIndex": 21,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:11:48.110Z",
+        "error": null
       }
     },
     {
+      "id": "022",
       "title": "Rigatoni bacon & crème de bleu",
       "subtitle": "avec de la ciboulette & des noix concassées",
       "duration": "25-35 min",
@@ -2512,10 +2624,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait (lactose)",
-        "Fruits à coque"
-      ],
       "steps": [
         {
           "text": "Coupez finement l'oignon. Ciselez la ciboulette. Coupez les tranches de poitrine fumée en lanières et faites-les revenir 4-5 min."
@@ -2540,6 +2648,10 @@
         "proteines": "26.1",
         "sel": "2.6"
       },
+      "allergens": [
+        "Lait (lactose)",
+        "Fruits à coque"
+      ],
       "tips": [
         "Ajustez la quantité de poivre selon votre goût."
       ],
@@ -2555,10 +2667,15 @@
           "verso": "20250529_120616.jpg"
         },
         "processedAt": "2025-05-29T11:12:13.608Z",
-        "recipeIndex": 22
+        "recipeIndex": 22,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:12:13.608Z",
+        "error": null
       }
     },
     {
+      "id": "023",
       "title": "Risotto D'Amore saveur truffe",
       "subtitle": "avec du Parmigiano Reggiano AOP & du persil",
       "duration": "35-45 min",
@@ -2622,9 +2739,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait (y compris lactose)"
-      ],
       "steps": [
         {
           "text": "Faites chauffer un filet d'huile d'olive dans une sauteuse à feu moyen. Faites-y revenir les champignons 5-6 min puis ajoutez l'ail et la moitié de l'échalote 2-3 min."
@@ -2655,6 +2769,9 @@
         "proteines": "28.3 g",
         "sel": "1.9 g"
       },
+      "allergens": [
+        "Lait (y compris lactose)"
+      ],
       "tips": [
         "Ajoutez plus de Parmesan ou de sel selon votre goût."
       ],
@@ -2670,10 +2787,15 @@
           "verso": "20250529_120620.jpg"
         },
         "processedAt": "2025-05-29T11:12:47.598Z",
-        "recipeIndex": 23
+        "recipeIndex": 23,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:12:47.598Z",
+        "error": null
       }
     },
     {
+      "id": "024",
       "title": "Saucisse de Toulouse & purée au cantal AOP",
       "subtitle": "avec des oignons confits & des champignons",
       "duration": "35-40 min",
@@ -2723,9 +2845,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait (y compris lactose)"
-      ],
       "steps": [
         {
           "text": "Épluchez et coupez les pommes de terre en morceaux."
@@ -2756,6 +2875,9 @@
         "proteines": "25 g",
         "sel": "3 g"
       },
+      "allergens": [
+        "Lait (y compris lactose)"
+      ],
       "tips": [
         "Utilisez une presse-purée pour une texture plus lisse.",
         "Ajoutez plus de thym si vous aimez son goût."
@@ -2772,10 +2894,15 @@
           "verso": "20250529_120625.jpg"
         },
         "processedAt": "2025-05-29T11:13:12.368Z",
-        "recipeIndex": 24
+        "recipeIndex": 24,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:13:12.368Z",
+        "error": null
       }
     },
     {
+      "id": "025",
       "title": "Gratin d'enfance de pâtes aux lardons",
       "subtitle": "avec une crème au gouda & du persil",
       "duration": "15-20 min",
@@ -2846,10 +2973,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Gluten"
-      ],
       "steps": [
         {
           "text": "Portez une grande casserole d'eau salée à ébullition pour les pâtes. Épluchez et coupez l'oignon."
@@ -2877,6 +3000,10 @@
         "proteines": "22 g",
         "sel": "2.3 g"
       },
+      "allergens": [
+        "Lait",
+        "Gluten"
+      ],
       "tips": [
         "Vous pouvez ajouter un peu d'eau de cuisson des pâtes pour un gratin plus onctueux."
       ],
@@ -2892,10 +3019,15 @@
           "verso": "20250529_120629.jpg"
         },
         "processedAt": "2025-05-29T11:13:35.682Z",
-        "recipeIndex": 25
+        "recipeIndex": 25,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:13:35.682Z",
+        "error": null
       }
     },
     {
+      "id": "026",
       "title": "Rigatoni gourmands au pesto vert & burrata",
       "subtitle": "avec des épinards & des noisettes grillées",
       "duration": "35-40 min",
@@ -2959,10 +3091,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Fruits à coque"
-      ],
       "steps": [
         {
           "text": "Portez l’eau à ébullition dans la casserole pour les rigatoni."
@@ -2987,6 +3115,10 @@
         "proteines": "7.2 g",
         "sel": "0.6 g"
       },
+      "allergens": [
+        "Lait",
+        "Fruits à coque"
+      ],
       "tips": [
         "Ajoutez le zeste de citron pour plus de saveur."
       ],
@@ -3003,10 +3135,15 @@
           "verso": "20250529_120633.jpg"
         },
         "processedAt": "2025-05-29T11:14:02.274Z",
-        "recipeIndex": 26
+        "recipeIndex": 26,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:14:02.274Z",
+        "error": null
       }
     },
     {
+      "id": "027",
       "title": "Poulet à la crème de poireau & muscade",
       "subtitle": "avec du gouda, du riz & du persil",
       "duration": "20-25 min",
@@ -3070,9 +3207,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait"
-      ],
       "steps": [
         {
           "text": "Coupez le poireau en fines rondelles. Pressez ou émincez l'ail."
@@ -3097,6 +3231,9 @@
         "proteines": "49.6 g",
         "sel": "1.1 g"
       },
+      "allergens": [
+        "Lait"
+      ],
       "tips": [
         "Servez ce plat avec un bon vin blanc.",
         "Ajoutez de la muscade selon votre goût."
@@ -3113,10 +3250,15 @@
           "verso": "20250529_120637.jpg"
         },
         "processedAt": "2025-05-29T11:14:26.264Z",
-        "recipeIndex": 27
+        "recipeIndex": 27,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:14:26.264Z",
+        "error": null
       }
     },
     {
+      "id": "028",
       "title": "Burrito bowl tex-mex au poulet",
       "subtitle": "avec de la coriandre & des pickles d'oignon",
       "duration": "35-45 min",
@@ -3187,9 +3329,6 @@
           }
         }
       ],
-      "allergens": [
-        "lait"
-      ],
       "steps": [
         {
           "text": "Coupez l'oignon en fines demi-lunes et épluchez l'ail. Ajoutez l'ail et les épices mexicaines au riz."
@@ -3214,6 +3353,9 @@
         "proteines": "39.6 g",
         "sel": "2.5 g"
       },
+      "allergens": [
+        "lait"
+      ],
       "tips": [
         "Assurez-vous que le riz ne colle pas en remuant régulièrement."
       ],
@@ -3230,10 +3372,15 @@
           "verso": "20250529_120643.jpg"
         },
         "processedAt": "2025-05-29T11:14:46.362Z",
-        "recipeIndex": 28
+        "recipeIndex": 28,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:14:46.362Z",
+        "error": null
       }
     },
     {
+      "id": "029",
       "title": "One Pot Pasta saucisse & champis à la crème",
       "subtitle": "avec du fromage râpé & du persil",
       "duration": "25-30 min",
@@ -3304,10 +3451,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Moutarde"
-      ],
       "steps": [
         {
           "text": "Préparez l'oignon, coupez les champignons en tranches."
@@ -3335,6 +3478,10 @@
         "proteines": "27.1 g",
         "sel": "1.56 g"
       },
+      "allergens": [
+        "Lait",
+        "Moutarde"
+      ],
       "tips": [
         "Astuce: Assaisonnez à votre goût."
       ],
@@ -3350,10 +3497,15 @@
           "verso": "20250529_120649.jpg"
         },
         "processedAt": "2025-05-29T11:15:14.787Z",
-        "recipeIndex": 29
+        "recipeIndex": 29,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:15:14.787Z",
+        "error": null
       }
     },
     {
+      "id": "030",
       "title": "Gnocchi, sauce au bleu & poireau fondant",
       "subtitle": "avec de la muscade & une salade aux noix",
       "duration": "25-30 min",
@@ -3424,9 +3576,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lactose"
-      ],
       "steps": [
         {
           "text": "Coupez le poireau."
@@ -3451,6 +3600,9 @@
         "proteines": "20 g",
         "sel": "2 g"
       },
+      "allergens": [
+        "Lactose"
+      ],
       "tips": [],
       "tags": [
         "Rapide",
@@ -3465,10 +3617,15 @@
           "verso": "20250529_120657.jpg"
         },
         "processedAt": "2025-05-29T11:15:34.196Z",
-        "recipeIndex": 30
+        "recipeIndex": 30,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:15:34.196Z",
+        "error": null
       }
     },
     {
+      "id": "031",
       "title": "Nouilles au bœuf haché façon Dan Dan",
       "subtitle": "avec du piment, du pak choï et des cacahuètes",
       "duration": "25-35 min",
@@ -3553,11 +3710,6 @@
           }
         }
       ],
-      "allergens": [
-        "blé",
-        "soja",
-        "arachides"
-      ],
       "steps": [
         {
           "text": "Préparez les ingrédients : Émincez l'oignon, ciselez le piment. Concassez les cacahuètes."
@@ -3582,6 +3734,11 @@
         "proteines": "42 g",
         "sel": "3.2 g"
       },
+      "allergens": [
+        "blé",
+        "soja",
+        "arachides"
+      ],
       "tips": [
         "Utilisez des baguettes pour un repas authentique."
       ],
@@ -3598,10 +3755,15 @@
           "verso": "20250529_120702.jpg"
         },
         "processedAt": "2025-05-29T11:16:02.918Z",
-        "recipeIndex": 31
+        "recipeIndex": 31,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:16:02.918Z",
+        "error": null
       }
     },
     {
+      "id": "032",
       "title": "One pot crevettes & orzo à la toscane",
       "subtitle": "avec du grana padano AOP & des épinards",
       "duration": "25-35 min",
@@ -3665,9 +3827,6 @@
           }
         }
       ],
-      "allergens": [
-        "Grana Padano AOP"
-      ],
       "steps": [
         {
           "text": "Coupez l'oignon et l'ail. Coupez les tomates séchées en fines lamelles."
@@ -3698,6 +3857,9 @@
         "proteines": "36 g",
         "sel": "3 g"
       },
+      "allergens": [
+        "Grana Padano AOP"
+      ],
       "tips": [
         "Vérifiez que les crevettes sont bien cuites.",
         "Ajoutez du parmesan selon votre goût."
@@ -3714,10 +3876,15 @@
           "verso": "20250529_120707.jpg"
         },
         "processedAt": "2025-05-29T11:16:30.040Z",
-        "recipeIndex": 32
+        "recipeIndex": 32,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:16:30.040Z",
+        "error": null
       }
     },
     {
+      "id": "033",
       "title": "Linguine chorizo & crème à l'espagnole",
       "subtitle": "avec des noix & des épinards",
       "duration": "15-25 min",
@@ -3788,10 +3955,6 @@
           }
         }
       ],
-      "allergens": [
-        "Lait",
-        "Noix"
-      ],
       "steps": [
         {
           "text": "Préchauffez une grande poêle sèche et faites-y dorer l'oignon et la gousse d'ail avec la crème liquide. Cuisez à feu doux, à couvert, environ 3-5 minutes, ou jusqu'à ce qu'ils soient croustillants."
@@ -3816,6 +3979,10 @@
         "proteines": "41 g",
         "sel": "2.87 g"
       },
+      "allergens": [
+        "Lait",
+        "Noix"
+      ],
       "tips": [
         "Ajoutez une noisette de beurre pour un goût plus riche.",
         "Servez avec du fromage râpé pour une touche finale."
@@ -3832,10 +3999,15 @@
           "verso": "20250529_120717.jpg"
         },
         "processedAt": "2025-05-29T11:16:53.280Z",
-        "recipeIndex": 33
+        "recipeIndex": 33,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:16:53.280Z",
+        "error": null
       }
     },
     {
+      "id": "034",
       "title": "Tagliatelle aux crevettes pimentées",
       "subtitle": "Avec une sauce tomate, de l'ail & du persil",
       "duration": "15-25 min",
@@ -3892,9 +4064,6 @@
           }
         }
       ],
-      "allergens": [
-        "Crustacés"
-      ],
       "steps": [
         {
           "text": "Épluchez et émincez l'échalote. Effeuillez et ciselez le persil."
@@ -3919,6 +4088,9 @@
         "proteines": "37 g",
         "sel": "3.5 g"
       },
+      "allergens": [
+        "Crustacés"
+      ],
       "tips": [
         "Servez avec des extra crevettes.",
         "Versez un trait d'huile d'olive avant de servir."
@@ -3934,17 +4106,12 @@
           "verso": "20250529_120723.jpg"
         },
         "processedAt": "2025-05-29T11:17:18.375Z",
-        "recipeIndex": 34
+        "recipeIndex": 34,
+        "extracted": true,
+        "validated": false,
+        "extractedAt": "2025-05-29T11:17:18.375Z",
+        "error": null
       }
     }
-  ],
-  "metadata": {
-    "totalRecipes": 34,
-    "totalErrors": 0,
-    "successRate": "100%",
-    "processingTimeSeconds": 11,
-    "processedAt": "2025-05-29T17:28:19.978Z",
-    "source": "HelloFresh",
-    "errors": []
-  }
+  ]
 }
