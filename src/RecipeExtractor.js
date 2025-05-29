@@ -84,10 +84,7 @@ SCHÉMA JSON REQUIS:
   ],
   "allergens": ["..."],
   "steps": [
-    {
-      "text": "...",
-      "image": "step1.jpg"
-    }
+    { "text": "..." }
   ],
   "nutrition": {
     "calories": "...",
@@ -101,15 +98,12 @@ SCHÉMA JSON REQUIS:
   },
   "tips": ["..."],
   "tags": ["..."],
-  "image": "recipe_main.jpg",
   "source": "HelloFresh"
 }
 
 INSTRUCTIONS SPÉCIFIQUES:
 
 1. **Ingrédients**: Sépare bien la quantité en "value" (nombre) et "unit" (texte). Si une valeur est floue, mets "value": null mais indique l'unité si possible.
-
-2. **Étapes**: Associe chaque instruction à son image (step1.jpg, step2.jpg, etc.). S'il n'y a pas d'image spécifique pour une étape, utilise un nom générique.
 
 3. **Difficulté**: Utilise une échelle de 1 à 5 (1 = très facile, 5 = très difficile).
 

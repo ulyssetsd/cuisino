@@ -32,7 +32,7 @@ async function testProcessing() {
                 ],
                 allergens: ["Test"],
                 steps: [
-                    { text: "Étape de test", image: "step1.jpg" }
+                    { text: "Étape de test" }
                 ],
                 nutrition: {
                     calories: "500 kcal",
@@ -41,7 +41,6 @@ async function testProcessing() {
                 },
                 tips: ["Conseil de test"],
                 tags: ["Test"],
-                image: "recipe_main.jpg",
                 source: "HelloFresh"
             };
             

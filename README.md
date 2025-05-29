@@ -30,7 +30,7 @@ Ce projet permet d'automatiser l'extraction de données de recettes à partir de
   ],
   "allergens": ["Gluten", "Lactose"],
   "steps": [
-    { "text": "Instruction étape 1", "image": "step1.jpg" }
+    { "text": "Instruction étape 1" }
   ],
   "nutrition": {
     "calories": "650 kcal",
@@ -39,7 +39,6 @@ Ce projet permet d'automatiser l'extraction de données de recettes à partir de
   },
   "tips": ["Conseil utile"],
   "tags": ["Italien", "Végétarien"],
-  "image": "recipe_main.jpg",
   "source": "HelloFresh"
 }
 ```

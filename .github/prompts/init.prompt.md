@@ -19,8 +19,7 @@ Je veux que tu m’aides à extraire les données des paires d’images et les c
   "allergens": ["..."],
   "steps": [
     {
-      "text": "...",
-      "image": "step1.jpg"
+      "text": "..."
     }
   ],
   "nutrition": {
@@ -41,8 +40,6 @@ Je veux que tu m’aides à extraire les données des paires d’images et les c
 ```
 
 Pour les ingrédients, sépare bien la quantité en `value` (un nombre) et `unit` (ex: `"g"`, `"pièce"`, `"cc"`…). Si une valeur est absente ou floue, mets `"value": null` mais indique l’unité si elle est connue.
-
-Pour les étapes, associe chaque texte d’instruction à son image (étape 1 → step1.jpg, etc.).
 
 Je travaille en Node.js et j’utilise le paquet openai pour interagir avec ChatGPT et analyser les images. Le traitement est entièrement automatisé : les images sont envoyées à l’API en séquence pour extraire les données de chaque recette.
 Pour l’instant, le projet est vide. J’aimerais que tu m’aides à initialiser la structure du projet et à poser les premières bases du traitement (lecture des images, appel API, génération du JSON).
