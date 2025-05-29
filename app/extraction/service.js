@@ -21,7 +21,8 @@ class ExtractionService {
         Logger.progress(recipe.id, '?', `Extracting recipe from images`);
 
         try {
-            const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath); const response = await this.openai.chat.completions.create({
+            const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath);
+            const response = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
                 messages: [
@@ -139,7 +140,7 @@ IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
             const recipe = JSON.parse(jsonStr);
 
             // Validate required fields
-            if (!parsed.title || !parsed.ingredients || !parsed.instructions) {
+            if (!recipe.title || !recipe.ingredients || !recipe.instructions) {
                 throw new Error('Missing required fields in extraction result');
             }
 
