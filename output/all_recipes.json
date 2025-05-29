@@ -1460,7 +1460,7 @@
           "name": "Noix de muscade",
           "quantity": {
             "value": null,
-            "unit": ""
+            "unit": "cc"
           }
         },
         {
@@ -3065,8 +3065,8 @@
         {
           "name": "Noix de muscade",
           "quantity": {
-            "value": null,
-            "unit": "à râper"
+            "value": 1,
+            "unit": "cs"
           }
         }
       ],
@@ -3942,8 +3942,8 @@
     "totalRecipes": 34,
     "totalErrors": 0,
     "successRate": "100%",
-    "processingTimeSeconds": 21,
-    "processedAt": "2025-05-29T17:21:10.485Z",
+    "processingTimeSeconds": 11,
+    "processedAt": "2025-05-29T17:28:19.978Z",
     "source": "HelloFresh",
     "errors": []
   }
