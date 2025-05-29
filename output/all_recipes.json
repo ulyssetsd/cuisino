@@ -10,21 +10,21 @@
         {
           "name": "Amandes effilées",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "sachet"
           }
         },
         {
           "name": "Paprika fumé en poudre",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "cc"
           }
         },
         {
           "name": "Lentilles corail",
           "quantity": {
-            "value": null,
+            "value": 75,
             "unit": "g"
           }
         },
@@ -45,14 +45,14 @@
         {
           "name": "Filet de lieu noir",
           "quantity": {
-            "value": null,
-            "unit": "g"
+            "value": 2,
+            "unit": "pièces"
           }
         },
         {
           "name": "Épinards",
           "quantity": {
-            "value": null,
+            "value": 200,
             "unit": "g"
           }
         },
@@ -114,6 +114,7 @@
         "Purée",
         "Paprika"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -188,16 +189,16 @@
           }
         },
         {
-          "name": "Cuvée d'huile d'olive",
+          "name": "Huile d'olive",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "cc"
           }
         },
         {
-          "name": "Vinaigre balsamique",
+          "name": "Vinaigre balsamique noir",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "cc"
           }
         }
@@ -232,6 +233,7 @@
         "Rapide",
         "Vive les légumes"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -349,6 +351,7 @@
         "Curry",
         "Facile"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -390,8 +393,8 @@
         {
           "name": "Épices mexicaines",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 2,
+            "unit": "sachet"
           }
         },
         {
@@ -478,6 +481,7 @@
         "Épicé",
         "Facile"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -601,6 +605,7 @@
         "Rapide",
         "Cuisine thaïlandaise"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -621,56 +626,56 @@
         {
           "name": "Graines de sésame",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 5,
+            "unit": "g"
           }
         },
         {
-          "name": "Pak-choï",
+          "name": "Pak choï",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "pièce"
           }
         },
         {
           "name": "Gousse d'ail",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "gousse"
           }
         },
         {
           "name": "Riz",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 150,
+            "unit": "g"
           }
         },
         {
           "name": "Émincés de boeuf",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "paquet"
           }
         },
         {
           "name": "Sauce soja",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "cs"
           }
         },
         {
           "name": "Gingembre frais",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "pièce"
           }
         },
         {
           "name": "Oignon",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "pièce"
           }
         }
@@ -714,6 +719,7 @@
         "Famille",
         "Calorie Smart"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -837,6 +843,7 @@
       "tags": [
         "Familial"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -945,6 +952,7 @@
         "Calorie Smart",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1061,6 +1069,7 @@
         "Famille",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1164,6 +1173,7 @@
         "Famille",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1184,8 +1194,8 @@
         {
           "name": "Salade",
           "quantity": {
-            "value": null,
-            "unit": " "
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
@@ -1277,6 +1287,7 @@
       "tags": [
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1399,6 +1410,7 @@
         "Famille",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1508,6 +1520,7 @@
         "Rapide",
         "Familiale"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1528,8 +1541,8 @@
         {
           "name": "Thym séché",
           "quantity": {
-            "value": null,
-            "unit": "à doser"
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
@@ -1609,6 +1622,7 @@
         "Super Sonic",
         "Facile"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1705,6 +1719,7 @@
         "Simple",
         "Poulet"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1732,7 +1747,7 @@
         {
           "name": "Thym séché",
           "quantity": {
-            "value": null,
+            "value": 2,
             "unit": "cs"
           }
         },
@@ -1814,6 +1829,7 @@
         "Poisson",
         "Calorie Smart"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -1943,6 +1959,7 @@
         "Épicé",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2069,6 +2086,7 @@
         "Végétarien",
         "Facile"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2195,6 +2213,7 @@
         "Saucisse",
         "Italien"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2271,8 +2290,8 @@
         {
           "name": "Persil",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "botte"
           }
         }
       ],
@@ -2308,6 +2327,7 @@
         "Super Rapide",
         "Familial"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2424,6 +2444,7 @@
         "Salade",
         "Méditerranéen"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2526,6 +2547,7 @@
         "Rapide",
         "Confort food"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2546,15 +2568,15 @@
         {
           "name": "Poudre de champignons",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "sachet"
           }
         },
         {
           "name": "Persil",
           "quantity": {
-            "value": null,
-            "unit": "botte"
+            "value": 5,
+            "unit": "g"
           }
         },
         {
@@ -2574,8 +2596,8 @@
         {
           "name": "Huile d'olive saveur truffe",
           "quantity": {
-            "value": null,
-            "unit": "boîte"
+            "value": 2,
+            "unit": "cs"
           }
         },
         {
@@ -2640,6 +2662,7 @@
         "Végétarien",
         "Saint-Valentin"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2741,6 +2764,7 @@
         "Famille",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2817,8 +2841,8 @@
         {
           "name": "Persil",
           "quantity": {
-            "value": null,
-            "unit": "tige"
+            "value": 5,
+            "unit": "g"
           }
         }
       ],
@@ -2860,6 +2884,7 @@
         "Peu de cuisine",
         "Plat principal"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -2878,10 +2903,10 @@
       "servings": 2,
       "ingredients": [
         {
-          "name": "Pesto vert à la genovese",
+          "name": "Pesto vert alla genovese",
           "quantity": {
-            "value": null,
-            "unit": "boîte"
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
@@ -2970,6 +2995,7 @@
         "Rapide",
         "Végé"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3040,7 +3066,7 @@
           "name": "Noix de muscade",
           "quantity": {
             "value": null,
-            "unit": "à râper"
+            "unit": ""
           }
         }
       ],
@@ -3079,6 +3105,7 @@
         "Famille",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3195,6 +3222,7 @@
         "Tex-Mex",
         "Plat principal"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3314,6 +3342,7 @@
         "Famille",
         "Peu de cuisine"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3370,7 +3399,7 @@
           "name": "Noix de muscade",
           "quantity": {
             "value": null,
-            "unit": "gousse"
+            "unit": ""
           }
         },
         {
@@ -3428,6 +3457,7 @@
         "Veggie",
         "Calorie Smart"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3560,6 +3590,7 @@
         "Asiatique",
         "Épicé"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3580,56 +3611,56 @@
         {
           "name": "Épinards",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 100,
+            "unit": "g"
           }
         },
         {
-          "name": "Grana Padano AOP",
+          "name": "Copeaux de grana padano AOP",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
           "name": "Orzo",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 150,
+            "unit": "g"
           }
         },
         {
           "name": "Crevettes",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "paquet"
           }
         },
         {
           "name": "Gousse d'ail",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "gousse"
           }
         },
         {
-          "name": "Épices Italiennes",
+          "name": "Épices italiennes",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 0.5,
+            "unit": "cc"
           }
         },
         {
           "name": "Tomates semi-séchées",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "paquet"
           }
         },
         {
           "name": "Oignon",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "pièce"
           }
         }
@@ -3675,6 +3706,7 @@
         "Calorie smart",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3693,65 +3725,65 @@
       "servings": 2,
       "ingredients": [
         {
-          "name": "Fermier râpé à l'italienne",
+          "name": "Fromage râpé à l'italienne",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
           "name": "Paprika fumé en poudre",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
           "name": "Dés de chorizo",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 100,
+            "unit": "g"
           }
         },
         {
           "name": "Crème liquide",
           "quantity": {
-            "value": null,
-            "unit": "ml"
+            "value": 200,
+            "unit": "g"
           }
         },
         {
           "name": "Noix concassées",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 1,
+            "unit": "sachet"
           }
         },
         {
           "name": "Épinards",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 100,
+            "unit": "g"
           }
         },
         {
           "name": "Gousse d'ail",
           "quantity": {
-            "value": null,
-            "unit": "gousse"
+            "value": 1,
+            "unit": "pièce"
           }
         },
         {
           "name": "Linguine",
           "quantity": {
-            "value": null,
-            "unit": "pièce"
+            "value": 180,
+            "unit": "g"
           }
         },
         {
           "name": "Oignon",
           "quantity": {
-            "value": null,
+            "value": 1,
             "unit": "pièce"
           }
         }
@@ -3792,6 +3824,7 @@
         "Famille",
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3893,6 +3926,7 @@
       "tags": [
         "Rapide"
       ],
+      "image": "",
       "source": "HelloFresh",
       "metadata": {
         "originalFiles": {
@@ -3908,8 +3942,8 @@
     "totalRecipes": 34,
     "totalErrors": 0,
     "successRate": "100%",
-    "processingTimeSeconds": 944,
-    "processedAt": "2025-05-29T11:17:18.386Z",
+    "processingTimeSeconds": 139,
+    "processedAt": "2025-05-29T16:46:37.713Z",
     "source": "HelloFresh",
     "errors": []
   }
