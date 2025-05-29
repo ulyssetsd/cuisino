@@ -57,8 +57,7 @@ class RecipeProcessor {
     async ensureDirectories() {
         await fs.ensureDir(this.outputDir);
         await fs.ensureDir(this.tempDir);
-    }
-      async processAllRecipes() {
+    }    async processAllRecipes() {
         console.log('📂 Lecture des images...');
         
         // Lire toutes les images et les trier par timestamp
@@ -66,19 +65,33 @@ class RecipeProcessor {
         
         console.log(`📸 ${images.length} paires d'images trouvées`);
         
-        const recipes = [];
-        const errors = [];
+        // Charger les recettes existantes pour traitement incrémental
+        const { existingRecipes, existingErrors } = await this.loadExistingRecipes();
+        console.log(`📚 ${existingRecipes.length} recettes existantes trouvées`);
+        
+        const recipes = [...existingRecipes];
+        const errors = [...existingErrors];
         const startTime = Date.now();
         
-        for (let i = 0; i < images.length; i++) {
-            const { recto, verso } = images[i];
+        // Déterminer quelles images nécessitent un traitement
+        const imagesToProcess = await this.determineImagesToProcess(images, existingRecipes);
+        console.log(`🔄 ${imagesToProcess.length} images à traiter (nouvelles ou avec problèmes de qualité)`);
+        
+        if (imagesToProcess.length === 0) {
+            console.log('✨ Toutes les recettes sont déjà à jour et de bonne qualité !');
+            return existingRecipes;
+        }
+        
+        for (let i = 0; i < imagesToProcess.length; i++) {
+            const { imageIndex, recto, verso, reason } = imagesToProcess[i];
             
-            console.log(`\n🔄 Traitement de la recette ${i + 1}/${images.length}`);
+            console.log(`\n🔄 Traitement de la recette ${imageIndex + 1}/${images.length} (${i + 1}/${imagesToProcess.length})`);
             console.log(`   Recto: ${path.basename(recto)}`);
             console.log(`   Verso: ${path.basename(verso)}`);
+            console.log(`   Raison: ${reason}`);
             
             try {
-                const recipe = await this.processRecipeWithRetry(recto, verso, i + 1);
+                const recipe = await this.processRecipeWithRetry(recto, verso, imageIndex + 1);
                 
                 if (recipe) {
                     // Ajouter les métadonnées si configuré
@@ -89,32 +102,39 @@ class RecipeProcessor {
                                 verso: path.basename(verso)
                             },
                             processedAt: new Date().toISOString(),
-                            recipeIndex: i + 1
+                            recipeIndex: imageIndex + 1
                         };
                     }
                     
-                    recipes.push(recipe);
+                    // Mettre à jour ou ajouter la recette
+                    recipes[imageIndex] = recipe;
                     
                     // Sauvegarder chaque recette individuellement
-                    const filename = `recipe_${String(i + 1).padStart(3, '0')}.json`;
+                    const filename = `recipe_${String(imageIndex + 1).padStart(3, '0')}.json`;
                     const filepath = path.join(this.outputDir, filename);
                     const jsonOptions = this.config.output.prettyPrint ? { spaces: 2 } : {};
                     await fs.writeJson(filepath, recipe, jsonOptions);
                     
-                    console.log(`   ✅ Recette sauvegardée: ${filename}`);
+                    console.log(`   ✅ Recette mise à jour: ${filename}`);
+                    
+                    // Supprimer l'erreur existante si elle existait
+                    const errorIndex = errors.findIndex(e => e.pair === imageIndex + 1);
+                    if (errorIndex !== -1) {
+                        errors.splice(errorIndex, 1);
+                    }
                 } else {
-                    const errorMsg = `Échec de l'extraction pour la paire ${i + 1}`;
+                    const errorMsg = `Échec de l'extraction pour la paire ${imageIndex + 1}`;
                     console.log(`   ⚠️ ${errorMsg}`);
-                    errors.push({ pair: i + 1, recto: path.basename(recto), verso: path.basename(verso), error: errorMsg });
+                    this.updateError(errors, imageIndex + 1, path.basename(recto), path.basename(verso), errorMsg);
                 }
             } catch (error) {
-                const errorMsg = `Erreur lors du traitement de la paire ${i + 1}: ${error.message}`;
+                const errorMsg = `Erreur lors du traitement de la paire ${imageIndex + 1}: ${error.message}`;
                 console.error(`   ❌ ${errorMsg}`);
-                errors.push({ pair: i + 1, recto: path.basename(recto), verso: path.basename(verso), error: error.message });
+                this.updateError(errors, imageIndex + 1, path.basename(recto), path.basename(verso), error.message);
             }
             
             // Délai entre les requêtes pour éviter la limitation de taux
-            if (i < images.length - 1) {
+            if (i < imagesToProcess.length - 1) {
                 console.log(`   ⏱️ Pause de ${this.config.processing.delayBetweenRequests}ms...`);
                 await this.sleep(this.config.processing.delayBetweenRequests);
             }
@@ -266,6 +286,146 @@ ${summary.metadata.errors.map(err => `- Paire ${err.pair} (${err.recto} / ${err.
     
     sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    /**
+     * Charge les recettes existantes depuis le fichier all_recipes.json
+     */
+    async loadExistingRecipes() {
+        const allRecipesPath = path.join(this.outputDir, 'all_recipes.json');
+        
+        if (!fs.existsSync(allRecipesPath)) {
+            console.log('📝 Aucun fichier de recettes existant trouvé - traitement complet');
+            return { existingRecipes: [], existingErrors: [] };
+        }
+        
+        try {
+            const data = await fs.readJson(allRecipesPath);
+            const recipes = data.recipes || [];
+            const errors = data.metadata?.errors || [];
+            
+            console.log(`📚 ${recipes.length} recettes chargées depuis all_recipes.json`);
+            return { existingRecipes: recipes, existingErrors: errors };
+        } catch (error) {
+            console.log(`⚠️ Erreur lors du chargement des recettes existantes: ${error.message}`);
+            return { existingRecipes: [], existingErrors: [] };
+        }
+    }
+    
+    /**
+     * Détermine quelles images nécessitent un traitement basé sur la qualité des données
+     */
+    async determineImagesToProcess(images, existingRecipes) {
+        const imagesToProcess = [];
+        
+        for (let i = 0; i < images.length; i++) {
+            const { recto, verso } = images[i];
+            const existingRecipe = existingRecipes[i];
+            
+            // Si pas de recette existante, traiter
+            if (!existingRecipe) {
+                imagesToProcess.push({
+                    imageIndex: i,
+                    recto,
+                    verso,
+                    reason: 'Nouvelle recette'
+                });
+                continue;
+            }
+            
+            // Vérifier si les fichiers sources correspondent
+            const shouldReprocess = await this.shouldReprocessRecipe(existingRecipe, recto, verso, i);
+            
+            if (shouldReprocess.reprocess) {
+                imagesToProcess.push({
+                    imageIndex: i,
+                    recto,
+                    verso,
+                    reason: shouldReprocess.reason
+                });
+            }
+        }
+        
+        return imagesToProcess;
+    }
+    
+    /**
+     * Détermine si une recette doit être retraitée
+     */
+    async shouldReprocessRecipe(recipe, rectoPath, versoPath, index) {
+        // Vérifier si les fichiers sources correspondent
+        if (recipe.metadata?.originalFiles) {
+            const currentRecto = path.basename(rectoPath);
+            const currentVerso = path.basename(versoPath);
+            const existingRecto = recipe.metadata.originalFiles.recto;
+            const existingVerso = recipe.metadata.originalFiles.verso;
+            
+            if (currentRecto !== existingRecto || currentVerso !== existingVerso) {
+                return {
+                    reprocess: true,
+                    reason: `Fichiers sources différents (${currentRecto}/${currentVerso} vs ${existingRecto}/${existingVerso})`
+                };
+            }
+        }
+        
+        // Évaluer la qualité des données
+        console.log(`   🔍 Évaluation qualité recette ${index + 1}: "${recipe.title}"`);
+        
+        try {
+            const qualityIssues = this.recipeExtractor.dataQualityValidator.detectDataQualityIssues(recipe);
+            
+            if (qualityIssues.length > 0) {
+                const totalProblems = qualityIssues.reduce((sum, issue) => sum + issue.problems.length, 0);
+                console.log(`   ⚠️ ${qualityIssues.length} ingrédient(s) avec ${totalProblems} problème(s) de qualité`);
+                
+                // Afficher quelques exemples de problèmes
+                qualityIssues.slice(0, 3).forEach(issue => {
+                    console.log(`     • "${issue.ingredient.name}": ${issue.problems.join(', ')}`);
+                });
+                
+                if (qualityIssues.length > 3) {
+                    console.log(`     • ... et ${qualityIssues.length - 3} autre(s) ingrédient(s)`);
+                }
+                
+                return {
+                    reprocess: true,
+                    reason: `Qualité des données insuffisante (${totalProblems} problèmes détectés)`
+                };
+            } else {
+                console.log(`   ✅ Qualité des données satisfaisante`);
+                return {
+                    reprocess: false,
+                    reason: null
+                };
+            }
+        } catch (error) {
+            console.log(`   ⚠️ Erreur lors de l'évaluation qualité: ${error.message}`);
+            return {
+                reprocess: true,
+                reason: `Erreur lors de l'évaluation qualité: ${error.message}`
+            };
+        }
+    }
+    
+    /**
+     * Met à jour ou ajoute une erreur dans la liste
+     */
+    updateError(errors, pair, recto, verso, errorMessage) {
+        const existingErrorIndex = errors.findIndex(e => e.pair === pair);
+        
+        const errorData = {
+            pair,
+            recto,
+            verso,
+            error: errorMessage,
+            lastAttempt: new Date().toISOString()
+        };
+        
+        if (existingErrorIndex !== -1) {
+            errors[existingErrorIndex] = errorData;
+        } else {
+            errors.push(errorData);
+        }
     }
 }
 

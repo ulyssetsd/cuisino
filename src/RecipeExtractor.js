@@ -1,12 +1,14 @@
 const ImageProcessor = require('./ImageProcessor');
 const DataQualityValidator = require('./DataQualityValidator');
+const DataQualityCorrector = require('./DataQualityCorrector');
 
 class RecipeExtractor {
     constructor(openaiClient, config = null) {
         this.openai = openaiClient;
         this.config = config;
         this.imageProcessor = new ImageProcessor();
-        this.dataQualityValidator = new DataQualityValidator(openaiClient, config);
+        this.dataQualityValidator = new DataQualityValidator(config);
+        this.dataQualityCorrector = new DataQualityCorrector(openaiClient, config);
         this.model = process.env.OPENAI_MODEL || 'gpt-4o';
         this.maxTokens = parseInt(process.env.MAX_TOKENS) || 4096;
     }
@@ -58,12 +60,32 @@ class RecipeExtractor {
             if (!content) {
                 throw new Error('Réponse vide de l\'API OpenAI');
             }
-            
-            // Extraire le JSON de la réponse
+              // Extraire le JSON de la réponse
             let recipe = this.parseRecipeFromResponse(content);
             
-            // Vérification et correction automatique de la qualité des données
-            recipe = await this.dataQualityValidator.validateAndFixRecipe(recipe, rectoPath, versoPath);
+            // Vérification de la qualité des données (sans correction)
+            const validationResult = this.dataQualityValidator.validateRecipe(recipe);
+            recipe = validationResult.normalizedRecipe;
+            
+            // Si des problèmes sont détectés ET que l'auto-correction est activée
+            if (validationResult.needsCorrection && this.config?.dataQuality?.autoCorrection) {
+                console.log('   🔧 Correction automatique des problèmes détectés...');
+                try {
+                    recipe = await this.dataQualityCorrector.correctRecipeData(
+                        recipe, 
+                        validationResult.issues, 
+                        rectoPath, 
+                        versoPath
+                    );
+                    console.log('   ✅ Données corrigées avec succès');
+                } catch (error) {
+                    console.log(`   ⚠️  Échec de la correction: ${error.message}`);
+                    console.log('   📝 Conservation des données normalisées');
+                    // On garde la recette normalisée même si la correction échoue
+                }
+            } else if (validationResult.needsCorrection) {
+                console.log('   ⚠️  Problèmes détectés mais auto-correction désactivée');
+            }
             
             console.log(`   ✅ Recette extraite: "${recipe.title}"`);
             return recipe;
