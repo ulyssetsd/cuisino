@@ -11,11 +11,8 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Images non compressées
-recipes/uncompressed/
-
-# Archives zip (trop volumineuses pour GitHub)
-recipes/*.zip
+# Images recettes
+recipes/*
 
 # Output
 output/
