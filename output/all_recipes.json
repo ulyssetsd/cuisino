@@ -1,9 +1,12 @@
 {
   "metadata": {
     "totalRecipes": 34,
-    "generatedAt": "2025-05-29T21:17:13.319Z",
-    "testRun": true,
-    "testTimestamp": "2025-05-29T21:17:13.319Z"
+    "generatedAt": "2025-05-29T21:20:32.969Z",
+    "extractedRecipes": 34,
+    "validatedRecipes": 34,
+    "errorCount": 0,
+    "successRate": "100%",
+    "qualityRate": "100%"
   },
   "recipes": [
     {
@@ -131,7 +134,7 @@
         "processedAt": "2025-05-29T11:02:04.832Z",
         "recipeIndex": 1,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:02:04.832Z",
         "error": null
       }
@@ -255,7 +258,7 @@
         "processedAt": "2025-05-29T11:02:33.565Z",
         "recipeIndex": 2,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:02:33.565Z",
         "error": null
       }
@@ -378,7 +381,7 @@
         "processedAt": "2025-05-29T11:03:27.829Z",
         "recipeIndex": 3,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:03:27.829Z",
         "error": null
       }
@@ -513,7 +516,7 @@
         "processedAt": "2025-05-29T11:03:59.603Z",
         "recipeIndex": 4,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:03:59.603Z",
         "error": null
       }
@@ -642,7 +645,7 @@
         "processedAt": "2025-05-29T11:04:29.628Z",
         "recipeIndex": 5,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:04:29.628Z",
         "error": null
       }
@@ -761,7 +764,7 @@
         "processedAt": "2025-05-29T11:04:58.144Z",
         "recipeIndex": 6,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:04:58.144Z",
         "error": null
       }
@@ -890,7 +893,7 @@
         "processedAt": "2025-05-29T11:05:30.191Z",
         "recipeIndex": 7,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:05:30.191Z",
         "error": null
       }
@@ -1004,7 +1007,7 @@
         "processedAt": "2025-05-29T11:05:52.501Z",
         "recipeIndex": 8,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:05:52.501Z",
         "error": null
       }
@@ -1126,7 +1129,7 @@
         "processedAt": "2025-05-29T11:06:19.704Z",
         "recipeIndex": 9,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:06:19.704Z",
         "error": null
       }
@@ -1235,7 +1238,7 @@
         "processedAt": "2025-05-29T11:06:46.382Z",
         "recipeIndex": 10,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:06:46.382Z",
         "error": null
       }
@@ -1354,7 +1357,7 @@
         "processedAt": "2025-05-29T11:07:12.775Z",
         "recipeIndex": 11,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:07:12.775Z",
         "error": null
       }
@@ -1482,7 +1485,7 @@
         "processedAt": "2025-05-29T11:07:33.273Z",
         "recipeIndex": 12,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:07:33.273Z",
         "error": null
       }
@@ -1597,7 +1600,7 @@
         "processedAt": "2025-05-29T11:07:57.725Z",
         "recipeIndex": 13,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:07:57.725Z",
         "error": null
       }
@@ -1704,7 +1707,7 @@
         "processedAt": "2025-05-29T11:08:19.393Z",
         "recipeIndex": 14,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:08:19.393Z",
         "error": null
       }
@@ -1806,7 +1809,7 @@
         "processedAt": "2025-05-29T11:08:42.842Z",
         "recipeIndex": 15,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:08:42.842Z",
         "error": null
       }
@@ -1921,7 +1924,7 @@
         "processedAt": "2025-05-29T11:09:12.377Z",
         "recipeIndex": 16,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:09:12.377Z",
         "error": null
       }
@@ -2056,7 +2059,7 @@
         "processedAt": "2025-05-29T11:09:39.266Z",
         "recipeIndex": 17,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:09:39.266Z",
         "error": null
       }
@@ -2188,7 +2191,7 @@
         "processedAt": "2025-05-29T11:10:33.694Z",
         "recipeIndex": 18,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:10:33.694Z",
         "error": null
       }
@@ -2320,7 +2323,7 @@
         "processedAt": "2025-05-29T11:10:59.112Z",
         "recipeIndex": 19,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:10:59.112Z",
         "error": null
       }
@@ -2439,7 +2442,7 @@
         "processedAt": "2025-05-29T11:11:20.714Z",
         "recipeIndex": 20,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:11:20.714Z",
         "error": null
       }
@@ -2561,7 +2564,7 @@
         "processedAt": "2025-05-29T11:11:48.110Z",
         "recipeIndex": 21,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:11:48.110Z",
         "error": null
       }
@@ -2669,7 +2672,7 @@
         "processedAt": "2025-05-29T11:12:13.608Z",
         "recipeIndex": 22,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:12:13.608Z",
         "error": null
       }
@@ -2789,7 +2792,7 @@
         "processedAt": "2025-05-29T11:12:47.598Z",
         "recipeIndex": 23,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:12:47.598Z",
         "error": null
       }
@@ -2896,7 +2899,7 @@
         "processedAt": "2025-05-29T11:13:12.368Z",
         "recipeIndex": 24,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:13:12.368Z",
         "error": null
       }
@@ -3021,7 +3024,7 @@
         "processedAt": "2025-05-29T11:13:35.682Z",
         "recipeIndex": 25,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:13:35.682Z",
         "error": null
       }
@@ -3137,7 +3140,7 @@
         "processedAt": "2025-05-29T11:14:02.274Z",
         "recipeIndex": 26,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:14:02.274Z",
         "error": null
       }
@@ -3252,7 +3255,7 @@
         "processedAt": "2025-05-29T11:14:26.264Z",
         "recipeIndex": 27,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:14:26.264Z",
         "error": null
       }
@@ -3374,7 +3377,7 @@
         "processedAt": "2025-05-29T11:14:46.362Z",
         "recipeIndex": 28,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:14:46.362Z",
         "error": null
       }
@@ -3499,7 +3502,7 @@
         "processedAt": "2025-05-29T11:15:14.787Z",
         "recipeIndex": 29,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:15:14.787Z",
         "error": null
       }
@@ -3619,7 +3622,7 @@
         "processedAt": "2025-05-29T11:15:34.196Z",
         "recipeIndex": 30,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:15:34.196Z",
         "error": null
       }
@@ -3757,7 +3760,7 @@
         "processedAt": "2025-05-29T11:16:02.918Z",
         "recipeIndex": 31,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:16:02.918Z",
         "error": null
       }
@@ -3878,7 +3881,7 @@
         "processedAt": "2025-05-29T11:16:30.040Z",
         "recipeIndex": 32,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:16:30.040Z",
         "error": null
       }
@@ -4001,7 +4004,7 @@
         "processedAt": "2025-05-29T11:16:53.280Z",
         "recipeIndex": 33,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:16:53.280Z",
         "error": null
       }
@@ -4108,7 +4111,7 @@
         "processedAt": "2025-05-29T11:17:18.375Z",
         "recipeIndex": 34,
         "extracted": true,
-        "validated": false,
+        "validated": true,
         "extractedAt": "2025-05-29T11:17:18.375Z",
         "error": null
       }
