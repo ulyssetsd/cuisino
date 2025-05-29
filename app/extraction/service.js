@@ -15,28 +15,37 @@ class ExtractionService {
         this.model = config.openai.model;
         this.maxTokens = config.openai.maxTokens;
     }
-    
+
     // Extract recipe from image pair
     async extractRecipe(recipe) {
         Logger.progress(recipe.id, '?', `Extracting recipe from images`);
 
         try {
-            const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath);
-            const prompt = this.createExtractionPrompt();
-
-            const response = await this.openai.chat.completions.create({
+            const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath); const response = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
-                messages: [{
-                    role: "user",
-                    content: [
-                        { type: "text", text: prompt },
-                        ...images
-                    ]
-                }]
+                messages: [
+                    {
+                        role: "system",
+                        content: this.getSystemPrompt()
+                    },
+                    {
+                        role: "user",
+                        content: [
+                            {
+                                type: "text",
+                                text: "Voici une fiche de recette HelloFresh en deux parties. La première image est le RECTO (titre, image, ingrédients) et la seconde est le VERSO (instructions, quantités, nutrition). Extrait toutes les informations selon le schéma JSON demandé."
+                            },
+                            ...images
+                        ]
+                    }
+                ]
             });
 
-            const extractedData = this.parseResponse(response.choices[0].message.content);
+            const content = response.choices[0].message.content;
+            Logger.info(`OpenAI response preview: ${content.substring(0, 100)}...`);
+
+            const extractedData = this.parseResponse(content);
             recipe.updateFromExtraction(extractedData);
 
             Logger.success(`Extracted recipe: "${recipe.title}"`);
@@ -47,7 +56,7 @@ class ExtractionService {
             throw error;
         }
     }
-    
+
     // Prepare images for OpenAI
     async prepareImages(rectoPath, versoPath) {
         const images = [];
@@ -67,59 +76,89 @@ class ExtractionService {
 
         return images;
     }
-    
-    // Create extraction prompt
-    createExtractionPrompt() {
-        return `
-You are analyzing TWO images that show the FRONT and BACK of the SAME HelloFresh recipe card. 
 
-IMPORTANT: These are two sides of ONE recipe card - combine ALL information from BOTH images into a SINGLE JSON response.
+    // Create system prompt
+    getSystemPrompt() {
+        return `Tu es un assistant spécialisé dans l'analyse de recettes de cuisine. Ton rôle est d'extraire des informations culinaires à partir d'images de cartes de recettes HelloFresh pour organiser des données de cuisine.
 
-- Image 1: Front of recipe card (usually shows the dish photo and title)
-- Image 2: Back of recipe card (usually shows ingredients, instructions, and nutritional info)
+Les images contiennent des informations légitimes sur la nourriture et la cuisine (ingrédients, instructions de préparation, valeurs nutritionnelles).
 
-Extract and combine all recipe information from BOTH images into ONE complete JSON object:
-
+SCHÉMA JSON REQUIS:
 {
-  "title": "Recipe name from the front of the card",
-  "cookingTime": "XX min",
-  "servings": "X",
+  "title": "...",
+  "subtitle": "...",
+  "duration": "...",
+  "difficulty": 2,
+  "servings": 2,
   "ingredients": [
-    {
-      "name": "ingredient name",
-      "quantity": "amount",
-      "unit": "unit"
-    }
+    { "name": "...", "quantity": { "value": ..., "unit": "..." } }
   ],
-  "instructions": [
-    "Step 1",
-    "Step 2"
+  "allergens": ["..."],
+  "steps": [
+    { "text": "..." }
   ],
-  "nutritionalInfo": {
-    "calories": "XXX kcal",
-    "protein": "XX g",
-    "carbs": "XX g",
-    "fat": "XX g"
-  }
+  "nutrition": {
+    "calories": "...",
+    "lipides": "...",
+    "acides_gras_satures": "...",
+    "glucides": "...",
+    "sucres": "...",
+    "fibres": "...",
+    "proteines": "...",
+    "sel": "..."
+  },
+  "tips": ["..."],
+  "tags": ["..."],
+  "source": "HelloFresh"
 }
 
-CRITICAL: Return EXACTLY ONE JSON object that combines information from BOTH images. Do not return separate JSON objects for each image.`;
+INSTRUCTIONS:
+1. **Ingrédients**: Sépare la quantité en "value" (nombre) et "unit" (unité)
+2. **Difficulté**: Échelle 1-5 (1=facile, 5=difficile)
+3. **Nutrition**: Extrait toutes les valeurs visibles, sinon ""
+4. **Allergènes**: Liste tous les allergènes mentionnés
+5. **Étapes**: Une étape par élément du tableau steps
+6. **Tags**: Type de plat, cuisine, régime, etc.
+
+IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
+    }
+
+    // Create extraction prompt (now simplified for user message)
+    createExtractionPrompt() {
+        return `Voici une fiche de recette HelloFresh en deux parties. La première image est le RECTO (titre, image, ingrédients) et la seconde est le VERSO (instructions, quantités, nutrition). Extrait toutes les informations selon le schéma JSON demandé.`;
     }    // Parse OpenAI response
     parseResponse(content) {
-        // Clean up the response
-        let cleanContent = content
-            .replace(/```json/gi, '')
-            .replace(/```/g, '')
-            .trim();
+        try {
+            // Nettoyer la réponse pour extraire uniquement le JSON
+            let jsonStr = content.trim();
 
-        const parsed = JSON.parse(cleanContent);
+            // Supprimer les balises markdown si présentes
+            jsonStr = jsonStr.replace(/```json\s*/, '').replace(/```\s*$/, '');
 
-        // Validate required fields
-        if (!parsed.title || !parsed.ingredients || !parsed.instructions) {
-            throw new Error('Missing required fields in extraction result');
+            // Parser le JSON
+            const recipe = JSON.parse(jsonStr);
+
+            // Validate required fields
+            if (!parsed.title || !parsed.ingredients || !parsed.instructions) {
+                throw new Error('Missing required fields in extraction result');
+            }
+
+            // Assurer que certains champs sont présents avec des valeurs par défaut
+            recipe.source = recipe.source || "HelloFresh";
+            recipe.ingredients = recipe.ingredients || [];
+            recipe.steps = recipe.steps || [];
+            recipe.nutrition = recipe.nutrition || {};
+            recipe.allergens = recipe.allergens || [];
+            recipe.tips = recipe.tips || [];
+            recipe.tags = recipe.tags || [];
+
+            return recipe;
+
+        } catch (error) {
+            Logger.error(`Erreur lors du parsing JSON: ${error.message}`);
+            Logger.error(`Contenu reçu: ${content}`);
+            throw new Error(`Impossible de parser la réponse JSON: ${error.message}`);
         }
-
-        return parsed;
     }
 
     // Add delay between requests
