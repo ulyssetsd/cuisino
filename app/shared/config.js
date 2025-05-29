@@ -3,7 +3,6 @@
  * Centralized configuration with environment variables
  */
 require('dotenv').config();
-const path = require('path');
 
 class Config {
     constructor() {

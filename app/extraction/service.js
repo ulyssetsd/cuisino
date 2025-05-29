@@ -9,62 +9,53 @@ const Logger = require('../shared/logger');
 class ExtractionService {
     constructor(config) {
         this.config = config;
-        this.openai = new OpenAI({ 
-            apiKey: config.openai.apiKey 
+        this.openai = new OpenAI({
+            apiKey: config.openai.apiKey
         });
         this.model = config.openai.model;
         this.maxTokens = config.openai.maxTokens;
     }
-
+    
     // Extract recipe from image pair
     async extractRecipe(recipe) {
         Logger.progress(recipe.id, '?', `Extracting recipe from images`);
 
         try {
-            // Prepare images
             const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath);
-            
-            // Create prompt
             const prompt = this.createExtractionPrompt();
-            
-            // Call OpenAI
+
             const response = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
-                messages: [
-                    {
-                        role: "user",
-                        content: [
-                            { type: "text", text: prompt },
-                            ...images
-                        ]
-                    }
-                ]
+                messages: [{
+                    role: "user",
+                    content: [
+                        { type: "text", text: prompt },
+                        ...images
+                    ]
+                }]
             });
 
-            // Parse response
             const extractedData = this.parseResponse(response.choices[0].message.content);
-            
-            // Update recipe
             recipe.updateFromExtraction(extractedData);
-            
+
             Logger.success(`Extracted recipe: "${recipe.title}"`);
-            
+
         } catch (error) {
             Logger.error(`Extraction failed for recipe ${recipe.id}: ${error.message}`);
             recipe.setError(error);
             throw error;
         }
     }
-
+    
     // Prepare images for OpenAI
     async prepareImages(rectoPath, versoPath) {
         const images = [];
-        
+
         for (const imagePath of [rectoPath, versoPath]) {
             const imageBuffer = fs.readFileSync(imagePath);
             const base64Image = imageBuffer.toString('base64');
-            
+
             images.push({
                 type: "image_url",
                 image_url: {
@@ -73,19 +64,26 @@ class ExtractionService {
                 }
             });
         }
-        
+
         return images;
     }
-
+    
     // Create extraction prompt
     createExtractionPrompt() {
-        return `Analyze these HelloFresh recipe card images (front and back) and extract the recipe information.
+        return `
+You are analyzing TWO images that show the FRONT and BACK of the SAME HelloFresh recipe card. 
 
-Return ONLY a valid JSON object with this exact structure:
+IMPORTANT: These are two sides of ONE recipe card - combine ALL information from BOTH images into a SINGLE JSON response.
+
+- Image 1: Front of recipe card (usually shows the dish photo and title)
+- Image 2: Back of recipe card (usually shows ingredients, instructions, and nutritional info)
+
+Extract and combine all recipe information from BOTH images into ONE complete JSON object:
+
 {
-  "title": "Recipe name",
+  "title": "Recipe name from the front of the card",
   "cookingTime": "XX min",
-  "servings": "X portions",
+  "servings": "X",
   "ingredients": [
     {
       "name": "ingredient name",
@@ -94,8 +92,8 @@ Return ONLY a valid JSON object with this exact structure:
     }
   ],
   "instructions": [
-    "Step 1 description",
-    "Step 2 description"
+    "Step 1",
+    "Step 2"
   ],
   "nutritionalInfo": {
     "calories": "XXX kcal",
@@ -105,40 +103,28 @@ Return ONLY a valid JSON object with this exact structure:
   }
 }
 
-Requirements:
-- Extract ALL visible ingredients with their quantities
-- Include ALL preparation steps in order
-- Use clear, readable French text
-- Ensure valid JSON format
-- If information is unclear, use your best judgment`;
-    }
-
-    // Parse OpenAI response
+CRITICAL: Return EXACTLY ONE JSON object that combines information from BOTH images. Do not return separate JSON objects for each image.`;
+    }    // Parse OpenAI response
     parseResponse(content) {
-        try {
-            // Clean up the response (remove markdown code blocks if present)
-            const cleanContent = content
-                .replace(/```json/g, '')
-                .replace(/```/g, '')
-                .trim();
-            
-            const parsed = JSON.parse(cleanContent);
-            
-            // Validate required fields
-            if (!parsed.title || !parsed.ingredients || !parsed.instructions) {
-                throw new Error('Missing required fields in extraction result');
-            }
-            
-            return parsed;
-            
-        } catch (error) {
-            throw new Error(`Failed to parse extraction result: ${error.message}`);
+        // Clean up the response
+        let cleanContent = content
+            .replace(/```json/gi, '')
+            .replace(/```/g, '')
+            .trim();
+
+        const parsed = JSON.parse(cleanContent);
+
+        // Validate required fields
+        if (!parsed.title || !parsed.ingredients || !parsed.instructions) {
+            throw new Error('Missing required fields in extraction result');
         }
+
+        return parsed;
     }
 
     // Add delay between requests
     async delay() {
-        await new Promise(resolve => 
+        await new Promise(resolve =>
             setTimeout(resolve, this.config.processing.delayBetweenRequests)
         );
     }
