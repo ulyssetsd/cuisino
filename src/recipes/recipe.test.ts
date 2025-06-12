@@ -161,10 +161,10 @@ describe('Recipe Repository', () => {
         const pairs = repository.groupImagePairs(images, '/test/dir');
 
         expect(pairs).toHaveLength(2);
-        expect(pairs[0].recto).toContain('image_001.jpg');
-        expect(pairs[0].verso).toContain('image_002.jpg');
-        expect(pairs[1].recto).toContain('image_003.jpg');
-        expect(pairs[1].verso).toContain('image_004.jpg');
+        expect(pairs[0]?.recto).toContain('image_001.jpg');
+        expect(pairs[0]?.verso).toContain('image_002.jpg');
+        expect(pairs[1]?.recto).toContain('image_003.jpg');
+        expect(pairs[1]?.verso).toContain('image_004.jpg');
     });
 
     it('should handle odd number of images', () => {
@@ -172,8 +172,8 @@ describe('Recipe Repository', () => {
         const pairs = repository.groupImagePairs(images, '/test/dir');
 
         expect(pairs).toHaveLength(1);
-        expect(pairs[0].recto).toContain('image_001.jpg');
-        expect(pairs[0].verso).toContain('image_002.jpg');
+        expect(pairs[0]?.recto).toContain('image_001.jpg');
+        expect(pairs[0]?.verso).toContain('image_002.jpg');
     });
 
     it('should handle empty images array', () => {

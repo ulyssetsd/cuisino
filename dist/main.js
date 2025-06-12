@@ -380,7 +380,9 @@ var RecipeRepository = class {
   // Save single recipe - updates the consolidated file
   async saveRecipe(recipe) {
     const existingRecipes = await this.loadExistingRecipes();
-    const existingIndex = existingRecipes.findIndex((r) => r.id === recipe.id);
+    const existingIndex = existingRecipes.findIndex(
+      (r) => r.id === recipe.id
+    );
     if (existingIndex >= 0) {
       existingRecipes[existingIndex] = recipe;
     } else {
@@ -396,9 +398,9 @@ var RecipeRepository = class {
   async saveAllRecipes(recipes, stats = {}) {
     const data = {
       metadata: {
+        ...stats,
         totalRecipes: recipes.length,
-        generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
-        ...stats
+        generatedAt: (/* @__PURE__ */ new Date()).toISOString()
       },
       recipes: recipes.map((r) => r.toJson())
     };
@@ -415,10 +417,14 @@ var RecipeRepository = class {
     const sortedImages = images.sort();
     for (let i = 0; i < sortedImages.length; i += 2) {
       if (i + 1 < sortedImages.length) {
-        pairs.push({
-          recto: join(baseDir, sortedImages[i]),
-          verso: join(baseDir, sortedImages[i + 1])
-        });
+        const rectoImage = sortedImages[i];
+        const versoImage = sortedImages[i + 1];
+        if (rectoImage && versoImage) {
+          pairs.push({
+            recto: join(baseDir, rectoImage),
+            verso: join(baseDir, versoImage)
+          });
+        }
       }
     }
     return pairs;
@@ -449,11 +455,16 @@ var ExtractionService = class {
   // Extract recipe from image pair
   async extractRecipe(recipe) {
     if (!recipe.rectoPath || !recipe.versoPath) {
-      throw new Error("Recipe must have both recto and verso image paths");
+      throw new Error(
+        "Recipe must have both recto and verso image paths"
+      );
     }
     try {
       info(`Extracting recipe ${recipe.id}`);
-      const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath);
+      const images = await this.prepareImages(
+        recipe.rectoPath,
+        recipe.versoPath
+      );
       const completion = await this.openai.chat.completions.create({
         model: this.model,
         max_tokens: this.maxTokens,
@@ -482,7 +493,10 @@ var ExtractionService = class {
       recipe.updateFromExtraction(extractedData);
       success(`Recipe ${recipe.id} extracted successfully`);
     } catch (error2) {
-      error(`Failed to extract recipe ${recipe.id}:`, error2.message);
+      error(
+        `Failed to extract recipe ${recipe.id}:`,
+        error2.message
+      );
       recipe.setError(error2);
     }
   }
@@ -589,6 +603,7 @@ var ExtractionOrchestrator = class {
     section(`Extracting ${toExtract.length} recipes`);
     for (let i = 0; i < toExtract.length; i++) {
       const recipe = toExtract[i];
+      if (!recipe) continue;
       progress(i + 1, toExtract.length, `Processing recipe ${recipe.id}`);
       try {
         await this.extractWithRetry(recipe);
@@ -784,7 +799,13 @@ var ImageProcessor = class {
       avgSizeKB: Math.round(totalSize / images.length / 1024),
       estimatedCost: this.estimateProcessingCost(pairs.length)
     };
-    result(stats);
+    result({
+      "Total Images": stats.totalImages,
+      "Image Pairs": stats.imagePairs,
+      "Total Size (MB)": stats.totalSizeMB,
+      "Average Size (KB)": stats.avgSizeKB,
+      "Estimated Cost": stats.estimatedCost
+    });
     return stats;
   }
   // Optimize images for processing
@@ -797,6 +818,7 @@ var ImageProcessor = class {
     let totalSizeAfter = 0;
     for (let i = 0; i < images.length; i++) {
       const filename = images[i];
+      if (!filename) continue;
       const inputPath = join2(inputDir, filename);
       const outputPath = join2(outputDir, filename);
       progress(i + 1, images.length, `Processing ${filename}`);
@@ -812,7 +834,9 @@ var ImageProcessor = class {
         }
         processed++;
       } catch (error2) {
-        error(`Failed to process ${filename}: ${error2.message}`);
+        error(
+          `Failed to process ${filename}: ${error2.message}`
+        );
       }
     }
     const compressionRate = Math.round(
@@ -844,10 +868,14 @@ var ImageProcessor = class {
     const sortedImages = images.sort();
     for (let i = 0; i < sortedImages.length; i += 2) {
       if (i + 1 < sortedImages.length) {
-        pairs.push({
-          recto: sortedImages[i],
-          verso: sortedImages[i + 1]
-        });
+        const rectoImage = sortedImages[i];
+        const versoImage = sortedImages[i + 1];
+        if (rectoImage && versoImage) {
+          pairs.push({
+            recto: rectoImage,
+            verso: versoImage
+          });
+        }
       }
     }
     return pairs;
@@ -992,7 +1020,7 @@ ${report.issues.extractionErrors.length > 0 ? report.issues.extractionErrors.map
   // Extract minutes from cooking time string
   extractMinutes(timeStr) {
     const match = timeStr.match(/(\d+)/);
-    if (!match) return 0;
+    if (!match || !match[1]) return 0;
     const value = parseInt(match[1], 10);
     if (timeStr.toLowerCase().includes("h")) {
       return value * 60;

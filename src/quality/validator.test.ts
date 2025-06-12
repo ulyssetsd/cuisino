@@ -107,27 +107,33 @@ describe('Quality Validator', () => {
         ];
 
         // Setup first recipe as high quality
-        recipes[0].extracted = true;
-        recipes[0].title = 'Good Recipe';
-        recipes[0].cookingTime = '25 min';
-        recipes[0].servings = '2';
-        recipes[0].ingredients = [
-            { name: 'Ingredient 1', quantity: '100g', unit: 'g' },
-            { name: 'Ingredient 2', quantity: '1', unit: 'cup' },
-        ];
-        recipes[0].instructions = [
-            'Step 1: Prepare ingredients carefully',
-            'Step 2: Cook according to directions',
-            'Step 3: Serve immediately',
-        ];
+        const recipe1 = recipes[0];
+        if (recipe1) {
+            recipe1.extracted = true;
+            recipe1.title = 'Good Recipe';
+            recipe1.cookingTime = '25 min';
+            recipe1.servings = '2';
+            recipe1.ingredients = [
+                { name: 'Ingredient 1', quantity: '100g', unit: 'g' },
+                { name: 'Ingredient 2', quantity: '1', unit: 'cup' },
+            ];
+            recipe1.instructions = [
+                'Step 1: Prepare ingredients carefully',
+                'Step 2: Cook according to directions',
+                'Step 3: Serve immediately',
+            ];
+        }
 
         // Setup second recipe as low quality
-        recipes[1].extracted = true;
-        recipes[1].title = 'Bad Recipe';
-        recipes[1].ingredients = [
-            { name: 'Something', quantity: '', unit: '' },
-        ];
-        recipes[1].instructions = ['Cook it'];
+        const recipe2 = recipes[1];
+        if (recipe2) {
+            recipe2.extracted = true;
+            recipe2.title = 'Bad Recipe';
+            recipe2.ingredients = [
+                { name: 'Something', quantity: '', unit: '' },
+            ];
+            recipe2.instructions = ['Cook it'];
+        }
 
         // Mock console methods to avoid test output
         const consoleSpy = vi
