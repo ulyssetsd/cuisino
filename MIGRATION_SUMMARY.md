@@ -17,27 +17,31 @@ The Cuisino project has been successfully migrated from JavaScript to TypeScript
 
 ```
 src/
-├── types/index.ts           # Comprehensive type definitions
 ├── main.ts                  # Application entry point
 ├── app.ts                   # Application orchestrator
 ├── shared/                  # Common utilities
 │   ├── config.ts           # Type-safe configuration
 │   ├── filesystem.ts       # File operations
-│   └── logger.ts           # Logging utilities
+│   ├── logger.ts           # Logging utilities
+│   └── types.ts            # Shared configuration types
 ├── recipes/                 # Recipe domain
 │   ├── recipe.ts           # Recipe entity
 │   ├── repository.ts       # Data access layer
-│   └── recipe.test.ts      # Domain tests
+│   ├── recipe.test.ts      # Domain tests
+│   └── types.ts            # Recipe domain types
 ├── extraction/              # AI extraction domain
 │   ├── service.ts          # OpenAI integration
 │   └── orchestrator.ts     # Extraction workflow
 ├── quality/                 # Quality validation domain
 │   ├── validator.ts        # Validation logic
-│   └── validator.test.ts   # Validation tests
+│   ├── validator.test.ts   # Validation tests
+│   └── types.ts            # Quality validation types
 ├── images/                  # Image processing domain
-│   └── processor.ts        # Image optimization
+│   ├── processor.ts        # Image optimization
+│   └── types.ts            # Image processing types
 ├── analysis/                # Analysis and reporting domain
-│   └── service.ts          # Report generation
+│   ├── service.ts          # Report generation
+│   └── types.ts            # Analysis and reporting types
 └── scripts/                 # Utility scripts
     ├── extract-only.ts
     ├── validate-quality.ts
@@ -67,12 +71,13 @@ npm run format               # Format code with Prettier
 
 ### 🎯 Key Improvements
 
-1. **Type Safety**: All domain objects have proper TypeScript interfaces
+1. **Type Safety**: All domain objects have proper TypeScript interfaces **organized by domain**
 2. **Modern Tooling**: Fast build (tsup), fast tests (Vitest), fast dev (tsx)
 3. **Code Quality**: ESLint + Prettier integration
 4. **Developer Experience**: Full IntelliSense, compile-time error checking
-5. **Maintainability**: Clean architecture with proper typing
+5. **Maintainability**: Clean architecture with domain-specific typing
 6. **Performance**: Modern bundling and testing tools
+7. **Domain Separation**: Types are co-located with their respective domains
 
 ### 📊 Migration Results
 
