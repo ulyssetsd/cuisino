@@ -73,17 +73,21 @@ cuisino/
 │   ├── recipes/       # Recipe data management
 │   │   ├── recipe.ts  # Recipe entity with HelloFresh format support
 │   │   ├── repository.ts # Data persistence and loading
-│   │   └── recipe.test.ts # Recipe domain tests
+│   │   ├── recipe.test.ts # Recipe domain tests
+│   │   └── types.ts   # Recipe domain types
 │   ├── extraction/    # OpenAI recipe extraction
 │   │   ├── service.ts # OpenAI API integration
 │   │   └── orchestrator.ts # Extraction workflow
 │   ├── quality/       # Data validation and scoring
 │   │   ├── validator.ts # Quality validation logic
-│   │   └── validator.test.ts # Quality validation tests
+│   │   ├── validator.test.ts # Quality validation tests
+│   │   └── types.ts   # Quality validation types
 │   ├── images/        # Image processing and optimization
-│   │   └── processor.ts # Image analysis and cost estimation
+│   │   ├── processor.ts # Image analysis and cost estimation
+│   │   └── types.ts   # Image processing types
 │   ├── analysis/      # Reporting and statistics
-│   │   └── service.ts # Analysis report generation
+│   │   ├── service.ts # Analysis report generation
+│   │   └── types.ts   # Analysis and reporting types
 │   ├── scripts/       # Domain-specific scripts
 │   │   ├── extract-only.ts
 │   │   ├── validate-quality.ts
