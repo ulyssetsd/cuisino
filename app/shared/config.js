@@ -47,4 +47,4 @@ class Config {
     }
 }
 
-module.exports = new Config();
+export default new Config();

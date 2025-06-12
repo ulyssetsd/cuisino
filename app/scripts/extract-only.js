@@ -3,14 +3,14 @@
  * Process only the extraction phase
  */
 require('dotenv').config();
-const config = require('../shared/config');
-const RecipeRepository = require('../recipes/repository');
-const ExtractionOrchestrator = require('../extraction/orchestrator');
-const Logger = require('../shared/logger');
+import config from '../shared/config';
+import RecipeRepository from '../recipes/repository';
+import ExtractionOrchestrator from '../extraction/orchestrator';
+import { section, success, error as _error } from '../shared/logger';
 
 async function extractOnly() {
     try {
-        Logger.section('🤖 Extraction Only Mode');
+        section('🤖 Extraction Only Mode');
 
         const recipeRepo = new RecipeRepository(config);
         const extractor = new ExtractionOrchestrator(config);
@@ -27,9 +27,9 @@ async function extractOnly() {
             }
         }
 
-        Logger.success('Extraction completed!');
+        success('Extraction completed!');
     } catch (error) {
-        Logger.error('Extraction failed:', error.message);
+        _error('Extraction failed:', error.message);
         process.exit(1);
     }
 }

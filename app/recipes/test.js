@@ -2,16 +2,16 @@
  * Recipes Domain Tests
  * Tests for Recipe entity and RecipeRepository
  */
-const path = require('path');
-const Recipe = require('./recipe');
-const RecipeRepository = require('./repository');
-const Logger = require('../shared/logger');
+import { join, basename } from 'path';
+import { fromImagePaths, fromJson } from './recipe';
+import RecipeRepository from './repository';
+import { info, success, error as _error } from '../shared/logger';
 
 async function testRecipeEntity() {
-    Logger.info('Testing Recipe entity...');
+    info('Testing Recipe entity...');
 
     // Test factory methods
-    const recipe1 = Recipe.fromImagePaths('001', 'recto.jpg', 'verso.jpg');
+    const recipe1 = fromImagePaths('001', 'recto.jpg', 'verso.jpg');
     console.log('✓ Recipe created from image paths');
 
     const jsonData = {
@@ -22,7 +22,7 @@ async function testRecipeEntity() {
         ingredients: ['ingredient 1', 'ingredient 2'],
         instructions: ['step 1', 'step 2'],
     };
-    const recipe2 = Recipe.fromJson(jsonData);
+    const recipe2 = fromJson(jsonData);
     console.log('✓ Recipe created from JSON');
 
     // Test extraction update
@@ -53,12 +53,12 @@ async function testRecipeEntity() {
 }
 
 async function testRecipeRepository() {
-    Logger.info('Testing RecipeRepository...');
+    info('Testing RecipeRepository...');
 
     const config = {
         paths: {
-            recipes: path.join(__dirname, '..', 'data', 'recipes'),
-            output: path.join(__dirname, '..', 'output'),
+            recipes: join(__dirname, '..', 'data', 'recipes'),
+            output: join(__dirname, '..', 'output'),
         },
     };
 
@@ -93,12 +93,12 @@ async function testRecipeRepository() {
 }
 
 async function testImagePairing() {
-    Logger.info('Testing image pairing logic...');
+    info('Testing image pairing logic...');
 
     const config = {
         paths: {
-            recipes: path.join(__dirname, '..', 'data', 'recipes'),
-            output: path.join(__dirname, '..', 'output'),
+            recipes: join(__dirname, '..', 'data', 'recipes'),
+            output: join(__dirname, '..', 'output'),
         },
     };
 
@@ -119,8 +119,8 @@ async function testImagePairing() {
     console.log(
         '  Pairs:',
         pairs.map((p) => ({
-            recto: path.basename(p.recto),
-            verso: path.basename(p.verso),
+            recto: basename(p.recto),
+            verso: basename(p.verso),
         }))
     );
 
@@ -129,7 +129,7 @@ async function testImagePairing() {
 
 async function runRecipesTests() {
     try {
-        Logger.info('=== Running Recipes Domain Tests ===');
+        info('=== Running Recipes Domain Tests ===');
 
         // Test Recipe entity
         const { recipe1, recipe2 } = await testRecipeEntity();
@@ -141,7 +141,7 @@ async function runRecipesTests() {
         const pairs = await testImagePairing();
 
         // Summary
-        Logger.success('=== Recipes Domain Tests Complete ===');
+        success('=== Recipes Domain Tests Complete ===');
         console.log(`Recipe entities: ${recipe1 && recipe2 ? 'PASS' : 'FAIL'}`);
         console.log(
             `Repository operations: ${existingRecipes ? 'PASS' : 'FAIL'}`
@@ -155,7 +155,7 @@ async function runRecipesTests() {
             recipesLoaded: existingRecipes.length,
         };
     } catch (error) {
-        Logger.error('Recipe tests failed:', error);
+        _error('Recipe tests failed:', error);
         throw error;
     }
 }
@@ -173,7 +173,7 @@ if (require.main === module) {
         });
 }
 
-module.exports = {
+export default {
     runRecipesTests,
     testRecipeEntity,
     testRecipeRepository,

@@ -2,7 +2,13 @@
  * Simplified Quality Validator
  * Clean validation logic for recipe data
  */
-const Logger = require('../shared/logger');
+import {
+    info,
+    section,
+    success,
+    warning,
+    result as _result,
+} from '../shared/logger';
 
 class QualityValidator {
     constructor(config) {
@@ -18,11 +24,11 @@ class QualityValidator {
         );
 
         if (toValidate.length === 0) {
-            Logger.info('No recipes need quality validation');
+            info('No recipes need quality validation');
             return;
         }
 
-        Logger.section(`Validating ${toValidate.length} recipes`);
+        section(`Validating ${toValidate.length} recipes`);
 
         let passed = 0;
         let failed = 0;
@@ -33,19 +39,15 @@ class QualityValidator {
             if (result.passed) {
                 recipe.validated = true;
                 passed++;
-                Logger.success(
-                    `Recipe ${recipe.id}: Quality validation passed`
-                );
+                success(`Recipe ${recipe.id}: Quality validation passed`);
             } else {
                 failed++;
-                Logger.warning(`Recipe ${recipe.id}: Quality issues found`);
-                result.issues.forEach((issue) =>
-                    Logger.warning(`  - ${issue}`)
-                );
+                warning(`Recipe ${recipe.id}: Quality issues found`);
+                result.issues.forEach((issue) => warning(`  - ${issue}`));
             }
         }
 
-        Logger.result({
+        _result({
             'Quality validations passed': passed,
             'Quality validations failed': failed,
             'Quality pass rate': `${Math.round((passed / toValidate.length) * 100)}%`,
@@ -231,4 +233,4 @@ class QualityValidator {
     }
 }
 
-module.exports = QualityValidator;
+export default QualityValidator;

@@ -3,14 +3,14 @@
  * Generate comprehensive analysis report
  */
 require('dotenv').config();
-const config = require('../shared/config');
-const RecipeRepository = require('../recipes/repository');
-const AnalysisService = require('../analysis/service');
-const Logger = require('../shared/logger');
+import config from '../shared/config';
+import RecipeRepository from '../recipes/repository';
+import AnalysisService from '../analysis/service';
+import { section, warning, success, error as _error } from '../shared/logger';
 
 async function generateReport() {
     try {
-        Logger.section('📊 Analysis Report Generation');
+        section('📊 Analysis Report Generation');
 
         const recipeRepo = new RecipeRepository(config);
         const analysisService = new AnalysisService(config);
@@ -18,15 +18,15 @@ async function generateReport() {
         const recipes = await recipeRepo.loadExistingRecipes();
 
         if (recipes.length === 0) {
-            Logger.warning('No recipes found. Process some recipes first.');
+            warning('No recipes found. Process some recipes first.');
             return;
         }
 
         await analysisService.generateReport(recipes);
 
-        Logger.success('Analysis report generated!');
+        success('Analysis report generated!');
     } catch (error) {
-        Logger.error('Report generation failed:', error.message);
+        _error('Report generation failed:', error.message);
         process.exit(1);
     }
 }

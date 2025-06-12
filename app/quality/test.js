@@ -1,7 +1,7 @@
 /**
  * Quality domain tests
  */
-const QualityValidator = require('./validator');
+import QualityValidator from './validator';
 
 function testQualityDomain() {
     console.log('🧪 Testing Quality Domain...');
@@ -69,4 +69,4 @@ if (require.main === module) {
     }
 }
 
-module.exports = { testQualityDomain };
+export default { testQualityDomain };

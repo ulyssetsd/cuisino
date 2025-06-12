@@ -2,10 +2,15 @@
  * Recipe Repository - Simplified data access
  * Handles loading and saving recipes with minimal complexity
  */
-const path = require('path');
-const Recipe = require('./recipe');
-const FileSystem = require('../shared/filesystem');
-const Logger = require('../shared/logger');
+import { join } from 'path';
+import { fromImagePaths, fromJson } from './recipe';
+import {
+    listFiles,
+    readJson,
+    writeJson,
+    ensureDir,
+} from '../shared/filesystem';
+import { info, success } from '../shared/logger';
 
 class RecipeRepository {
     constructor(config) {
@@ -16,16 +21,16 @@ class RecipeRepository {
 
     // Load recipes from image pairs
     async loadFromImages() {
-        const compressedDir = path.join(this.recipesPath, 'compressed');
-        const images = await FileSystem.listFiles(compressedDir, '.jpg');
+        const compressedDir = join(this.recipesPath, 'compressed');
+        const images = await listFiles(compressedDir, '.jpg');
 
         // Group images into pairs (assuming they come in recto/verso pairs)
         const pairs = this.groupImagePairs(images, compressedDir);
 
-        Logger.info(`Found ${pairs.length} image pairs in ${compressedDir}`);
+        info(`Found ${pairs.length} image pairs in ${compressedDir}`);
 
         return pairs.map((pair, index) =>
-            Recipe.fromImagePaths(
+            fromImagePaths(
                 String(index + 1).padStart(3, '0'),
                 pair.recto,
                 pair.verso
@@ -36,8 +41,8 @@ class RecipeRepository {
         const recipes = [];
 
         // Load from consolidated file only
-        const consolidatedPath = path.join(this.outputPath, 'all_recipes.json');
-        const consolidatedData = await FileSystem.readJson(consolidatedPath);
+        const consolidatedPath = join(this.outputPath, 'all_recipes.json');
+        const consolidatedData = await readJson(consolidatedPath);
 
         if (consolidatedData && consolidatedData.recipes) {
             for (let i = 0; i < consolidatedData.recipes.length; i++) {
@@ -45,11 +50,11 @@ class RecipeRepository {
                 // Generate ID from index if not present
                 data.id = data.id || String(i + 1).padStart(3, '0');
 
-                recipes.push(Recipe.fromJson(data));
+                recipes.push(fromJson(data));
             }
         }
 
-        Logger.info(
+        info(
             `Loaded ${recipes.length} existing recipes from consolidated file`
         );
         return recipes;
@@ -85,7 +90,7 @@ class RecipeRepository {
         }
 
         const updatedRecipes = Array.from(existingMap.values());
-        Logger.info(`Batch saving ${recipes.length} recipes`);
+        info(`Batch saving ${recipes.length} recipes`);
 
         return await this.saveAllRecipes(updatedRecipes);
     } // Save all recipes as consolidated file
@@ -99,10 +104,10 @@ class RecipeRepository {
             recipes: recipes.map((r) => r.toJson()),
         };
 
-        const filePath = path.join(this.outputPath, 'all_recipes.json');
-        await FileSystem.writeJson(filePath, data);
+        const filePath = join(this.outputPath, 'all_recipes.json');
+        await writeJson(filePath, data);
 
-        Logger.success(
+        success(
             `Saved ${recipes.length} recipes to consolidated file: ${filePath}`
         );
         return filePath;
@@ -116,8 +121,8 @@ class RecipeRepository {
         for (let i = 0; i < sortedImages.length; i += 2) {
             if (i + 1 < sortedImages.length) {
                 pairs.push({
-                    recto: path.join(baseDir, sortedImages[i]),
-                    verso: path.join(baseDir, sortedImages[i + 1]),
+                    recto: join(baseDir, sortedImages[i]),
+                    verso: join(baseDir, sortedImages[i + 1]),
                 });
             }
         }
@@ -127,8 +132,8 @@ class RecipeRepository {
 
     // Ensure output directory exists
     async ensureDirectories() {
-        await FileSystem.ensureDir(this.outputPath);
+        await ensureDir(this.outputPath);
     }
 }
 
-module.exports = RecipeRepository;
+export default RecipeRepository;

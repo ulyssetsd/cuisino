@@ -2,9 +2,9 @@
  * Simplified Analysis Service
  * Clean reporting and statistics generation
  */
-const path = require('path');
-const FileSystem = require('../shared/filesystem');
-const Logger = require('../shared/logger');
+import { join } from 'path';
+import { writeJson, writeText } from '../shared/filesystem';
+import { section, success, result } from '../shared/logger';
 
 class AnalysisService {
     constructor(config) {
@@ -14,21 +14,19 @@ class AnalysisService {
 
     // Generate comprehensive report
     async generateReport(recipes) {
-        Logger.section('Generating analysis report');
+        section('Generating analysis report');
 
         const stats = this.calculateStatistics(recipes);
         const report = this.buildReport(stats);
 
         // Save JSON report
-        const jsonPath = path.join(this.outputPath, 'analysis_report.json');
-        await FileSystem.writeJson(jsonPath, report); // Save Markdown report
-        const markdownPath = path.join(this.outputPath, 'analysis_report.md');
+        const jsonPath = join(this.outputPath, 'analysis_report.json');
+        await writeJson(jsonPath, report); // Save Markdown report
+        const markdownPath = join(this.outputPath, 'analysis_report.md');
         const markdown = this.generateMarkdown(report);
-        await FileSystem.writeText(markdownPath, markdown);
+        await writeText(markdownPath, markdown);
 
-        Logger.success(
-            `Analysis report saved to ${jsonPath} and ${markdownPath}`
-        );
+        success(`Analysis report saved to ${jsonPath} and ${markdownPath}`);
         this.logSummary(stats);
 
         return report;
@@ -193,7 +191,7 @@ ${
 
     // Log summary to console
     logSummary(stats) {
-        Logger.result({
+        result({
             'Total recipes': stats.total,
             'Successful extractions': stats.extracted,
             'Validation rate': `${stats.qualityRate}%`,
@@ -203,4 +201,4 @@ ${
     }
 }
 
-module.exports = AnalysisService;
+export default AnalysisService;

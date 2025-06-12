@@ -2,33 +2,42 @@
  * Simplified File System utilities
  * Common file operations used across domains
  */
-const fs = require('fs-extra');
-const path = require('path');
+import {
+    ensureDir as _ensureDir,
+    pathExists,
+    readJson as _readJson,
+    writeJson as _writeJson,
+    readdir,
+    stat,
+    copy,
+    writeFile,
+} from 'fs-extra';
+import { dirname } from 'path';
 
 class FileSystem {
     static async ensureDir(dirPath) {
-        await fs.ensureDir(dirPath);
+        await _ensureDir(dirPath);
     }
 
     static async readJson(filePath) {
-        if (!(await fs.pathExists(filePath))) {
+        if (!(await pathExists(filePath))) {
             return null;
         }
-        return await fs.readJson(filePath);
+        return await _readJson(filePath);
     }
 
     static async writeJson(filePath, data, pretty = true) {
-        await this.ensureDir(path.dirname(filePath));
+        await this.ensureDir(dirname(filePath));
         const options = pretty ? { spaces: 2 } : {};
-        await fs.writeJson(filePath, data, options);
+        await _writeJson(filePath, data, options);
     }
 
     static async listFiles(dirPath, extension = null) {
-        if (!(await fs.pathExists(dirPath))) {
+        if (!(await pathExists(dirPath))) {
             return [];
         }
 
-        const files = await fs.readdir(dirPath);
+        const files = await readdir(dirPath);
         if (extension) {
             return files.filter((file) =>
                 file.toLowerCase().endsWith(extension.toLowerCase())
@@ -38,15 +47,15 @@ class FileSystem {
     }
 
     static async getFileStats(filePath) {
-        if (!(await fs.pathExists(filePath))) {
+        if (!(await pathExists(filePath))) {
             return null;
         }
-        return await fs.stat(filePath);
+        return await stat(filePath);
     }
 
     static async copyFile(src, dest) {
-        await this.ensureDir(path.dirname(dest));
-        await fs.copy(src, dest);
+        await this.ensureDir(dirname(dest));
+        await copy(src, dest);
     }
 
     static getFileSize(stats) {
@@ -59,9 +68,9 @@ class FileSystem {
     }
 
     static async writeText(filePath, content) {
-        await this.ensureDir(path.dirname(filePath));
-        await fs.writeFile(filePath, content, 'utf8');
+        await this.ensureDir(dirname(filePath));
+        await writeFile(filePath, content, 'utf8');
     }
 }
 
-module.exports = FileSystem;
+export default FileSystem;

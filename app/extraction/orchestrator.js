@@ -2,7 +2,7 @@
  * Extraction Orchestrator
  * Manages the extraction process with retry logic
  */
-const ExtractionService = require('./service');
+const ExtractionService = require('./service').default;
 const Logger = require('../shared/logger');
 
 class ExtractionOrchestrator {

@@ -2,10 +2,15 @@
  * Simplified Image Processor
  * Clean image optimization and analysis
  */
-const sharp = require('sharp');
-const path = require('path');
-const FileSystem = require('../shared/filesystem');
-const Logger = require('../shared/logger');
+import sharp from 'sharp';
+import { join } from 'path';
+import {
+    listFiles,
+    getFileStats,
+    ensureDir,
+    formatFileSize,
+} from '../shared/filesystem';
+import { section, result, progress, error as _error } from '../shared/logger';
 
 class ImageProcessor {
     constructor(config) {
@@ -16,9 +21,9 @@ class ImageProcessor {
 
     // Analyze images in directory
     async analyzeImages(inputDir) {
-        Logger.section('Analyzing images');
+        section('Analyzing images');
 
-        const images = await FileSystem.listFiles(inputDir, '.jpg');
+        const images = await listFiles(inputDir, '.jpg');
         const pairs = this.groupImagePairs(images);
 
         let totalSize = 0;
@@ -26,12 +31,8 @@ class ImageProcessor {
         let maxSize = 0;
 
         for (const pair of pairs) {
-            const rectoStats = await FileSystem.getFileStats(
-                path.join(inputDir, pair.recto)
-            );
-            const versoStats = await FileSystem.getFileStats(
-                path.join(inputDir, pair.verso)
-            );
+            const rectoStats = await getFileStats(join(inputDir, pair.recto));
+            const versoStats = await getFileStats(join(inputDir, pair.verso));
 
             if (rectoStats && versoStats) {
                 totalSize += rectoStats.size + versoStats.size;
@@ -50,40 +51,40 @@ class ImageProcessor {
             estimatedCost: this.estimateProcessingCost(pairs.length),
         };
 
-        Logger.result(stats);
+        result(stats);
         return stats;
     }
 
     // Optimize images for processing
     async optimizeImages(inputDir, outputDir) {
-        Logger.section('Optimizing images');
+        section('Optimizing images');
 
-        await FileSystem.ensureDir(outputDir);
+        await ensureDir(outputDir);
 
-        const images = await FileSystem.listFiles(inputDir, '.jpg');
+        const images = await listFiles(inputDir, '.jpg');
         let processed = 0;
         let totalSizeBefore = 0;
         let totalSizeAfter = 0;
 
         for (let i = 0; i < images.length; i++) {
             const filename = images[i];
-            const inputPath = path.join(inputDir, filename);
-            const outputPath = path.join(outputDir, filename);
+            const inputPath = join(inputDir, filename);
+            const outputPath = join(outputDir, filename);
 
-            Logger.progress(i + 1, images.length, `Processing ${filename}`);
+            progress(i + 1, images.length, `Processing ${filename}`);
 
             try {
-                const beforeStats = await FileSystem.getFileStats(inputPath);
+                const beforeStats = await getFileStats(inputPath);
                 totalSizeBefore += beforeStats.size;
 
                 await this.processImage(inputPath, outputPath);
 
-                const afterStats = await FileSystem.getFileStats(outputPath);
+                const afterStats = await getFileStats(outputPath);
                 totalSizeAfter += afterStats.size;
 
                 processed++;
             } catch (error) {
-                Logger.error(`Failed to process ${filename}: ${error.message}`);
+                _error(`Failed to process ${filename}: ${error.message}`);
             }
         }
 
@@ -91,10 +92,10 @@ class ImageProcessor {
             (1 - totalSizeAfter / totalSizeBefore) * 100
         );
 
-        Logger.result({
+        result({
             'Images processed': processed,
-            'Size before': FileSystem.formatFileSize(totalSizeBefore),
-            'Size after': FileSystem.formatFileSize(totalSizeAfter),
+            'Size before': formatFileSize(totalSizeBefore),
+            'Size after': formatFileSize(totalSizeAfter),
             'Compression rate': `${compressionRate}%`,
         });
     }
@@ -156,4 +157,4 @@ class ImageProcessor {
     }
 }
 
-module.exports = ImageProcessor;
+export default ImageProcessor;

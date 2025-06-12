@@ -3,14 +3,14 @@
  * Process only the quality validation phase
  */
 require('dotenv').config();
-const config = require('../shared/config');
-const RecipeRepository = require('../recipes/repository');
-const QualityValidator = require('../quality/validator');
-const Logger = require('../shared/logger');
+import config from '../shared/config';
+import RecipeRepository from '../recipes/repository';
+import QualityValidator from '../quality/validator';
+import { section, warning, success, error as _error } from '../shared/logger';
 
 async function validateQuality() {
     try {
-        Logger.section('🔍 Quality Validation Mode');
+        section('🔍 Quality Validation Mode');
 
         const recipeRepo = new RecipeRepository(config);
         const validator = new QualityValidator(config);
@@ -18,7 +18,7 @@ async function validateQuality() {
         const recipes = await recipeRepo.loadExistingRecipes();
 
         if (recipes.length === 0) {
-            Logger.warning('No existing recipes found. Run extraction first.');
+            warning('No existing recipes found. Run extraction first.');
             return;
         }
         validator.validateRecipes(recipes);
@@ -26,9 +26,9 @@ async function validateQuality() {
         // Save updated recipes in batch
         await recipeRepo.saveRecipes(recipes);
 
-        Logger.success('Quality validation completed!');
+        success('Quality validation completed!');
     } catch (error) {
-        Logger.error('Quality validation failed:', error.message);
+        _error('Quality validation failed:', error.message);
         process.exit(1);
     }
 }

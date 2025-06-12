@@ -2,9 +2,9 @@
  * Simplified OpenAI Extraction Service
  * Clean, focused recipe extraction from images
  */
-const OpenAI = require('openai');
-const fs = require('fs');
-const Logger = require('../shared/logger');
+import OpenAI from 'openai';
+import { readFileSync } from 'fs';
+import { progress, info, success, error as _error } from '../shared/logger';
 
 class ExtractionService {
     constructor(config) {
@@ -18,7 +18,7 @@ class ExtractionService {
 
     // Extract recipe from image pair
     async extractRecipe(recipe) {
-        Logger.progress(recipe.id, '?', `Extracting recipe from images`);
+        progress(recipe.id, '?', `Extracting recipe from images`);
 
         try {
             const images = await this.prepareImages(
@@ -47,16 +47,14 @@ class ExtractionService {
             });
 
             const content = response.choices[0].message.content;
-            Logger.info(
-                `OpenAI response preview: ${content.substring(0, 100)}...`
-            );
+            info(`OpenAI response preview: ${content.substring(0, 100)}...`);
 
             const extractedData = this.parseResponse(content);
             recipe.updateFromExtraction(extractedData);
 
-            Logger.success(`Extracted recipe: "${recipe.title}"`);
+            success(`Extracted recipe: "${recipe.title}"`);
         } catch (error) {
-            Logger.error(
+            _error(
                 `Extraction failed for recipe ${recipe.id}: ${error.message}`
             );
             recipe.setError(error);
@@ -69,7 +67,7 @@ class ExtractionService {
         const images = [];
 
         for (const imagePath of [rectoPath, versoPath]) {
-            const imageBuffer = fs.readFileSync(imagePath);
+            const imageBuffer = readFileSync(imagePath);
             const base64Image = imageBuffer.toString('base64');
 
             images.push({
@@ -161,8 +159,8 @@ IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
 
             return recipe;
         } catch (error) {
-            Logger.error(`Erreur lors du parsing JSON: ${error.message}`);
-            Logger.error(`Contenu reçu: ${content}`);
+            _error(`Erreur lors du parsing JSON: ${error.message}`);
+            _error(`Contenu reçu: ${content}`);
             throw new Error(
                 `Impossible de parser la réponse JSON: ${error.message}`
             );
@@ -177,4 +175,4 @@ IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
     }
 }
 
-module.exports = ExtractionService;
+export default ExtractionService;
