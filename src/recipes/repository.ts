@@ -52,15 +52,19 @@ class RecipeRepository {
 
         // Load from consolidated file only
         const consolidatedPath = join(this.outputPath, 'all_recipes.json');
-        const consolidatedData = await readJson<any>(consolidatedPath);
+        const consolidatedData = await readJson(consolidatedPath) as {
+            recipes?: Array<Record<string, unknown>>;
+        } | null;
 
         if (consolidatedData && consolidatedData.recipes) {
             for (let i = 0; i < consolidatedData.recipes.length; i++) {
                 const data = consolidatedData.recipes[i];
-                // Generate ID from index if not present
-                data.id = data.id || String(i + 1).padStart(3, '0');
+                if (data) {
+                    // Generate ID from index if not present
+                    data.id = data.id || String(i + 1).padStart(3, '0');
 
-                recipes.push(fromJson(data));
+                    recipes.push(fromJson(data));
+                }
             }
         }
 

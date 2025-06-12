@@ -136,7 +136,8 @@ describe('Recipe Entity', () => {
         expect(json.title).toBe('JSON Test Recipe');
         expect(json.ingredients).toHaveLength(1);
         expect(json.steps).toHaveLength(1);
-        expect(json.steps[0].text).toBe('Test instruction');
+        const steps = json.steps as Array<{ text: string }>;
+        expect(steps[0]?.text).toBe('Test instruction');
     });
 });
 

@@ -63,7 +63,7 @@ class AnalysisService {
         // Cooking time analysis
         const cookingTimes = recipes
             .filter((r) => r.cookingTime)
-            .map((r) => this.extractMinutes(r.cookingTime!))
+            .map((r) => r.cookingTime ? this.extractMinutes(r.cookingTime) : 0)
             .filter((t) => t > 0);
 
         const avgCookingTime =
@@ -98,7 +98,7 @@ class AnalysisService {
                 .filter((r) => r.hasError())
                 .map((r) => ({
                     id: r.id,
-                    error: r.error!,
+                    error: r.error || 'Unknown error',
                     timestamp: r.extractedAt,
                 })),
         };

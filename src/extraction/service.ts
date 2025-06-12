@@ -7,6 +7,7 @@ import { readFileSync } from 'fs';
 import { info, success, error as _error } from '../shared/logger.js';
 import type { AppConfig } from '../shared/types.js';
 import type Recipe from '../recipes/recipe.js';
+import type { ExtractedRecipeData } from '../recipes/types.js';
 
 class ExtractionService {
     private readonly config: AppConfig;
@@ -37,9 +38,7 @@ class ExtractionService {
             const images = await this.prepareImages(
                 recipe.rectoPath,
                 recipe.versoPath
-            );
-
-            const completion = await this.openai.chat.completions.create({
+            );            const completion = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
                 messages: [
@@ -48,14 +47,14 @@ class ExtractionService {
                         content: this.getSystemPrompt(),
                     },
                     {
-                        role: 'user',
-                        content: [
+                        role: 'user',                        content: [
                             {
                                 type: 'text',
                                 text: this.createExtractionPrompt(),
                             },
-                            ...images as any,
-                        ],
+                            ...images,
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        ] as any, // OpenAI types issue - this is correct at runtime
                     },
                 ],
             });
@@ -148,16 +147,14 @@ Return the data in this JSON format:
   "allergens": ["allergen1", "allergen2"],
   "tags": ["tag1", "tag2"]
 }`;
-    }
-
-    // Parse OpenAI response
-    private parseResponse(content: string): any {
+    }    // Parse OpenAI response
+    private parseResponse(content: string): ExtractedRecipeData {
         try {
             // Try to extract JSON from the response
             const jsonMatch = content.match(/\{[\s\S]*\}/);
             const jsonStr = jsonMatch ? jsonMatch[0] : content;
 
-            return JSON.parse(jsonStr);
+            return JSON.parse(jsonStr) as ExtractedRecipeData;
         } catch (error) {
             _error('Failed to parse OpenAI response:', content);
             throw new Error('Invalid JSON response from OpenAI');

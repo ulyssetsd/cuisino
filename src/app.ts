@@ -3,7 +3,7 @@
  * Simplified main entry point that coordinates all domains
  */
 import config from './shared/config.js';
-import Logger from './shared/logger.js';
+import { section, warning, error as logError, info, success } from './shared/logger.js';
 
 // Domain services
 import RecipeRepository from './recipes/repository.js';
@@ -38,12 +38,10 @@ class CuisinoApp {
         this.qualityValidator = new QualityValidator(config);
         this.imageProcessor = new ImageProcessor(config);
         this.analysisService = new AnalysisService(config);
-    }
-
-    // Main processing pipeline
+    }    // Main processing pipeline
     async run(): Promise<void> {
         try {
-            Logger.section('🍳 Cuisino Recipe Processor');
+            section('🍳 Cuisino Recipe Processor');
             const startTime = Date.now();
 
             // Setup
@@ -53,7 +51,7 @@ class CuisinoApp {
             const recipes = await this.loadRecipes();
 
             if (recipes.length === 0) {
-                Logger.warning('No recipes found to process');
+                warning('No recipes found to process');
                 return;
             }
 
@@ -71,16 +69,13 @@ class CuisinoApp {
 
             // Final summary
             const duration = Math.round((Date.now() - startTime) / 1000);
-            Logger.section(`✨ Processing completed in ${duration}s`);
-        } catch (error) {
-            Logger.error('Application failed:', (error as Error).message);
+            section(`✨ Processing completed in ${duration}s`);        } catch (error) {
+            logError('Application failed:', (error as Error).message);
             throw error;
         }
-    }
-
-    // Analyze images only (no processing)
+    }    // Analyze images only (no processing)
     async analyzeImages(): Promise<ImageStats> {
-        Logger.section('🔍 Image Analysis Mode');
+        section('🔍 Image Analysis Mode');
 
         const inputDir = config.paths.recipes + '/compressed';
         return await this.imageProcessor.analyzeImages(inputDir);
@@ -88,7 +83,7 @@ class CuisinoApp {
 
     // Optimize images only
     async optimizeImages(): Promise<ImageProcessingResult> {
-        Logger.section('🎨 Image Optimization Mode');
+        section('🎨 Image Optimization Mode');
 
         const inputDir = config.paths.recipes + '/uncompressed';
         const outputDir = config.paths.recipes + '/compressed';
@@ -98,7 +93,7 @@ class CuisinoApp {
 
     // Load recipes from various sources
     private async loadRecipes(): Promise<Recipe[]> {
-        Logger.section('Loading recipes');
+        section('Loading recipes');
 
         // Try to load existing recipes first
         let recipes = await this.recipeRepo.loadExistingRecipes();
@@ -108,13 +103,13 @@ class CuisinoApp {
             recipes = await this.recipeRepo.loadFromImages();
         }
 
-        Logger.info(`Loaded ${recipes.length} recipes total`);
+        info(`Loaded ${recipes.length} recipes total`);
         return recipes;
     }
 
     // Save all results
     private async saveResults(recipes: Recipe[]): Promise<void> {
-        Logger.section('Saving results');
+        section('Saving results');
 
         // Save individual recipes
         for (const recipe of recipes) {
@@ -127,7 +122,7 @@ class CuisinoApp {
         const stats = this.calculateStats(recipes);
         await this.recipeRepo.saveAllRecipes(recipes, stats);
 
-        Logger.success('All results saved successfully');
+        success('All results saved successfully');
     }
 
     // Calculate processing statistics

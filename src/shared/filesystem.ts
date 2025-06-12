@@ -1,95 +1,53 @@
 /**
- * Simplified File System utilities
- * Common file operations used across domains
+ * File system utilities using native Node.js APIs
+ * Direct use of fs/promises and fs-extra for better performance
  */
-import fs from 'fs-extra';
+import { promises as fs } from 'fs';
 import { dirname } from 'path';
+import { ensureDir, pathExists, readJson, writeJson } from 'fs-extra';
 
-const {
-    ensureDir: _ensureDir,
-    pathExists,
-    readJson: _readJson,
-    writeJson: _writeJson,
-    readdir,
-    stat,
-    copy,
-    writeFile,
-} = fs;
+// Re-export fs-extra functions that are commonly used
+export { ensureDir, pathExists, readJson, writeJson };
 
-class FileSystem {
-    static async ensureDir(dirPath: string): Promise<void> {
-        await _ensureDir(dirPath);
-    }
+// Simple file operations using native fs/promises
+export async function readText(filePath: string): Promise<string> {
+    return fs.readFile(filePath, 'utf-8');
+}
 
-    static async readJson<T = any>(filePath: string): Promise<T | null> {
-        if (!(await pathExists(filePath))) {
-            return null;
-        }
-        return await _readJson(filePath);
-    }
+export async function writeText(filePath: string, content: string): Promise<void> {
+    await ensureDir(dirname(filePath));
+    await fs.writeFile(filePath, content, 'utf-8');
+}
 
-    static async writeJson(
-        filePath: string,
-        data: any,
-        pretty = true
-    ): Promise<void> {
-        await this.ensureDir(dirname(filePath));
-        const options = pretty ? { spaces: 2 } : {};
-        await _writeJson(filePath, data, options);
-    }
-
-    static async listFiles(
-        dirPath: string,
-        extension: string | null = null
-    ): Promise<string[]> {
-        if (!(await pathExists(dirPath))) {
-            return [];
-        }
-
-        const files = await readdir(dirPath);
-        if (extension) {
-            return files.filter((file) =>
-                file.toLowerCase().endsWith(extension.toLowerCase())
-            );
-        }
-        return files;
-    }
-
-    static async getFileStats(filePath: string): Promise<fs.Stats | null> {
-        if (!(await pathExists(filePath))) {
-            return null;
-        }
-        return await stat(filePath);
-    }
-
-    static async copyFile(src: string, dest: string): Promise<void> {
-        await this.ensureDir(dirname(dest));
-        await copy(src, dest);
-    }
-
-    static getFileSize(stats: fs.Stats): number {
-        return Math.round(stats.size / 1024); // KB
-    }
-
-    static formatFileSize(bytes: number): string {
-        if (bytes < 1024) return `${bytes}B`;
-        if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)}KB`;
-        return `${Math.round(bytes / (1024 * 1024))}MB`;
-    }
-
-    static async writeText(filePath: string, content: string): Promise<void> {
-        await this.ensureDir(dirname(filePath));
-        await writeFile(filePath, content, 'utf8');
+export async function listFiles(dirPath: string, extension?: string): Promise<string[]> {
+    try {
+        const files = await fs.readdir(dirPath);
+        return extension 
+            ? files.filter(file => file.toLowerCase().endsWith(extension.toLowerCase()))
+            : files;
+    } catch {
+        return [];
     }
 }
 
-export default FileSystem;
+export async function getFileStats(filePath: string): Promise<{ size: number } | null> {
+    try {
+        const stats = await fs.stat(filePath);
+        return { size: stats.size };
+    } catch {
+        return null;
+    }
+}
 
-// Named exports for convenience
-export const listFiles = FileSystem.listFiles;
-export const readJson = FileSystem.readJson;
-export const writeJson = FileSystem.writeJson;
-export const ensureDir = FileSystem.ensureDir;
-export const getFileStats = FileSystem.getFileStats;
-export const formatFileSize = FileSystem.formatFileSize;
-export const writeText = FileSystem.writeText;
+export function formatFileSize(bytes: number): string {
+    const units = ['B', 'KB', 'MB', 'GB'];
+    let size = bytes;
+    let unitIndex = 0;
+
+    while (size >= 1024 && unitIndex < units.length - 1) {
+        size /= 1024;
+        unitIndex++;
+    }
+
+    return `${Math.round(size * 100) / 100} ${units[unitIndex]}`;
+}

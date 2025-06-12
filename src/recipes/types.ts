@@ -23,6 +23,25 @@ export interface NutritionalInfo {
     sugar?: string;
 }
 
+// Interface for extracted recipe data from OpenAI
+export interface ExtractedRecipeData {
+    title?: string;
+    subtitle?: string;
+    cookingTime?: string;
+    duration?: string; // Alternative name for cookingTime
+    difficulty?: string;
+    servings?: string | number;
+    ingredients?: RecipeIngredient[];
+    instructions?: string[];
+    nutritionalInfo?: NutritionalInfo;
+    nutrition?: NutritionalInfo; // Alternative name for nutritionalInfo
+    allergens?: string[];
+    tips?: string[];
+    tags?: string[];
+    image?: string;
+    source?: string;
+}
+
 export interface RecipeMetadata {
     extracted?: boolean;
     validated?: boolean;
@@ -32,7 +51,7 @@ export interface RecipeMetadata {
         recto?: string;
         verso?: string;
     };
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 export interface RecipeData {

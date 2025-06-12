@@ -8,6 +8,7 @@ import type {
     NutritionalInfo,
     RecipeMetadata,
     ValidationResult,
+    ExtractedRecipeData,
 } from './types.js';
 
 class Recipe implements RecipeData {
@@ -75,43 +76,43 @@ class Recipe implements RecipeData {
     }
 
     // Factory method from JSON
-    static fromJson(data: any): Recipe {
-        const recipe = new Recipe(data.id, data.rectoPath, data.versoPath);
+    static fromJson(data: Record<string, unknown>): Recipe {
+        const recipe = new Recipe(data.id as string, data.rectoPath as string, data.versoPath as string);
 
         // Handle different JSON formats
         if (data.steps) {
             // HelloFresh format from all_recipes.json
-            recipe.title = data.title || 'Unknown Recipe';
-            recipe.subtitle = data.subtitle;
-            recipe.cookingTime = data.duration;
-            recipe.difficulty = data.difficulty;
-            recipe.servings = data.servings;
-            recipe.ingredients = data.ingredients || [];
+            recipe.title = data.title as string || 'Unknown Recipe';
+            recipe.subtitle = data.subtitle as string;
+            recipe.cookingTime = data.duration as string;
+            recipe.difficulty = data.difficulty as string;
+            recipe.servings = data.servings as string | number;
+            recipe.ingredients = (data.ingredients as RecipeIngredient[]) || [];
             recipe.instructions = data.steps
-                ? data.steps.map((step: any) => step.text)
+                ? (data.steps as Array<{ text: string }>).map((step) => step.text)
                 : [];
-            recipe.nutritionalInfo = data.nutrition || {};
-            recipe.allergens = data.allergens || [];
-            recipe.tips = data.tips || [];
-            recipe.tags = data.tags || [];
-            recipe.image = data.image;
-            recipe.source = data.source;
-            recipe.metadata = data.metadata || {};
+            recipe.nutritionalInfo = (data.nutrition as NutritionalInfo) || {};
+            recipe.allergens = (data.allergens as string[]) || [];
+            recipe.tips = (data.tips as string[]) || [];
+            recipe.tags = (data.tags as string[]) || [];
+            recipe.image = data.image as string;
+            recipe.source = data.source as string;
+            recipe.metadata = (data.metadata as RecipeMetadata) || {};
             recipe.extracted = true;
             recipe.validated = false;
             recipe.extractedAt =
-                data.metadata?.processedAt || new Date().toISOString();
+                (data.metadata as RecipeMetadata)?.processedAt as string || new Date().toISOString();
         } else if (data.title) {
             // New format or already converted
             Object.assign(recipe, data);
         } else {
             // Legacy format - convert from old structure
-            recipe.title = data.title || 'Unknown Recipe';
-            recipe.cookingTime = data.duration || data.cookingTime;
-            recipe.servings = data.servings;
-            recipe.ingredients = data.ingredients || [];
-            recipe.instructions = data.instructions || [];
-            recipe.nutritionalInfo = data.nutritionalInfo || {};
+            recipe.title = (data.title as string) || 'Unknown Recipe';
+            recipe.cookingTime = (data.duration as string) || (data.cookingTime as string);
+            recipe.servings = data.servings as string | number;
+            recipe.ingredients = (data.ingredients as RecipeIngredient[]) || [];
+            recipe.instructions = (data.instructions as string[]) || [];
+            recipe.nutritionalInfo = (data.nutritionalInfo as NutritionalInfo) || {};
             recipe.extracted = true;
             recipe.validated = false;
             recipe.extractedAt = new Date().toISOString();
@@ -121,7 +122,7 @@ class Recipe implements RecipeData {
     }
 
     // Update with extraction data
-    updateFromExtraction(data: any): void {
+    updateFromExtraction(data: ExtractedRecipeData): void {
         this.title = data.title;
         this.subtitle = data.subtitle;
         this.cookingTime = data.cookingTime || data.duration;
@@ -174,7 +175,7 @@ class Recipe implements RecipeData {
     }
 
     // Export to JSON (maintaining HelloFresh format)
-    toJson(): any {
+    toJson(): Record<string, unknown> {
         // Prepare clean metadata without duplication
         const cleanMetadata = { ...this.metadata };
 
