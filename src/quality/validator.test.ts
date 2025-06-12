@@ -5,7 +5,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import QualityValidator from './validator.js';
 import { fromImagePaths } from '../recipes/recipe.js';
-import type { AppConfig } from '../types/index.js';
+import type { AppConfig } from '../shared/types.js';
 
 // Mock configuration for tests
 const mockConfig: AppConfig = {

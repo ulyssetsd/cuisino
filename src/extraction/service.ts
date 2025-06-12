@@ -5,7 +5,7 @@
 import OpenAI from 'openai';
 import { readFileSync } from 'fs';
 import { info, success, error as _error } from '../shared/logger.js';
-import type { AppConfig } from '../types/index.js';
+import type { AppConfig } from '../shared/types.js';
 import type Recipe from '../recipes/recipe.js';
 
 class ExtractionService {

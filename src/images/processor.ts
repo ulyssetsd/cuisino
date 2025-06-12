@@ -16,13 +16,12 @@ import {
     progress,
     error as _error,
 } from '../shared/logger.js';
+import type { AppConfig, ImageCompressionConfig } from '../shared/types.js';
 import type {
-    AppConfig,
     ImagePair,
     ImageStats,
     ImageProcessingResult,
-    ImageCompressionConfig,
-} from '../types/index.js';
+} from './types.js';
 
 class ImageProcessor {
     private readonly config: AppConfig;

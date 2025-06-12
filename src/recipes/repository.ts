@@ -11,7 +11,9 @@ import {
     ensureDir,
 } from '../shared/filesystem.js';
 import { info, success } from '../shared/logger.js';
-import type { AppConfig, ImagePair, ProcessingStats } from '../types/index.js';
+import type { AppConfig } from '../shared/types.js';
+import type { ProcessingStats } from './types.js';
+import type { ImagePair } from '../images/types.js';
 import type Recipe from './recipe.js';
 
 class RecipeRepository {

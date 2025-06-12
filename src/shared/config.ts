@@ -11,7 +11,7 @@ import type {
     QualityConfig,
     ImagesConfig,
     ImageCompressionConfig,
-} from '../types/index.js';
+} from './types.js';
 
 class Config implements AppConfig {
     public readonly openai: OpenAIConfig;

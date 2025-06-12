@@ -5,12 +5,9 @@
 import { join } from 'path';
 import { writeJson, writeText } from '../shared/filesystem.js';
 import { section, success, result } from '../shared/logger.js';
-import type {
-    AppConfig,
-    AnalysisStats,
-    AnalysisReport,
-    RecipeIngredient,
-} from '../types/index.js';
+import type { AppConfig } from '../shared/types.js';
+import type { AnalysisStats, AnalysisReport } from './types.js';
+import type { RecipeIngredient } from '../recipes/types.js';
 import type Recipe from '../recipes/recipe.js';
 
 class AnalysisService {

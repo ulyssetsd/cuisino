@@ -5,7 +5,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { fromImagePaths, fromJson } from './recipe.js';
 import RecipeRepository from './repository.js';
-import type { AppConfig } from '../types/index.js';
+import type { AppConfig } from '../shared/types.js';
 
 // Mock configuration for tests
 const mockConfig: AppConfig = {

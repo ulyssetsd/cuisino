@@ -11,7 +11,7 @@ import {
     result,
     warning,
 } from '../shared/logger.js';
-import type { AppConfig } from '../types/index.js';
+import type { AppConfig } from '../shared/types.js';
 import type Recipe from '../recipes/recipe.js';
 
 class ExtractionOrchestrator {

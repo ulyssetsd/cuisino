@@ -8,7 +8,7 @@ import type {
     NutritionalInfo,
     RecipeMetadata,
     ValidationResult,
-} from '../types/index.js';
+} from './types.js';
 
 class Recipe implements RecipeData {
     public id: string;
