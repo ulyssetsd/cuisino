@@ -51,42 +51,32 @@ var Config = class {
 var config_default = new Config();
 
 // src/shared/logger.ts
-var Logger = class {
-  static info(message, ...args) {
-    console.log(`\u2139\uFE0F  ${message}`, ...args);
-  }
-  static success(message, ...args) {
-    console.log(`\u2705 ${message}`, ...args);
-  }
-  static warning(message, ...args) {
-    console.log(`\u26A0\uFE0F  ${message}`, ...args);
-  }
-  static error(message, ...args) {
-    console.error(`\u274C ${message}`, ...args);
-  }
-  static progress(current, total, message) {
-    console.log(`\u{1F504} [${current}/${total}] ${message}`);
-  }
-  static section(title) {
-    console.log(`
+function info(message, ...args) {
+  console.log(`\u2139\uFE0F  ${message}`, ...args);
+}
+function success(message, ...args) {
+  console.log(`\u2705 ${message}`, ...args);
+}
+function warning(message, ...args) {
+  console.log(`\u26A0\uFE0F  ${message}`, ...args);
+}
+function error(message, ...args) {
+  console.error(`\u274C ${message}`, ...args);
+}
+function progress(current, total, message) {
+  console.log(`\u{1F504} [${current}/${total}] ${message}`);
+}
+function section(title) {
+  console.log(`
 \u{1F539} ${title}`);
-    console.log("\u2500".repeat(50));
-  }
-  static result(stats) {
-    console.log("\n\u{1F4CA} Results:");
-    Object.entries(stats).forEach(([key, value]) => {
-      console.log(`   ${key}: ${value}`);
-    });
-  }
-};
-var logger_default = Logger;
-var info = Logger.info;
-var success = Logger.success;
-var warning = Logger.warning;
-var error = Logger.error;
-var progress = Logger.progress;
-var section = Logger.section;
-var result = Logger.result;
+  console.log("\u2500".repeat(50));
+}
+function result(stats) {
+  console.log("\n\u{1F4CA} Results:");
+  Object.entries(stats).forEach(([key, value]) => {
+    console.log(`   ${key}: ${value}`);
+  });
+}
 
 // src/recipes/repository.ts
 import { join } from "path";
@@ -266,75 +256,39 @@ var fromImagePaths = Recipe.fromImagePaths;
 var fromJson = Recipe.fromJson;
 
 // src/shared/filesystem.ts
-import fs from "fs-extra";
+import { promises as fs } from "fs";
 import { dirname } from "path";
-var {
-  ensureDir: _ensureDir,
-  pathExists,
-  readJson: _readJson,
-  writeJson: _writeJson,
-  readdir,
-  stat,
-  copy,
-  writeFile
-} = fs;
-var FileSystem = class {
-  static async ensureDir(dirPath) {
-    await _ensureDir(dirPath);
+import { ensureDir, pathExists, readJson, writeJson } from "fs-extra";
+async function writeText(filePath, content) {
+  await ensureDir(dirname(filePath));
+  await fs.writeFile(filePath, content, "utf-8");
+}
+async function listFiles(dirPath, extension) {
+  try {
+    const files = await fs.readdir(dirPath);
+    return extension ? files.filter((file) => file.toLowerCase().endsWith(extension.toLowerCase())) : files;
+  } catch {
+    return [];
   }
-  static async readJson(filePath) {
-    if (!await pathExists(filePath)) {
-      return null;
-    }
-    return await _readJson(filePath);
+}
+async function getFileStats(filePath) {
+  try {
+    const stats = await fs.stat(filePath);
+    return { size: stats.size };
+  } catch {
+    return null;
   }
-  static async writeJson(filePath, data, pretty = true) {
-    await this.ensureDir(dirname(filePath));
-    const options = pretty ? { spaces: 2 } : {};
-    await _writeJson(filePath, data, options);
+}
+function formatFileSize(bytes) {
+  const units = ["B", "KB", "MB", "GB"];
+  let size = bytes;
+  let unitIndex = 0;
+  while (size >= 1024 && unitIndex < units.length - 1) {
+    size /= 1024;
+    unitIndex++;
   }
-  static async listFiles(dirPath, extension = null) {
-    if (!await pathExists(dirPath)) {
-      return [];
-    }
-    const files = await readdir(dirPath);
-    if (extension) {
-      return files.filter(
-        (file) => file.toLowerCase().endsWith(extension.toLowerCase())
-      );
-    }
-    return files;
-  }
-  static async getFileStats(filePath) {
-    if (!await pathExists(filePath)) {
-      return null;
-    }
-    return await stat(filePath);
-  }
-  static async copyFile(src, dest) {
-    await this.ensureDir(dirname(dest));
-    await copy(src, dest);
-  }
-  static getFileSize(stats) {
-    return Math.round(stats.size / 1024);
-  }
-  static formatFileSize(bytes) {
-    if (bytes < 1024) return `${bytes}B`;
-    if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)}KB`;
-    return `${Math.round(bytes / (1024 * 1024))}MB`;
-  }
-  static async writeText(filePath, content) {
-    await this.ensureDir(dirname(filePath));
-    await writeFile(filePath, content, "utf8");
-  }
-};
-var listFiles = FileSystem.listFiles;
-var readJson = FileSystem.readJson;
-var writeJson = FileSystem.writeJson;
-var ensureDir = FileSystem.ensureDir;
-var getFileStats = FileSystem.getFileStats;
-var formatFileSize = FileSystem.formatFileSize;
-var writeText = FileSystem.writeText;
+  return `${Math.round(size * 100) / 100} ${units[unitIndex]}`;
+}
 
 // src/recipes/repository.ts
 var RecipeRepository = class {
@@ -368,8 +322,10 @@ var RecipeRepository = class {
     if (consolidatedData && consolidatedData.recipes) {
       for (let i = 0; i < consolidatedData.recipes.length; i++) {
         const data = consolidatedData.recipes[i];
-        data.id = data.id || String(i + 1).padStart(3, "0");
-        recipes.push(fromJson(data));
+        if (data) {
+          data.id = data.id || String(i + 1).padStart(3, "0");
+          recipes.push(fromJson(data));
+        }
       }
     }
     info(
@@ -481,7 +437,9 @@ var ExtractionService = class {
                 text: this.createExtractionPrompt()
               },
               ...images
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ]
+            // OpenAI types issue - this is correct at runtime
           }
         ]
       });
@@ -921,7 +879,7 @@ var AnalysisService = class {
       allIngredients.map((i) => i.name.toLowerCase())
     );
     const avgIngredientsPerRecipe = allIngredients.length / Math.max(extracted, 1);
-    const cookingTimes = recipes.filter((r) => r.cookingTime).map((r) => this.extractMinutes(r.cookingTime)).filter((t) => t > 0);
+    const cookingTimes = recipes.filter((r) => r.cookingTime).map((r) => r.cookingTime ? this.extractMinutes(r.cookingTime) : 0).filter((t) => t > 0);
     const avgCookingTime = cookingTimes.length > 0 ? Math.round(
       cookingTimes.reduce((a, b) => a + b, 0) / cookingTimes.length
     ) : 0;
@@ -941,7 +899,7 @@ var AnalysisService = class {
       topIngredients: Object.entries(ingredientCounts).sort(([, a], [, b]) => b - a).slice(0, 10).map(([name, count]) => ({ name, count })),
       errors: recipes.filter((r) => r.hasError()).map((r) => ({
         id: r.id,
-        error: r.error,
+        error: r.error || "Unknown error",
         timestamp: r.extractedAt
       }))
     };
@@ -1058,12 +1016,12 @@ var CuisinoApp = class {
   // Main processing pipeline
   async run() {
     try {
-      logger_default.section("\u{1F373} Cuisino Recipe Processor");
+      section("\u{1F373} Cuisino Recipe Processor");
       const startTime = Date.now();
       await this.recipeRepo.ensureDirectories();
       const recipes = await this.loadRecipes();
       if (recipes.length === 0) {
-        logger_default.warning("No recipes found to process");
+        warning("No recipes found to process");
         return;
       }
       await this.extractor.extractRecipes(recipes);
@@ -1071,38 +1029,38 @@ var CuisinoApp = class {
       await this.saveResults(recipes);
       await this.analysisService.generateReport(recipes);
       const duration = Math.round((Date.now() - startTime) / 1e3);
-      logger_default.section(`\u2728 Processing completed in ${duration}s`);
+      section(`\u2728 Processing completed in ${duration}s`);
     } catch (error2) {
-      logger_default.error("Application failed:", error2.message);
+      error("Application failed:", error2.message);
       throw error2;
     }
   }
   // Analyze images only (no processing)
   async analyzeImages() {
-    logger_default.section("\u{1F50D} Image Analysis Mode");
+    section("\u{1F50D} Image Analysis Mode");
     const inputDir = config_default.paths.recipes + "/compressed";
     return await this.imageProcessor.analyzeImages(inputDir);
   }
   // Optimize images only
   async optimizeImages() {
-    logger_default.section("\u{1F3A8} Image Optimization Mode");
+    section("\u{1F3A8} Image Optimization Mode");
     const inputDir = config_default.paths.recipes + "/uncompressed";
     const outputDir = config_default.paths.recipes + "/compressed";
     return await this.imageProcessor.optimizeImages(inputDir, outputDir);
   }
   // Load recipes from various sources
   async loadRecipes() {
-    logger_default.section("Loading recipes");
+    section("Loading recipes");
     let recipes = await this.recipeRepo.loadExistingRecipes();
     if (recipes.length === 0) {
       recipes = await this.recipeRepo.loadFromImages();
     }
-    logger_default.info(`Loaded ${recipes.length} recipes total`);
+    info(`Loaded ${recipes.length} recipes total`);
     return recipes;
   }
   // Save all results
   async saveResults(recipes) {
-    logger_default.section("Saving results");
+    section("Saving results");
     for (const recipe of recipes) {
       if (recipe.extracted || recipe.hasError()) {
         await this.recipeRepo.saveRecipe(recipe);
@@ -1110,7 +1068,7 @@ var CuisinoApp = class {
     }
     const stats = this.calculateStats(recipes);
     await this.recipeRepo.saveAllRecipes(recipes, stats);
-    logger_default.success("All results saved successfully");
+    success("All results saved successfully");
   }
   // Calculate processing statistics
   calculateStats(recipes) {
