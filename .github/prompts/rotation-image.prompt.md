@@ -1,6 +1,7 @@
 ---
 mode: 'agent'
 ---
+
 Rotation automatique des images (portrait → paysage)
 J’ai remarqué que mes images sont toutes en orientation portrait, alors qu’elles devraient être en paysage pour faciliter le traitement OCR.
 Je veux que tu m’aides à écrire une routine qui :

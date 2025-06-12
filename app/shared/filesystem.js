@@ -11,7 +11,7 @@ class FileSystem {
     }
 
     static async readJson(filePath) {
-        if (!await fs.pathExists(filePath)) {
+        if (!(await fs.pathExists(filePath))) {
             return null;
         }
         return await fs.readJson(filePath);
@@ -24,19 +24,21 @@ class FileSystem {
     }
 
     static async listFiles(dirPath, extension = null) {
-        if (!await fs.pathExists(dirPath)) {
+        if (!(await fs.pathExists(dirPath))) {
             return [];
         }
-        
+
         const files = await fs.readdir(dirPath);
         if (extension) {
-            return files.filter(file => file.toLowerCase().endsWith(extension.toLowerCase()));
+            return files.filter((file) =>
+                file.toLowerCase().endsWith(extension.toLowerCase())
+            );
         }
         return files;
     }
 
     static async getFileStats(filePath) {
-        if (!await fs.pathExists(filePath)) {
+        if (!(await fs.pathExists(filePath))) {
             return null;
         }
         return await fs.stat(filePath);
@@ -49,7 +51,8 @@ class FileSystem {
 
     static getFileSize(stats) {
         return Math.round(stats.size / 1024); // KB
-    }    static formatFileSize(bytes) {
+    }
+    static formatFileSize(bytes) {
         if (bytes < 1024) return `${bytes}B`;
         if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)}KB`;
         return `${Math.round(bytes / (1024 * 1024))}MB`;

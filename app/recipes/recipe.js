@@ -2,11 +2,12 @@
  * Simplified Recipe Entity
  * Core recipe data structure with essential methods
  */
-class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
+class Recipe {
+    constructor(id, rectoPath = null, versoPath = null) {
         this.id = id;
         this.rectoPath = rectoPath;
         this.versoPath = versoPath;
-        
+
         // Recipe data
         this.title = null;
         this.subtitle = null;
@@ -19,10 +20,10 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
         this.allergens = [];
         this.tips = [];
         this.tags = [];
-        this.image = "";
+        this.image = '';
         this.source = null;
         this.metadata = {};
-        
+
         // Status tracking
         this.extracted = false;
         this.validated = false;
@@ -33,10 +34,10 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
     // Factory method from image paths
     static fromImagePaths(id, rectoPath, versoPath) {
         return new Recipe(id, rectoPath, versoPath);
-    }    // Factory method from JSON
+    } // Factory method from JSON
     static fromJson(data) {
         const recipe = new Recipe(data.id, data.rectoPath, data.versoPath);
-        
+
         // Handle different JSON formats
         if (data.steps) {
             // HelloFresh format from all_recipes.json
@@ -46,7 +47,9 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
             recipe.difficulty = data.difficulty;
             recipe.servings = data.servings;
             recipe.ingredients = data.ingredients || [];
-            recipe.instructions = data.steps ? data.steps.map(step => step.text) : [];
+            recipe.instructions = data.steps
+                ? data.steps.map((step) => step.text)
+                : [];
             recipe.nutritionalInfo = data.nutrition || {};
             recipe.allergens = data.allergens || [];
             recipe.tips = data.tips || [];
@@ -56,7 +59,8 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
             recipe.metadata = data.metadata || {};
             recipe.extracted = true;
             recipe.validated = false;
-            recipe.extractedAt = data.metadata?.processedAt || new Date().toISOString();
+            recipe.extractedAt =
+                data.metadata?.processedAt || new Date().toISOString();
         } else if (data.title) {
             // New format or already converted
             Object.assign(recipe, data);
@@ -72,7 +76,7 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
             recipe.validated = false;
             recipe.extractedAt = new Date().toISOString();
         }
-        
+
         return recipe;
     }
 
@@ -93,7 +97,7 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
     setError(error) {
         this.error = {
             message: error.message,
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
         };
         this.extracted = false;
     }
@@ -111,34 +115,39 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
     // Basic validation
     isValid() {
         const errors = [];
-        
+
         if (!this.title) errors.push('Missing title');
-        if (!this.ingredients || this.ingredients.length === 0) errors.push('Missing ingredients');
-        if (!this.instructions || this.instructions.length === 0) errors.push('Missing instructions');
-        
+        if (!this.ingredients || this.ingredients.length === 0)
+            errors.push('Missing ingredients');
+        if (!this.instructions || this.instructions.length === 0)
+            errors.push('Missing instructions');
+
         return {
             valid: errors.length === 0,
-            errors
+            errors,
         };
-    }    // Export to JSON (maintaining HelloFresh format)
+    } // Export to JSON (maintaining HelloFresh format)
     toJson() {
         // Prepare clean metadata without duplication
         const cleanMetadata = { ...this.metadata };
-        
+
         // Only add file paths if they don't already exist in originalFiles
-        if (!cleanMetadata.originalFiles && (this.rectoPath || this.versoPath)) {
+        if (
+            !cleanMetadata.originalFiles &&
+            (this.rectoPath || this.versoPath)
+        ) {
             cleanMetadata.originalFiles = {
                 recto: this.rectoPath,
-                verso: this.versoPath
+                verso: this.versoPath,
             };
         }
-        
+
         // Remove duplicated properties (prefer originalFiles over rectoPath/versoPath)
         if (cleanMetadata.originalFiles) {
             delete cleanMetadata.rectoPath;
             delete cleanMetadata.versoPath;
         }
-        
+
         // Add current status
         cleanMetadata.extracted = this.extracted;
         cleanMetadata.validated = this.validated;
@@ -153,14 +162,16 @@ class Recipe {    constructor(id, rectoPath = null, versoPath = null) {
             difficulty: this.difficulty,
             servings: this.servings,
             ingredients: this.ingredients,
-            steps: this.instructions.map(instruction => ({ text: instruction })),
+            steps: this.instructions.map((instruction) => ({
+                text: instruction,
+            })),
             nutrition: this.nutritionalInfo,
             allergens: this.allergens || [],
             tips: this.tips || [],
             tags: this.tags || [],
-            image: this.image || "",
-            source: this.source || "Extracted",
-            metadata: cleanMetadata
+            image: this.image || '',
+            source: this.source || 'Extracted',
+            metadata: cleanMetadata,
         };
     }
 }

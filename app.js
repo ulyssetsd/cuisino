@@ -16,7 +16,7 @@ class CuisinoApp {
     constructor() {
         // Validate configuration
         config.validate();
-        
+
         // Initialize domain services
         this.recipeRepo = new RecipeRepository(config);
         this.extractor = new ExtractionOrchestrator(config);
@@ -36,7 +36,7 @@ class CuisinoApp {
 
             // Load recipes (from images and existing data)
             const recipes = await this.loadRecipes();
-            
+
             if (recipes.length === 0) {
                 Logger.warning('No recipes found to process');
                 return;
@@ -57,7 +57,6 @@ class CuisinoApp {
             // Final summary
             const duration = Math.round((Date.now() - startTime) / 1000);
             Logger.section(`✨ Processing completed in ${duration}s`);
-
         } catch (error) {
             Logger.error('Application failed:', error.message);
             throw error;
@@ -67,7 +66,7 @@ class CuisinoApp {
     // Analyze images only (no processing)
     async analyzeImages() {
         Logger.section('🔍 Image Analysis Mode');
-        
+
         const inputDir = config.paths.recipes + '/compressed';
         return await this.imageProcessor.analyzeImages(inputDir);
     }
@@ -75,10 +74,10 @@ class CuisinoApp {
     // Optimize images only
     async optimizeImages() {
         Logger.section('🎨 Image Optimization Mode');
-        
+
         const inputDir = config.paths.recipes + '/uncompressed';
         const outputDir = config.paths.recipes + '/compressed';
-        
+
         return await this.imageProcessor.optimizeImages(inputDir, outputDir);
     }
 
@@ -118,9 +117,9 @@ class CuisinoApp {
 
     // Calculate processing statistics
     calculateStats(recipes) {
-        const extracted = recipes.filter(r => r.extracted).length;
-        const validated = recipes.filter(r => r.validated).length;
-        const errors = recipes.filter(r => r.hasError()).length;
+        const extracted = recipes.filter((r) => r.extracted).length;
+        const validated = recipes.filter((r) => r.validated).length;
+        const errors = recipes.filter((r) => r.hasError()).length;
 
         return {
             totalRecipes: recipes.length,
@@ -128,7 +127,7 @@ class CuisinoApp {
             validatedRecipes: validated,
             errorCount: errors,
             successRate: `${Math.round((extracted / recipes.length) * 100)}%`,
-            qualityRate: `${Math.round((validated / Math.max(extracted, 1)) * 100)}%`
+            qualityRate: `${Math.round((validated / Math.max(extracted, 1)) * 100)}%`,
         };
     }
 }

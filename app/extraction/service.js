@@ -10,7 +10,7 @@ class ExtractionService {
     constructor(config) {
         this.config = config;
         this.openai = new OpenAI({
-            apiKey: config.openai.apiKey
+            apiKey: config.openai.apiKey,
         });
         this.model = config.openai.model;
         this.maxTokens = config.openai.maxTokens;
@@ -21,38 +21,44 @@ class ExtractionService {
         Logger.progress(recipe.id, '?', `Extracting recipe from images`);
 
         try {
-            const images = await this.prepareImages(recipe.rectoPath, recipe.versoPath);
+            const images = await this.prepareImages(
+                recipe.rectoPath,
+                recipe.versoPath
+            );
             const response = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
                 messages: [
                     {
-                        role: "system",
-                        content: this.getSystemPrompt()
+                        role: 'system',
+                        content: this.getSystemPrompt(),
                     },
                     {
-                        role: "user",
+                        role: 'user',
                         content: [
                             {
-                                type: "text",
-                                text: "Voici une fiche de recette HelloFresh en deux parties. La première image est le RECTO (titre, image, ingrédients) et la seconde est le VERSO (instructions, quantités, nutrition). Extrait toutes les informations selon le schéma JSON demandé."
+                                type: 'text',
+                                text: 'Voici une fiche de recette HelloFresh en deux parties. La première image est le RECTO (titre, image, ingrédients) et la seconde est le VERSO (instructions, quantités, nutrition). Extrait toutes les informations selon le schéma JSON demandé.',
                             },
-                            ...images
-                        ]
-                    }
-                ]
+                            ...images,
+                        ],
+                    },
+                ],
             });
 
             const content = response.choices[0].message.content;
-            Logger.info(`OpenAI response preview: ${content.substring(0, 100)}...`);
+            Logger.info(
+                `OpenAI response preview: ${content.substring(0, 100)}...`
+            );
 
             const extractedData = this.parseResponse(content);
             recipe.updateFromExtraction(extractedData);
 
             Logger.success(`Extracted recipe: "${recipe.title}"`);
-
         } catch (error) {
-            Logger.error(`Extraction failed for recipe ${recipe.id}: ${error.message}`);
+            Logger.error(
+                `Extraction failed for recipe ${recipe.id}: ${error.message}`
+            );
             recipe.setError(error);
             throw error;
         }
@@ -67,11 +73,11 @@ class ExtractionService {
             const base64Image = imageBuffer.toString('base64');
 
             images.push({
-                type: "image_url",
+                type: 'image_url',
                 image_url: {
                     url: `data:image/jpeg;base64,${base64Image}`,
-                    detail: "high"
-                }
+                    detail: 'high',
+                },
             });
         }
 
@@ -127,7 +133,7 @@ IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
     // Create extraction prompt (now simplified for user message)
     createExtractionPrompt() {
         return `Voici une fiche de recette HelloFresh en deux parties. La première image est le RECTO (titre, image, ingrédients) et la seconde est le VERSO (instructions, quantités, nutrition). Extrait toutes les informations selon le schéma JSON demandé.`;
-    }    // Parse OpenAI response
+    } // Parse OpenAI response
     parseResponse(content) {
         try {
             // Nettoyer la réponse pour extraire uniquement le JSON
@@ -145,7 +151,7 @@ IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
             }
 
             // Assurer que certains champs sont présents avec des valeurs par défaut
-            recipe.source = recipe.source || "HelloFresh";
+            recipe.source = recipe.source || 'HelloFresh';
             recipe.ingredients = recipe.ingredients || [];
             recipe.steps = recipe.steps || [];
             recipe.nutrition = recipe.nutrition || {};
@@ -154,17 +160,18 @@ IMPORTANT: Réponds UNIQUEMENT avec le JSON valide, aucun autre texte.`;
             recipe.tags = recipe.tags || [];
 
             return recipe;
-
         } catch (error) {
             Logger.error(`Erreur lors du parsing JSON: ${error.message}`);
             Logger.error(`Contenu reçu: ${content}`);
-            throw new Error(`Impossible de parser la réponse JSON: ${error.message}`);
+            throw new Error(
+                `Impossible de parser la réponse JSON: ${error.message}`
+            );
         }
     }
 
     // Add delay between requests
     async delay() {
-        await new Promise(resolve =>
+        await new Promise((resolve) =>
             setTimeout(resolve, this.config.processing.delayBetweenRequests)
         );
     }

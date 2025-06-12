@@ -1,6 +1,7 @@
 ---
 mode: 'agent'
 ---
+
 Mon projet Node.js commence à devenir gros. Je veux :
 
 Organiser le projet en domaines verticaux autonomes (à toi de les identifier à partir du code)

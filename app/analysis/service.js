@@ -21,12 +21,14 @@ class AnalysisService {
 
         // Save JSON report
         const jsonPath = path.join(this.outputPath, 'analysis_report.json');
-        await FileSystem.writeJson(jsonPath, report);        // Save Markdown report
+        await FileSystem.writeJson(jsonPath, report); // Save Markdown report
         const markdownPath = path.join(this.outputPath, 'analysis_report.md');
         const markdown = this.generateMarkdown(report);
         await FileSystem.writeText(markdownPath, markdown);
 
-        Logger.success(`Analysis report saved to ${jsonPath} and ${markdownPath}`);
+        Logger.success(
+            `Analysis report saved to ${jsonPath} and ${markdownPath}`
+        );
         this.logSummary(stats);
 
         return report;
@@ -35,33 +37,40 @@ class AnalysisService {
     // Calculate statistics from recipes
     calculateStatistics(recipes) {
         const total = recipes.length;
-        const extracted = recipes.filter(r => r.extracted).length;
-        const validated = recipes.filter(r => r.validated).length;
-        const withErrors = recipes.filter(r => r.hasError()).length;
+        const extracted = recipes.filter((r) => r.extracted).length;
+        const validated = recipes.filter((r) => r.validated).length;
+        const withErrors = recipes.filter((r) => r.hasError()).length;
 
         // Ingredient analysis
         const allIngredients = recipes
-            .filter(r => r.ingredients)
-            .flatMap(r => r.ingredients)
-            .filter(i => i && i.name);
+            .filter((r) => r.ingredients)
+            .flatMap((r) => r.ingredients)
+            .filter((i) => i && i.name);
 
-        const ingredientCounts = this.countOccurrences(allIngredients.map(i => i.name.toLowerCase()));
-        const avgIngredientsPerRecipe = allIngredients.length / Math.max(extracted, 1);
+        const ingredientCounts = this.countOccurrences(
+            allIngredients.map((i) => i.name.toLowerCase())
+        );
+        const avgIngredientsPerRecipe =
+            allIngredients.length / Math.max(extracted, 1);
 
         // Cooking time analysis
         const cookingTimes = recipes
-            .filter(r => r.cookingTime)
-            .map(r => this.extractMinutes(r.cookingTime))
-            .filter(t => t > 0);
+            .filter((r) => r.cookingTime)
+            .map((r) => this.extractMinutes(r.cookingTime))
+            .filter((t) => t > 0);
 
-        const avgCookingTime = cookingTimes.length > 0 
-            ? Math.round(cookingTimes.reduce((a, b) => a + b, 0) / cookingTimes.length)
-            : 0;
+        const avgCookingTime =
+            cookingTimes.length > 0
+                ? Math.round(
+                      cookingTimes.reduce((a, b) => a + b, 0) /
+                          cookingTimes.length
+                  )
+                : 0;
 
         // Quality analysis
-        const qualityIssues = recipes
-            .filter(r => r.extracted && !r.validated)
-            .length;
+        const qualityIssues = recipes.filter(
+            (r) => r.extracted && !r.validated
+        ).length;
 
         return {
             total,
@@ -70,20 +79,21 @@ class AnalysisService {
             withErrors,
             successRate: Math.round((extracted / total) * 100),
             qualityRate: Math.round((validated / Math.max(extracted, 1)) * 100),
-            avgIngredientsPerRecipe: Math.round(avgIngredientsPerRecipe * 10) / 10,
+            avgIngredientsPerRecipe:
+                Math.round(avgIngredientsPerRecipe * 10) / 10,
             avgCookingTime,
             qualityIssues,
             topIngredients: Object.entries(ingredientCounts)
-                .sort(([,a], [,b]) => b - a)
+                .sort(([, a], [, b]) => b - a)
                 .slice(0, 10)
                 .map(([name, count]) => ({ name, count })),
             errors: recipes
-                .filter(r => r.hasError())
-                .map(r => ({
+                .filter((r) => r.hasError())
+                .map((r) => ({
                     id: r.id,
                     error: r.error.message,
-                    timestamp: r.error.timestamp
-                }))
+                    timestamp: r.error.timestamp,
+                })),
         };
     }
 
@@ -92,7 +102,7 @@ class AnalysisService {
         return {
             metadata: {
                 generatedAt: new Date().toISOString(),
-                version: '1.0.0'
+                version: '1.0.0',
             },
             summary: {
                 totalRecipes: stats.total,
@@ -100,18 +110,18 @@ class AnalysisService {
                 validatedRecipes: stats.validated,
                 failedExtractions: stats.withErrors,
                 successRate: `${stats.successRate}%`,
-                qualityRate: `${stats.qualityRate}%`
+                qualityRate: `${stats.qualityRate}%`,
             },
             insights: {
                 averageIngredientsPerRecipe: stats.avgIngredientsPerRecipe,
                 averageCookingTimeMinutes: stats.avgCookingTime,
                 qualityIssuesCount: stats.qualityIssues,
-                topIngredients: stats.topIngredients
+                topIngredients: stats.topIngredients,
             },
             issues: {
                 extractionErrors: stats.errors,
-                qualityIssuesCount: stats.qualityIssues
-            }
+                qualityIssuesCount: stats.qualityIssues,
+            },
         };
     }
 
@@ -138,14 +148,17 @@ Generated on: ${new Date(report.metadata.generatedAt).toLocaleString()}
 - **Quality Issues**: ${report.insights.qualityIssuesCount}
 
 ### Top Ingredients
-${report.insights.topIngredients.map(ing => `- ${ing.name}: ${ing.count} recipes`).join('\n')}
+${report.insights.topIngredients.map((ing) => `- ${ing.name}: ${ing.count} recipes`).join('\n')}
 
 ## Issues
 
 ### Extraction Errors
-${report.issues.extractionErrors.length > 0 
-    ? report.issues.extractionErrors.map(err => `- Recipe ${err.id}: ${err.error}`).join('\n')
-    : '- No extraction errors'
+${
+    report.issues.extractionErrors.length > 0
+        ? report.issues.extractionErrors
+              .map((err) => `- Recipe ${err.id}: ${err.error}`)
+              .join('\n')
+        : '- No extraction errors'
 }
 
 ### Quality Issues
@@ -166,15 +179,15 @@ ${report.issues.extractionErrors.length > 0
     // Extract minutes from cooking time string
     extractMinutes(timeStr) {
         if (!timeStr) return 0;
-        
+
         const str = timeStr.toString().toLowerCase();
         const minuteMatch = str.match(/(\d+)\s*min/);
         const hourMatch = str.match(/(\d+)\s*h/);
-        
+
         let minutes = 0;
         if (minuteMatch) minutes += parseInt(minuteMatch[1]);
         if (hourMatch) minutes += parseInt(hourMatch[1]) * 60;
-        
+
         return minutes;
     }
 
@@ -185,7 +198,7 @@ ${report.issues.extractionErrors.length > 0
             'Successful extractions': stats.extracted,
             'Validation rate': `${stats.qualityRate}%`,
             'Average cooking time': `${stats.avgCookingTime} min`,
-            'Average ingredients': stats.avgIngredientsPerRecipe
+            'Average ingredients': stats.avgIngredientsPerRecipe,
         });
     }
 }

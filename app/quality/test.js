@@ -7,9 +7,9 @@ function testQualityDomain() {
     console.log('🧪 Testing Quality Domain...');
 
     const config = {
-        quality: { validationThreshold: 0.8 }
+        quality: { validationThreshold: 0.8 },
     };
-    
+
     const validator = new QualityValidator(config);
 
     // Test good recipe
@@ -20,16 +20,16 @@ function testQualityDomain() {
         ingredients: [
             { name: 'Pasta', quantity: '400g', unit: 'g' },
             { name: 'Tomatoes', quantity: '2', unit: 'pieces' },
-            { name: 'Garlic', quantity: '3', unit: 'cloves' }
+            { name: 'Garlic', quantity: '3', unit: 'cloves' },
         ],
         instructions: [
             'Boil water in a large pot',
             'Add pasta and cook for 10 minutes',
             'Prepare the sauce with tomatoes and garlic',
-            'Mix pasta with sauce and serve hot'
+            'Mix pasta with sauce and serve hot',
         ],
         extracted: true,
-        validated: false
+        validated: false,
     };
 
     const goodResult = validator.validateRecipe(goodRecipe);
@@ -45,7 +45,7 @@ function testQualityDomain() {
         ingredients: [],
         instructions: ['Step'],
         extracted: true,
-        validated: false
+        validated: false,
     };
 
     const badResult = validator.validateRecipe(badRecipe);

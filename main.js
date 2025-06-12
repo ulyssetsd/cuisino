@@ -8,7 +8,7 @@ const CuisinoApp = require('./app');
 
 async function main() {
     const app = new CuisinoApp();
-    
+
     try {
         await app.run();
         process.exit(0);

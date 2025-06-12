@@ -1,24 +1,24 @@
 {
-  "processing": {
-    "batchSize": 5,
-    "delayBetweenRequests": 2000,
-    "retryAttempts": 3,
-    "retryDelay": 5000
-  },
-  "output": {
-    "prettyPrint": true,
-    "includeMetadata": true,
-    "generateSummary": true
-  },
-  "extraction": {
-    "includeOriginalFilenames": true,
-    "validateJson": true,
-    "fallbackOnError": true
-  },
-  "dataQuality": {
-    "enabled": true,
-    "validateIngredients": true,
-    "autoCorrection": true,
-    "skipCorrectionIfComplete": true
-  }
+    "processing": {
+        "batchSize": 5,
+        "delayBetweenRequests": 2000,
+        "retryAttempts": 3,
+        "retryDelay": 5000
+    },
+    "output": {
+        "prettyPrint": true,
+        "includeMetadata": true,
+        "generateSummary": true
+    },
+    "extraction": {
+        "includeOriginalFilenames": true,
+        "validateJson": true,
+        "fallbackOnError": true
+    },
+    "dataQuality": {
+        "enabled": true,
+        "validateIngredients": true,
+        "autoCorrection": true,
+        "skipCorrectionIfComplete": true
+    }
 }

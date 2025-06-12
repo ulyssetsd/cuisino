@@ -9,33 +9,33 @@ class Config {
         this.openai = {
             apiKey: process.env.OPENAI_API_KEY,
             model: process.env.OPENAI_MODEL || 'gpt-4o',
-            maxTokens: parseInt(process.env.MAX_TOKENS) || 4000
+            maxTokens: parseInt(process.env.MAX_TOKENS) || 4000,
         };
 
         this.paths = {
             recipes: process.env.INPUT_DIR || './recipes',
             output: process.env.OUTPUT_DIR || './output',
-            temp: './temp'
+            temp: './temp',
         };
 
         this.processing = {
             retryAttempts: 3,
             delayBetweenRequests: 2000,
-            maxConcurrent: 1
+            maxConcurrent: 1,
         };
 
         this.quality = {
             autoCorrection: process.env.AUTO_CORRECTION === 'true',
-            validationThreshold: 0.8
+            validationThreshold: 0.8,
         };
 
         this.images = {
             compression: {
                 quality: 85,
                 progressive: true,
-                mozjpeg: true
+                mozjpeg: true,
             },
-            maxSize: 2048
+            maxSize: 2048,
         };
     }
 

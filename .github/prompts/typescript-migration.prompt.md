@@ -1,6 +1,7 @@
 ---
 mode: 'agent'
 ---
+
 Mon projet est désormais structuré par domaines verticaux. Je veux maintenant :
 
 Migrer tout le projet vers TypeScript, en gardant une approche simple et mainstream

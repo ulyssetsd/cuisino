@@ -15,24 +15,27 @@ Cuisino processes pairs of HelloFresh recipe card photos (front and back) and ex
 ## Quick Start
 
 1. **Install dependencies**
-   ```bash
-   npm install
-   ```
+
+    ```bash
+    npm install
+    ```
 
 2. **Set up OpenAI API**
-   ```bash
-   cp .env.example .env
-   # Edit .env and add your OPENAI_API_KEY
-   ```
+
+    ```bash
+    cp .env.example .env
+    # Edit .env and add your OPENAI_API_KEY
+    ```
 
 3. **Add your recipe photos**
-   - Place front/back photo pairs in `input/compressed/`
-   - Photos should be ordered: all fronts first, then all backs in same order
+
+    - Place front/back photo pairs in `input/compressed/`
+    - Photos should be ordered: all fronts first, then all backs in same order
 
 4. **Run extraction**
-   ```bash
-   npm start
-   ```
+    ```bash
+    npm start
+    ```
 
 Results will be saved in `output/all_recipes.json`
 
@@ -97,29 +100,26 @@ Each recipe is extracted as structured JSON:
 
 ```json
 {
-  "id": "recipe_001",
-  "title": "Recipe Name",
-  "cookingTime": "25 min",
-  "servings": 4,
-  "ingredients": [
-    {
-      "name": "Ingredient name",
-      "quantity": "150g",
-      "unit": "g"
-    }
-  ],
-  "instructions": [
-    "Step 1 instruction",
-    "Step 2 instruction"
-  ],
-  "tags": ["Italian", "Vegetarian"],
-  "nutrition": {
-    "calories": "650 kcal",
-    "protein": "25g",
-    "carbs": "45g"
-  },
-  "extracted": true,
-  "validated": true
+    "id": "recipe_001",
+    "title": "Recipe Name",
+    "cookingTime": "25 min",
+    "servings": 4,
+    "ingredients": [
+        {
+            "name": "Ingredient name",
+            "quantity": "150g",
+            "unit": "g"
+        }
+    ],
+    "instructions": ["Step 1 instruction", "Step 2 instruction"],
+    "tags": ["Italian", "Vegetarian"],
+    "nutrition": {
+        "calories": "650 kcal",
+        "protein": "25g",
+        "carbs": "45g"
+    },
+    "extracted": true,
+    "validated": true
 }
 ```
 
@@ -140,18 +140,18 @@ Key settings in `config.json`:
 
 ```json
 {
-  "paths": {
-    "inputImages": "./input/compressed",
-    "output": "./output"
-  },
-  "openai": {
-    "model": "gpt-4o",
-    "maxTokens": 4096
-  },
-  "quality": {
-    "validationThreshold": 0.8,
-    "autoCorrection": true
-  }
+    "paths": {
+        "inputImages": "./input/compressed",
+        "output": "./output"
+    },
+    "openai": {
+        "model": "gpt-4o",
+        "maxTokens": 4096
+    },
+    "quality": {
+        "validationThreshold": 0.8,
+        "autoCorrection": true
+    }
 }
 ```
 

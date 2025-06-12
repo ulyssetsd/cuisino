@@ -12,8 +12,9 @@ class QualityValidator {
 
     // Validate all recipes that need quality check
     validateRecipes(recipes) {
-        const toValidate = recipes.filter(recipe => 
-            recipe.extracted && !recipe.validated && !recipe.hasError()
+        const toValidate = recipes.filter(
+            (recipe) =>
+                recipe.extracted && !recipe.validated && !recipe.hasError()
         );
 
         if (toValidate.length === 0) {
@@ -28,15 +29,17 @@ class QualityValidator {
 
         for (const recipe of toValidate) {
             const result = this.validateRecipe(recipe);
-            
+
             if (result.passed) {
                 recipe.validated = true;
                 passed++;
-                Logger.success(`Recipe ${recipe.id}: Quality validation passed`);
+                Logger.success(
+                    `Recipe ${recipe.id}: Quality validation passed`
+                );
             } else {
                 failed++;
                 Logger.warning(`Recipe ${recipe.id}: Quality issues found`);
-                result.issues.forEach(issue => 
+                result.issues.forEach((issue) =>
                     Logger.warning(`  - ${issue}`)
                 );
             }
@@ -45,7 +48,7 @@ class QualityValidator {
         Logger.result({
             'Quality validations passed': passed,
             'Quality validations failed': failed,
-            'Quality pass rate': `${Math.round((passed / toValidate.length) * 100)}%`
+            'Quality pass rate': `${Math.round((passed / toValidate.length) * 100)}%`,
         });
     }
 
@@ -93,15 +96,13 @@ class QualityValidator {
             passed,
             score: qualityScore,
             issues,
-            needsCorrection: !passed && issues.length > 0
+            needsCorrection: !passed && issues.length > 0,
         };
     }
 
     // Validate title
     validateTitle(title) {
-        return title && 
-               typeof title === 'string' && 
-               title.trim().length >= 3;
+        return title && typeof title === 'string' && title.trim().length >= 3;
     }
 
     // Validate ingredients
@@ -128,8 +129,12 @@ class QualityValidator {
         }
 
         // Check ingredient structure
-        const validIngredients = ingredients.filter(ing => 
-            ing && ing.name && typeof ing.name === 'string' && ing.name.trim().length > 0
+        const validIngredients = ingredients.filter(
+            (ing) =>
+                ing &&
+                ing.name &&
+                typeof ing.name === 'string' &&
+                ing.name.trim().length > 0
         );
 
         if (validIngredients.length >= ingredients.length * 0.8) {
@@ -139,8 +144,8 @@ class QualityValidator {
         }
 
         // Check for quantities
-        const withQuantities = ingredients.filter(ing => 
-            ing.quantity && ing.quantity.toString().trim().length > 0
+        const withQuantities = ingredients.filter(
+            (ing) => ing.quantity && ing.quantity.toString().trim().length > 0
         );
 
         if (withQuantities.length >= ingredients.length * 0.7) {
@@ -176,8 +181,9 @@ class QualityValidator {
         }
 
         // Check instruction content
-        const validInstructions = instructions.filter(inst => 
-            inst && typeof inst === 'string' && inst.trim().length >= 10
+        const validInstructions = instructions.filter(
+            (inst) =>
+                inst && typeof inst === 'string' && inst.trim().length >= 10
         );
 
         if (validInstructions.length >= instructions.length * 0.8) {
@@ -187,8 +193,8 @@ class QualityValidator {
         }
 
         // Check for detailed instructions
-        const detailedInstructions = instructions.filter(inst => 
-            inst && inst.length >= 30
+        const detailedInstructions = instructions.filter(
+            (inst) => inst && inst.length >= 30
         );
 
         if (detailedInstructions.length >= instructions.length * 0.5) {
@@ -203,21 +209,25 @@ class QualityValidator {
     // Validate cooking time
     validateCookingTime(cookingTime) {
         if (!cookingTime) return false;
-        
+
         const timeStr = cookingTime.toString().toLowerCase();
-        return timeStr.includes('min') || 
-               timeStr.includes('h') || 
-               /\d+/.test(timeStr);
+        return (
+            timeStr.includes('min') ||
+            timeStr.includes('h') ||
+            /\d+/.test(timeStr)
+        );
     }
 
     // Validate servings
     validateServings(servings) {
         if (!servings) return false;
-        
+
         const servingStr = servings.toString().toLowerCase();
-        return /\d+/.test(servingStr) || 
-               servingStr.includes('portion') ||
-               servingStr.includes('pers');
+        return (
+            /\d+/.test(servingStr) ||
+            servingStr.includes('portion') ||
+            servingStr.includes('pers')
+        );
     }
 }
 

@@ -1,29 +1,37 @@
 {
-  "name": "cuisino",
-  "version": "1.0.0",
-  "description": "Automatic HelloFresh recipe extractor from front/back photos",
-  "main": "main.js",
-  "scripts": {
-    "start": "node main.js",
-    "dev": "node main.js",
-    "images:analyze": "node scripts/analyze-images.js",
-    "images:optimize": "node scripts/optimize-images.js",
-    "extraction:run": "node scripts/extract-only.js",
-    "quality:validate": "node scripts/validate-quality.js",
-    "analysis:report": "node scripts/generate-report.js",
-    "recipes:test": "node recipes/test.js",
-    "quality:test": "node quality/test.js",
-    "clean:metadata": "node scripts/clean-metadata.js",
-    "test": "npm run recipes:test && npm run quality:test"
-  },
-  "keywords": ["recipes", "hellofresh", "extraction", "ocr", "ai"],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "fs-extra": "^11.3.0",
-    "openai": "^4.103.0",
-    "path": "^0.12.7",
-    "sharp": "^0.34.2"
-  }
+    "name": "cuisino",
+    "version": "1.0.0",
+    "description": "Automatic HelloFresh recipe extractor from front/back photos",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js",
+        "dev": "node main.js",
+        "extraction:run": "node scripts/extract-only.js",
+        "quality:validate": "node scripts/validate-quality.js",
+        "analysis:report": "node scripts/generate-report.js",
+        "recipes:test": "node recipes/test.js",
+        "quality:test": "node quality/test.js",
+        "test": "npm run recipes:test && npm run quality:test",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
+    },
+    "keywords": [
+        "recipes",
+        "hellofresh",
+        "extraction",
+        "ocr",
+        "ai"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "fs-extra": "^11.3.0",
+        "openai": "^4.103.0",
+        "path": "^0.12.7",
+        "sharp": "^0.34.2"
+    },
+    "devDependencies": {
+        "prettier": "^3.5.3"
+    }
 }

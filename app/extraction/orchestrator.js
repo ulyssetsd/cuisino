@@ -14,8 +14,8 @@ class ExtractionOrchestrator {
 
     // Extract all recipes that need extraction
     async extractRecipes(recipes) {
-        const toExtract = recipes.filter(recipe => recipe.needsExtraction());
-        
+        const toExtract = recipes.filter((recipe) => recipe.needsExtraction());
+
         if (toExtract.length === 0) {
             Logger.info('No recipes need extraction');
             return;
@@ -25,29 +25,34 @@ class ExtractionOrchestrator {
 
         for (let i = 0; i < toExtract.length; i++) {
             const recipe = toExtract[i];
-            
-            Logger.progress(i + 1, toExtract.length, `Processing recipe ${recipe.id}`);
+
+            Logger.progress(
+                i + 1,
+                toExtract.length,
+                `Processing recipe ${recipe.id}`
+            );
 
             try {
                 await this.extractWithRetry(recipe);
-                
+
                 // Delay between requests (except for last one)
                 if (i < toExtract.length - 1) {
                     await this.service.delay();
                 }
-                
             } catch (error) {
-                Logger.error(`Failed to extract recipe ${recipe.id} after ${this.maxRetries} attempts`);
+                Logger.error(
+                    `Failed to extract recipe ${recipe.id} after ${this.maxRetries} attempts`
+                );
             }
         }
 
-        const successful = toExtract.filter(r => r.extracted).length;
-        const failed = toExtract.filter(r => r.hasError()).length;
+        const successful = toExtract.filter((r) => r.extracted).length;
+        const failed = toExtract.filter((r) => r.hasError()).length;
 
         Logger.result({
             'Successful extractions': successful,
             'Failed extractions': failed,
-            'Success rate': `${Math.round((successful / toExtract.length) * 100)}%`
+            'Success rate': `${Math.round((successful / toExtract.length) * 100)}%`,
         });
     }
 
@@ -59,10 +64,9 @@ class ExtractionOrchestrator {
             try {
                 await this.service.extractRecipe(recipe);
                 return; // Success
-                
             } catch (error) {
                 lastError = error;
-                
+
                 if (attempt < this.maxRetries) {
                     Logger.warning(`Attempt ${attempt} failed, retrying...`);
                     await this.service.delay();
