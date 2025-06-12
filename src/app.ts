@@ -14,9 +14,11 @@ import AnalysisService from './analysis/service.js';
 
 import type {
     ProcessingStats,
+} from './recipes/types.js';
+import type {
     ImageStats,
     ImageProcessingResult,
-} from './types/index.js';
+} from './images/types.js';
 import type Recipe from './recipes/recipe.js';
 
 class CuisinoApp {
