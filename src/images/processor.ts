@@ -17,11 +17,7 @@ import {
     error as _error,
 } from '../shared/logger.js';
 import type { AppConfig, ImageCompressionConfig } from '../shared/types.js';
-import type {
-    ImagePair,
-    ImageStats,
-    ImageProcessingResult,
-} from './types.js';
+import type { ImagePair, ImageStats, ImageProcessingResult } from './types.js';
 
 class ImageProcessor {
     private readonly config: AppConfig;
@@ -93,7 +89,7 @@ class ImageProcessor {
         for (let i = 0; i < images.length; i++) {
             const filename = images[i];
             if (!filename) continue;
-            
+
             const inputPath = join(inputDir, filename);
             const outputPath = join(outputDir, filename);
 

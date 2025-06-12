@@ -77,19 +77,25 @@ class Recipe implements RecipeData {
 
     // Factory method from JSON
     static fromJson(data: Record<string, unknown>): Recipe {
-        const recipe = new Recipe(data.id as string, data.rectoPath as string, data.versoPath as string);
+        const recipe = new Recipe(
+            data.id as string,
+            data.rectoPath as string,
+            data.versoPath as string
+        );
 
         // Handle different JSON formats
         if (data.steps) {
             // HelloFresh format from all_recipes.json
-            recipe.title = data.title as string || 'Unknown Recipe';
+            recipe.title = (data.title as string) || 'Unknown Recipe';
             recipe.subtitle = data.subtitle as string;
             recipe.cookingTime = data.duration as string;
             recipe.difficulty = data.difficulty as string;
             recipe.servings = data.servings as string | number;
             recipe.ingredients = (data.ingredients as RecipeIngredient[]) || [];
             recipe.instructions = data.steps
-                ? (data.steps as Array<{ text: string }>).map((step) => step.text)
+                ? (data.steps as Array<{ text: string }>).map(
+                      (step) => step.text
+                  )
                 : [];
             recipe.nutritionalInfo = (data.nutrition as NutritionalInfo) || {};
             recipe.allergens = (data.allergens as string[]) || [];
@@ -101,18 +107,21 @@ class Recipe implements RecipeData {
             recipe.extracted = true;
             recipe.validated = false;
             recipe.extractedAt =
-                (data.metadata as RecipeMetadata)?.processedAt as string || new Date().toISOString();
+                ((data.metadata as RecipeMetadata)?.processedAt as string) ||
+                new Date().toISOString();
         } else if (data.title) {
             // New format or already converted
             Object.assign(recipe, data);
         } else {
             // Legacy format - convert from old structure
             recipe.title = (data.title as string) || 'Unknown Recipe';
-            recipe.cookingTime = (data.duration as string) || (data.cookingTime as string);
+            recipe.cookingTime =
+                (data.duration as string) || (data.cookingTime as string);
             recipe.servings = data.servings as string | number;
             recipe.ingredients = (data.ingredients as RecipeIngredient[]) || [];
             recipe.instructions = (data.instructions as string[]) || [];
-            recipe.nutritionalInfo = (data.nutritionalInfo as NutritionalInfo) || {};
+            recipe.nutritionalInfo =
+                (data.nutritionalInfo as NutritionalInfo) || {};
             recipe.extracted = true;
             recipe.validated = false;
             recipe.extractedAt = new Date().toISOString();

@@ -38,7 +38,8 @@ class ExtractionService {
             const images = await this.prepareImages(
                 recipe.rectoPath,
                 recipe.versoPath
-            );            const completion = await this.openai.chat.completions.create({
+            );
+            const completion = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
                 messages: [
@@ -47,7 +48,8 @@ class ExtractionService {
                         content: this.getSystemPrompt(),
                     },
                     {
-                        role: 'user',                        content: [
+                        role: 'user',
+                        content: [
                             {
                                 type: 'text',
                                 text: this.createExtractionPrompt(),
@@ -81,7 +83,9 @@ class ExtractionService {
     private async prepareImages(
         rectoPath: string,
         versoPath: string
-    ): Promise<Array<{ type: 'image_url'; image_url: { url: string; detail: string } }>> {
+    ): Promise<
+        Array<{ type: 'image_url'; image_url: { url: string; detail: string } }>
+    > {
         const images = [];
 
         for (const imagePath of [rectoPath, versoPath]) {
@@ -147,7 +151,7 @@ Return the data in this JSON format:
   "allergens": ["allergen1", "allergen2"],
   "tags": ["tag1", "tag2"]
 }`;
-    }    // Parse OpenAI response
+    } // Parse OpenAI response
     private parseResponse(content: string): ExtractedRecipeData {
         try {
             // Try to extract JSON from the response

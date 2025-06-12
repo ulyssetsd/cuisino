@@ -19,7 +19,11 @@ export function error(message: string, ...args: unknown[]): void {
     console.error(`❌ ${message}`, ...args);
 }
 
-export function progress(current: number, total: number, message: string): void {
+export function progress(
+    current: number,
+    total: number,
+    message: string
+): void {
     console.log(`🔄 [${current}/${total}] ${message}`);
 }
 

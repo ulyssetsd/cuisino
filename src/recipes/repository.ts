@@ -52,7 +52,7 @@ class RecipeRepository {
 
         // Load from consolidated file only
         const consolidatedPath = join(this.outputPath, 'all_recipes.json');
-        const consolidatedData = await readJson(consolidatedPath) as {
+        const consolidatedData = (await readJson(consolidatedPath)) as {
             recipes?: Array<Record<string, unknown>>;
         } | null;
 

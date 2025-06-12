@@ -3,7 +3,13 @@
  * Simplified main entry point that coordinates all domains
  */
 import config from './shared/config.js';
-import { section, warning, error as logError, info, success } from './shared/logger.js';
+import {
+    section,
+    warning,
+    error as logError,
+    info,
+    success,
+} from './shared/logger.js';
 
 // Domain services
 import RecipeRepository from './recipes/repository.js';
@@ -12,13 +18,8 @@ import QualityValidator from './quality/validator.js';
 import ImageProcessor from './images/processor.js';
 import AnalysisService from './analysis/service.js';
 
-import type {
-    ProcessingStats,
-} from './recipes/types.js';
-import type {
-    ImageStats,
-    ImageProcessingResult,
-} from './images/types.js';
+import type { ProcessingStats } from './recipes/types.js';
+import type { ImageStats, ImageProcessingResult } from './images/types.js';
 import type Recipe from './recipes/recipe.js';
 
 class CuisinoApp {
@@ -38,7 +39,7 @@ class CuisinoApp {
         this.qualityValidator = new QualityValidator(config);
         this.imageProcessor = new ImageProcessor(config);
         this.analysisService = new AnalysisService(config);
-    }    // Main processing pipeline
+    } // Main processing pipeline
     async run(): Promise<void> {
         try {
             section('🍳 Cuisino Recipe Processor');
@@ -69,11 +70,12 @@ class CuisinoApp {
 
             // Final summary
             const duration = Math.round((Date.now() - startTime) / 1000);
-            section(`✨ Processing completed in ${duration}s`);        } catch (error) {
+            section(`✨ Processing completed in ${duration}s`);
+        } catch (error) {
             logError('Application failed:', (error as Error).message);
             throw error;
         }
-    }    // Analyze images only (no processing)
+    } // Analyze images only (no processing)
     async analyzeImages(): Promise<ImageStats> {
         section('🔍 Image Analysis Mode');
 

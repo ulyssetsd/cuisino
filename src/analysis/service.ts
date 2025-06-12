@@ -63,7 +63,9 @@ class AnalysisService {
         // Cooking time analysis
         const cookingTimes = recipes
             .filter((r) => r.cookingTime)
-            .map((r) => r.cookingTime ? this.extractMinutes(r.cookingTime) : 0)
+            .map((r) =>
+                r.cookingTime ? this.extractMinutes(r.cookingTime) : 0
+            )
             .filter((t) => t > 0);
 
         const avgCookingTime =

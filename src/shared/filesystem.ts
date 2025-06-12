@@ -14,23 +14,33 @@ export async function readText(filePath: string): Promise<string> {
     return fs.readFile(filePath, 'utf-8');
 }
 
-export async function writeText(filePath: string, content: string): Promise<void> {
+export async function writeText(
+    filePath: string,
+    content: string
+): Promise<void> {
     await ensureDir(dirname(filePath));
     await fs.writeFile(filePath, content, 'utf-8');
 }
 
-export async function listFiles(dirPath: string, extension?: string): Promise<string[]> {
+export async function listFiles(
+    dirPath: string,
+    extension?: string
+): Promise<string[]> {
     try {
         const files = await fs.readdir(dirPath);
-        return extension 
-            ? files.filter(file => file.toLowerCase().endsWith(extension.toLowerCase()))
+        return extension
+            ? files.filter((file) =>
+                  file.toLowerCase().endsWith(extension.toLowerCase())
+              )
             : files;
     } catch {
         return [];
     }
 }
 
-export async function getFileStats(filePath: string): Promise<{ size: number } | null> {
+export async function getFileStats(
+    filePath: string
+): Promise<{ size: number } | null> {
     try {
         const stats = await fs.stat(filePath);
         return { size: stats.size };
