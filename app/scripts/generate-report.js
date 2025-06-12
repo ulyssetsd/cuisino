@@ -3,10 +3,15 @@
  * Generate comprehensive analysis report
  */
 require('dotenv').config();
-import config from '../shared/config';
-import RecipeRepository from '../recipes/repository';
-import AnalysisService from '../analysis/service';
-import { section, warning, success, error as _error } from '../shared/logger';
+import config from '../shared/config.js';
+import RecipeRepository from '../recipes/repository.js';
+import AnalysisService from '../analysis/service.js';
+import {
+    section,
+    warning,
+    success,
+    error as _error,
+} from '../shared/logger.js';
 
 async function generateReport() {
     try {

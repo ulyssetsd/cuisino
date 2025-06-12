@@ -3,10 +3,10 @@
  * Process only the extraction phase
  */
 require('dotenv').config();
-import config from '../shared/config';
-import RecipeRepository from '../recipes/repository';
-import ExtractionOrchestrator from '../extraction/orchestrator';
-import { section, success, error as _error } from '../shared/logger';
+import config from '../shared/config.js';
+import RecipeRepository from '../recipes/repository.js';
+import ExtractionOrchestrator from '../extraction/orchestrator.js';
+import { section, success, error as _error } from '../shared/logger.js';
 
 async function extractOnly() {
     try {

@@ -3,9 +3,15 @@
  * Tests for Recipe entity and RecipeRepository
  */
 import { join, basename } from 'path';
-import { fromImagePaths, fromJson } from './recipe';
-import RecipeRepository from './repository';
-import { info, success, error as _error } from '../shared/logger';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { fromImagePaths, fromJson } from './recipe.js';
+import RecipeRepository from './repository.js';
+import { info, success, error as _error } from '../shared/logger.js';
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 async function testRecipeEntity() {
     info('Testing Recipe entity...');
@@ -160,18 +166,16 @@ async function runRecipesTests() {
     }
 }
 
-// Run tests if called directly
-if (require.main === module) {
-    runRecipesTests()
-        .then((results) => {
-            console.log('\nTest Results:', results);
-            process.exit(0);
-        })
-        .catch((error) => {
-            console.error('Tests failed:', error);
-            process.exit(1);
-        });
-}
+// Run tests when this module is executed
+runRecipesTests()
+    .then((results) => {
+        console.log('\nTest Results:', results);
+        process.exit(0);
+    })
+    .catch((error) => {
+        console.error('Tests failed:', error);
+        process.exit(1);
+    });
 
 export default {
     runRecipesTests,

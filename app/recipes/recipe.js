@@ -176,4 +176,6 @@ class Recipe {
     }
 }
 
-module.exports = Recipe;
+export default Recipe;
+export const fromImagePaths = Recipe.fromImagePaths;
+export const fromJson = Recipe.fromJson;

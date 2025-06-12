@@ -8,7 +8,7 @@ import {
     success,
     warning,
     result as _result,
-} from '../shared/logger';
+} from '../shared/logger.js';
 
 class QualityValidator {
     constructor(config) {

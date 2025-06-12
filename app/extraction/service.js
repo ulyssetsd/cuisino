@@ -4,7 +4,7 @@
  */
 import OpenAI from 'openai';
 import { readFileSync } from 'fs';
-import { progress, info, success, error as _error } from '../shared/logger';
+import { progress, info, success, error as _error } from '../shared/logger.js';
 
 class ExtractionService {
     constructor(config) {

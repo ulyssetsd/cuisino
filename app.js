@@ -7,7 +7,7 @@ const Logger = require('./app/shared/logger');
 
 // Domain services
 const RecipeRepository = require('./app/recipes/repository').default;
-const ExtractionOrchestrator = require('./app/extraction/orchestrator');
+const ExtractionOrchestrator = require('./app/extraction/orchestrator').default;
 const QualityValidator = require('./app/quality/validator').default;
 const ImageProcessor = require('./app/images/processor').default;
 const AnalysisService = require('./app/analysis/service').default;

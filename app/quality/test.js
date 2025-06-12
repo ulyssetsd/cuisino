@@ -1,7 +1,7 @@
 /**
  * Quality domain tests
  */
-import QualityValidator from './validator';
+import QualityValidator from './validator.js';
 
 function testQualityDomain() {
     console.log('🧪 Testing Quality Domain...');
@@ -60,13 +60,12 @@ function testQualityDomain() {
     console.log('✅ Quality domain tests passed');
 }
 
-if (require.main === module) {
-    try {
-        testQualityDomain();
-    } catch (error) {
-        console.error('❌ Quality domain tests failed:', error.message);
-        process.exit(1);
-    }
+// Run tests when this module is executed
+try {
+    testQualityDomain();
+} catch (error) {
+    console.error('❌ Quality domain tests failed:', error.message);
+    process.exit(1);
 }
 
 export default { testQualityDomain };

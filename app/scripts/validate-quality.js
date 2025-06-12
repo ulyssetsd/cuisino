@@ -3,10 +3,15 @@
  * Process only the quality validation phase
  */
 require('dotenv').config();
-import config from '../shared/config';
-import RecipeRepository from '../recipes/repository';
-import QualityValidator from '../quality/validator';
-import { section, warning, success, error as _error } from '../shared/logger';
+import config from '../shared/config.js';
+import RecipeRepository from '../recipes/repository.js';
+import QualityValidator from '../quality/validator.js';
+import {
+    section,
+    warning,
+    success,
+    error as _error,
+} from '../shared/logger.js';
 
 async function validateQuality() {
     try {

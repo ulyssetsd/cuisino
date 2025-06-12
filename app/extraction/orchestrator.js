@@ -2,8 +2,15 @@
  * Extraction Orchestrator
  * Manages the extraction process with retry logic
  */
-const ExtractionService = require('./service').default;
-const Logger = require('../shared/logger');
+import ExtractionService from './service.js';
+import {
+    info,
+    section,
+    progress,
+    error as _error,
+    result,
+    warning,
+} from '../shared/logger.js';
 
 class ExtractionOrchestrator {
     constructor(config) {
@@ -17,20 +24,16 @@ class ExtractionOrchestrator {
         const toExtract = recipes.filter((recipe) => recipe.needsExtraction());
 
         if (toExtract.length === 0) {
-            Logger.info('No recipes need extraction');
+            info('No recipes need extraction');
             return;
         }
 
-        Logger.section(`Extracting ${toExtract.length} recipes`);
+        section(`Extracting ${toExtract.length} recipes`);
 
         for (let i = 0; i < toExtract.length; i++) {
             const recipe = toExtract[i];
 
-            Logger.progress(
-                i + 1,
-                toExtract.length,
-                `Processing recipe ${recipe.id}`
-            );
+            progress(i + 1, toExtract.length, `Processing recipe ${recipe.id}`);
 
             try {
                 await this.extractWithRetry(recipe);
@@ -40,7 +43,7 @@ class ExtractionOrchestrator {
                     await this.service.delay();
                 }
             } catch (error) {
-                Logger.error(
+                _error(
                     `Failed to extract recipe ${recipe.id} after ${this.maxRetries} attempts`
                 );
             }
@@ -49,7 +52,7 @@ class ExtractionOrchestrator {
         const successful = toExtract.filter((r) => r.extracted).length;
         const failed = toExtract.filter((r) => r.hasError()).length;
 
-        Logger.result({
+        result({
             'Successful extractions': successful,
             'Failed extractions': failed,
             'Success rate': `${Math.round((successful / toExtract.length) * 100)}%`,
@@ -68,7 +71,7 @@ class ExtractionOrchestrator {
                 lastError = error;
 
                 if (attempt < this.maxRetries) {
-                    Logger.warning(`Attempt ${attempt} failed, retrying...`);
+                    warning(`Attempt ${attempt} failed, retrying...`);
                     await this.service.delay();
                 }
             }
@@ -80,4 +83,4 @@ class ExtractionOrchestrator {
     }
 }
 
-module.exports = ExtractionOrchestrator;
+export default ExtractionOrchestrator;

@@ -2,17 +2,19 @@
  * Simplified File System utilities
  * Common file operations used across domains
  */
-import {
-    ensureDir as _ensureDir,
+import fs from 'fs-extra';
+import { dirname } from 'path';
+
+const {
+    ensureDir: _ensureDir,
     pathExists,
-    readJson as _readJson,
-    writeJson as _writeJson,
+    readJson: _readJson,
+    writeJson: _writeJson,
     readdir,
     stat,
     copy,
     writeFile,
-} from 'fs-extra';
-import { dirname } from 'path';
+} = fs;
 
 class FileSystem {
     static async ensureDir(dirPath) {
@@ -74,3 +76,9 @@ class FileSystem {
 }
 
 export default FileSystem;
+
+// Named exports for convenience
+export const listFiles = FileSystem.listFiles;
+export const readJson = FileSystem.readJson;
+export const writeJson = FileSystem.writeJson;
+export const ensureDir = FileSystem.ensureDir;

@@ -3,14 +3,14 @@
  * Handles loading and saving recipes with minimal complexity
  */
 import { join } from 'path';
-import { fromImagePaths, fromJson } from './recipe';
+import { fromImagePaths, fromJson } from './recipe.js';
 import {
     listFiles,
     readJson,
     writeJson,
     ensureDir,
-} from '../shared/filesystem';
-import { info, success } from '../shared/logger';
+} from '../shared/filesystem.js';
+import { info, success } from '../shared/logger.js';
 
 class RecipeRepository {
     constructor(config) {

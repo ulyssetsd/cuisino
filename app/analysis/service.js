@@ -3,8 +3,8 @@
  * Clean reporting and statistics generation
  */
 import { join } from 'path';
-import { writeJson, writeText } from '../shared/filesystem';
-import { section, success, result } from '../shared/logger';
+import { writeJson, writeText } from '../shared/filesystem.js';
+import { section, success, result } from '../shared/logger.js';
 
 class AnalysisService {
     constructor(config) {

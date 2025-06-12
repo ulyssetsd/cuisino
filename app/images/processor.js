@@ -9,8 +9,13 @@ import {
     getFileStats,
     ensureDir,
     formatFileSize,
-} from '../shared/filesystem';
-import { section, result, progress, error as _error } from '../shared/logger';
+} from '../shared/filesystem.js';
+import {
+    section,
+    result,
+    progress,
+    error as _error,
+} from '../shared/logger.js';
 
 class ImageProcessor {
     constructor(config) {
