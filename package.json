@@ -3,18 +3,23 @@
     "version": "1.0.0",
     "description": "Automatic HelloFresh recipe extractor from front/back photos",
     "type": "module",
-    "main": "main.js",
+    "main": "dist/main.js",
     "scripts": {
-        "start": "node main.js",
-        "dev": "node main.js",
-        "extraction:run": "node scripts/extract-only.js",
-        "quality:validate": "node scripts/validate-quality.js",
-        "analysis:report": "node scripts/generate-report.js",
-        "recipes:test": "node app/recipes/test.js",
-        "quality:test": "node app/quality/test.js",
-        "test": "npm run recipes:test && npm run quality:test",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
+        "build": "tsup",
+        "build:watch": "tsup --watch",
+        "dev": "tsx src/main.ts",
+        "start": "node dist/main.js",
+        "extraction:run": "tsx src/scripts/extract-only.ts",
+        "quality:validate": "tsx src/scripts/validate-quality.ts",
+        "analysis:report": "tsx src/scripts/generate-report.ts",
+        "test": "vitest",
+        "test:watch": "vitest --watch",
+        "test:run": "vitest run",
+        "lint": "eslint src/**/*.ts",
+        "lint:fix": "eslint src/**/*.ts --fix",
+        "format": "prettier --write \"src/**/*.{ts,json,md}\"",
+        "format:check": "prettier --check \"src/**/*.{ts,json,md}\"",
+        "typecheck": "tsc --noEmit"
     },
     "keywords": [
         "recipes",
@@ -29,10 +34,19 @@
         "dotenv": "^16.5.0",
         "fs-extra": "^11.3.0",
         "openai": "^4.103.0",
-        "path": "^0.12.7",
         "sharp": "^0.34.2"
     },
     "devDependencies": {
-        "prettier": "^3.5.3"
+        "@types/fs-extra": "^11.0.4",
+        "@types/node": "^20.14.0",
+        "@typescript-eslint/eslint-plugin": "^7.13.0",
+        "@typescript-eslint/parser": "^7.13.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.5.3",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.1.0",
+        "tsx": "^4.20.2",
+        "typescript": "^5.4.5",
+        "vitest": "^1.6.0"
     }
 }
