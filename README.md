@@ -42,57 +42,82 @@ Results will be saved in `output/all_recipes.json`
 ## Available Commands
 
 ```bash
-# Main processing
-npm start                    # Extract all recipes with quality validation
-npm run extraction:run       # Extract recipes only (no validation)
+# Development
+npm run dev                  # Run in development mode with tsx
+npm run build                # Build the TypeScript project
+npm start                    # Run the built application
 
-# Quality & Analysis
+# Main processing
+npm run extraction:run       # Extract recipes only (no validation)
 npm run quality:validate     # Validate existing recipes
 npm run analysis:report      # Generate analysis reports
 
-# Image processing
-npm run images:analyze       # Analyze image costs and sizes
-npm run images:optimize      # Optimize images for API
+# Testing & Quality
+npm test                     # Run all tests with Vitest
+npm run test:watch           # Run tests in watch mode
+npm run test:run             # Run tests once
+npm run typecheck            # Check TypeScript types
 
-# Testing
-npm test                     # Run all tests
-npm run recipes:test         # Test recipe functionality
-npm run quality:test         # Test quality validation
-
-# Utilities
-npm run clean:metadata       # Clean temporary files
+# Code Quality
+npm run lint                 # Lint TypeScript files
+npm run lint:fix             # Fix linting issues
+npm run format               # Format code with Prettier
+npm run format:check         # Check code formatting
 ```
 
 ## Project Structure
 
 ```
 cuisino/
-├── recipes/           # Recipe data management
-│   ├── recipe.js      # Recipe entity with HelloFresh format support
-│   ├── repository.js  # Data persistence and loading
-│   └── test.js        # Recipe domain tests
-├── extraction/        # OpenAI recipe extraction
-│   ├── service.js     # OpenAI API integration
-│   └── orchestrator.js # Extraction workflow
-├── quality/           # Data validation and scoring
-│   ├── validator.js   # Quality validation logic
-│   └── test.js        # Quality validation tests
-├── images/            # Image processing and optimization
-│   └── processor.js   # Image analysis and cost estimation
-├── analysis/          # Reporting and statistics
-│   └── service.js     # Analysis report generation
-├── scripts/           # Domain-specific scripts
-├── shared/            # Common utilities
-│   ├── config.js      # Configuration management
-│   ├── logger.js      # Logging utility
-│   └── filesystem.js  # File operations
+├── src/               # TypeScript source code
+│   ├── recipes/       # Recipe data management
+│   │   ├── recipe.ts  # Recipe entity with HelloFresh format support
+│   │   ├── repository.ts # Data persistence and loading
+│   │   └── recipe.test.ts # Recipe domain tests
+│   ├── extraction/    # OpenAI recipe extraction
+│   │   ├── service.ts # OpenAI API integration
+│   │   └── orchestrator.ts # Extraction workflow
+│   ├── quality/       # Data validation and scoring
+│   │   ├── validator.ts # Quality validation logic
+│   │   └── validator.test.ts # Quality validation tests
+│   ├── images/        # Image processing and optimization
+│   │   └── processor.ts # Image analysis and cost estimation
+│   ├── analysis/      # Reporting and statistics
+│   │   └── service.ts # Analysis report generation
+│   ├── scripts/       # Domain-specific scripts
+│   │   ├── extract-only.ts
+│   │   ├── validate-quality.ts
+│   │   └── generate-report.ts
+│   ├── shared/        # Common utilities
+│   │   ├── config.ts  # Configuration management
+│   │   ├── logger.ts  # Logging utility
+│   │   └── filesystem.ts # File operations
+│   ├── types/         # TypeScript type definitions
+│   │   └── index.ts   # All domain types
+│   ├── app.ts         # Application orchestrator
+│   └── main.ts        # Application entry point
+├── dist/              # Compiled JavaScript output
 ├── input/             # Input images
 │   ├── compressed/    # Optimized images (use these)
 │   └── uncompressed/  # Original images
 ├── output/            # Generated results
-├── main.js            # Application entry point
-└── app.js             # Application orchestrator
+├── tsconfig.json      # TypeScript configuration
+├── tsup.config.ts     # Build configuration
+└── vitest.config.ts   # Test configuration
 ```
+
+## TypeScript Stack
+
+This project uses a modern TypeScript development stack:
+
+- **Language**: TypeScript with strict type checking
+- **Build Tool**: tsup (fast ESBuild-based bundler)
+- **Test Framework**: Vitest (fast Vite-based testing)
+- **Dev Runtime**: tsx (fast TypeScript execution)
+- **Code Quality**: ESLint + Prettier
+- **Type Safety**: Comprehensive interfaces for all domain objects
+
+All source code is fully typed with proper interfaces, ensuring type safety and excellent developer experience.
 
 ## Data Format
 
