@@ -4,10 +4,10 @@
  */
 import { promises as fs } from 'fs';
 import { dirname } from 'path';
-import { ensureDir, pathExists, readJson, writeJson } from 'fs-extra';
+import fse from 'fs-extra';
 
 // Re-export fs-extra functions that are commonly used
-export { ensureDir, pathExists, readJson, writeJson };
+export const { ensureDir, pathExists, readJson, writeJson } = fse;
 
 // Simple file operations using native fs/promises
 export async function readText(filePath: string): Promise<string> {

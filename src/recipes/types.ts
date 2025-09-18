@@ -3,10 +3,14 @@
  * Interfaces for recipe entities and related data structures
  */
 
+export interface RecipeQuantity {
+    value: number | null;
+    unit: string;
+}
+
 export interface RecipeIngredient {
     name: string;
-    quantity?: string;
-    unit?: string;
+    quantity?: RecipeQuantity;
 }
 
 export interface RecipeInstruction {
