@@ -35,5 +35,5 @@ async function extractOnly(): Promise<void> {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    extractOnly();
+    void extractOnly();
 }
