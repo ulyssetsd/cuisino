@@ -8,6 +8,13 @@ import { info, success, error as _error } from '../shared/logger.js';
 import type { AppConfig } from '../shared/types.js';
 import type Recipe from '../recipes/recipe.js';
 import type { ExtractedRecipeData } from '../recipes/types.js';
+import type { 
+    OpenAIChatCompletionResponse, 
+    OpenAIImageMessage,
+    isOpenAIRateLimitError,
+    isOpenAIQuotaError,
+    isOpenAIError 
+} from '../shared/openai-types.js';
 
 class ExtractionService {
     private readonly config: AppConfig;
@@ -59,7 +66,7 @@ class ExtractionService {
                         ],
                     },
                 ],
-            });
+            }) as OpenAIChatCompletionResponse;
 
             const content = completion.choices[0]?.message?.content;
             if (!content) {
@@ -71,16 +78,26 @@ class ExtractionService {
 
             success(`Recipe ${recipe.id} extracted successfully`);
         } catch (error) {
-            // Enhanced error handling for OpenAI API
-            if (error instanceof Error) {
+            // Enhanced error handling for OpenAI API with typed errors
+            if (isOpenAIRateLimitError(error)) {
+                _error(
+                    `OpenAI rate limit error for recipe ${recipe.id}:`,
+                    error.error.message
+                );
+            } else if (isOpenAIQuotaError(error)) {
+                _error(
+                    `OpenAI quota exceeded for recipe ${recipe.id}:`,
+                    error.error.message
+                );
+            } else if (isOpenAIError(error)) {
+                _error(
+                    `OpenAI API error for recipe ${recipe.id}:`,
+                    error.error.message
+                );
+            } else if (error instanceof Error) {
                 if (error.message.includes('API key')) {
                     _error(
                         `OpenAI API key error for recipe ${recipe.id}:`,
-                        error.message
-                    );
-                } else if (error.message.includes('rate limit')) {
-                    _error(
-                        `OpenAI rate limit error for recipe ${recipe.id}:`,
                         error.message
                     );
                 } else {
@@ -103,8 +120,8 @@ class ExtractionService {
     private prepareImages(
         rectoPath: string,
         versoPath: string
-    ): Array<{ type: 'image_url'; image_url: { url: string; detail: 'high' } }> {
-        const images: Array<{ type: 'image_url'; image_url: { url: string; detail: 'high' } }> = [];
+    ): OpenAIImageMessage[] {
+        const images: OpenAIImageMessage[] = [];
 
         for (const imagePath of [rectoPath, versoPath]) {
             const imageBuffer = readFileSync(imagePath);
