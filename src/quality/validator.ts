@@ -125,7 +125,11 @@ class QualityValidator {
         // Check if most ingredients have names and some have quantities
         const withNames = ingredients.filter((ing) => ing.name?.trim()).length;
         const withQuantities = ingredients.filter(
-            (ing) => ing.quantity?.trim() || ing.unit?.trim()
+            (ing) =>
+                ing.quantity &&
+                typeof ing.quantity === 'object' &&
+                ing.quantity.value !== null &&
+                ing.quantity.unit?.trim()
         ).length;
 
         return (

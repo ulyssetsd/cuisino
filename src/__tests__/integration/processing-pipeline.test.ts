@@ -3,11 +3,13 @@
  * End-to-end tests with real photos and mocked OpenAI API
  */
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { readdir, pathExists, readFile, rm } from 'fs-extra';
+import fse from 'fs-extra';
 import { join } from 'path';
 import CuisinoApp from '../../app.js';
 import OpenAIMock from './openai-mock.js';
 import type { AppConfig } from '../../shared/types.js';
+
+const { readdir, pathExists, readFile, rm } = fse;
 
 // Test configuration
 const TEST_CONFIG: AppConfig = {
@@ -49,15 +51,15 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
     beforeEach(async () => {
         // Setup OpenAI mock
         openaiMock = OpenAIMock.create();
-        
+
         // Mock the OpenAI module
         vi.doMock('openai', () => ({
-            default: vi.fn(() => openaiMock)
+            default: vi.fn(() => openaiMock),
         }));
 
         // Mock the config module to use test configuration
         vi.doMock('../../shared/config.js', () => ({
-            default: TEST_CONFIG
+            default: TEST_CONFIG,
         }));
 
         // Clean up previous test outputs
@@ -83,8 +85,10 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
             expect(imageExists).toBe(true);
 
             const images = await readdir(inputDir);
-            const jpgImages = images.filter(img => img.toLowerCase().endsWith('.jpg'));
-            
+            const jpgImages = images.filter((img) =>
+                img.toLowerCase().endsWith('.jpg')
+            );
+
             expect(jpgImages.length).toBeGreaterThan(0);
             console.log(`Found ${jpgImages.length} test images`);
 
@@ -104,7 +108,7 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
             // Verify the content structure
             const allRecipesContent = await readFile(allRecipesPath, 'utf-8');
             const allRecipes = JSON.parse(allRecipesContent);
-            
+
             expect(allRecipes).toHaveProperty('recipes');
             expect(allRecipes).toHaveProperty('stats');
             expect(Array.isArray(allRecipes.recipes)).toBe(true);
@@ -119,15 +123,19 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
             expect(Array.isArray(recipe.ingredients)).toBe(true);
             expect(Array.isArray(recipe.steps)).toBe(true);
 
-            console.log(`Successfully processed ${allRecipes.recipes.length} recipes`);
+            console.log(
+                `Successfully processed ${allRecipes.recipes.length} recipes`
+            );
         }, 30000); // 30 second timeout for full pipeline
 
         it('should handle limited image processing (first 3 pairs)', async () => {
             // Create a modified app for limited processing
             const inputDir = join(TEST_CONFIG.paths.recipes, 'compressed');
             const images = await readdir(inputDir);
-            const jpgImages = images.filter(img => img.toLowerCase().endsWith('.jpg'));
-            
+            const jpgImages = images.filter((img) =>
+                img.toLowerCase().endsWith('.jpg')
+            );
+
             // Only process first 6 images (3 pairs)
             const limitedImages = jpgImages.slice(0, 6);
             expect(limitedImages.length).toBe(6);
@@ -142,9 +150,13 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
 
             // Should have processed some recipes
             expect(allRecipes.recipes.length).toBeGreaterThan(0);
-            expect(allRecipes.recipes.length).toBeLessThanOrEqual(Math.floor(jpgImages.length / 2));
+            expect(allRecipes.recipes.length).toBeLessThanOrEqual(
+                Math.floor(jpgImages.length / 2)
+            );
 
-            console.log(`Limited processing: ${allRecipes.recipes.length} recipes`);
+            console.log(
+                `Limited processing: ${allRecipes.recipes.length} recipes`
+            );
         }, 20000);
 
         it('should handle OpenAI API errors gracefully', async () => {
@@ -157,14 +169,19 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
             // Check that error was logged and fallback recipes were created
             const outputDir = TEST_CONFIG.paths.output;
             const allRecipesPath = join(outputDir, 'all_recipes.json');
-            
+
             if (await pathExists(allRecipesPath)) {
-                const allRecipesContent = await readFile(allRecipesPath, 'utf-8');
+                const allRecipesContent = await readFile(
+                    allRecipesPath,
+                    'utf-8'
+                );
                 const allRecipes = JSON.parse(allRecipesContent);
-                
+
                 // Should have stats showing errors
                 expect(allRecipes.stats).toHaveProperty('errorCount');
-                console.log(`Error handling test: ${allRecipes.stats.errorCount} errors handled`);
+                console.log(
+                    `Error handling test: ${allRecipes.stats.errorCount} errors handled`
+                );
             }
         }, 15000);
 
@@ -195,7 +212,7 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
                     expect(ingredient).toHaveProperty('unit');
                 }
 
-                // Instructions validation  
+                // Instructions validation
                 expect(Array.isArray(recipe.steps)).toBe(true);
                 for (const step of recipe.steps) {
                     expect(step).toHaveProperty('text');
@@ -204,7 +221,9 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
                 }
             }
 
-            console.log(`Quality validation: ${allRecipes.stats.qualityRate} quality rate`);
+            console.log(
+                `Quality validation: ${allRecipes.stats.qualityRate} quality rate`
+            );
         }, 25000);
     });
 
@@ -218,7 +237,9 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
             expect(stats.imagePairs).toBeGreaterThan(0);
             expect(stats.imagePairs).toBe(Math.floor(stats.totalImages / 2));
 
-            console.log(`Image analysis: ${stats.totalImages} images, ${stats.imagePairs} pairs`);
+            console.log(
+                `Image analysis: ${stats.totalImages} images, ${stats.imagePairs} pairs`
+            );
         });
     });
 
@@ -229,12 +250,12 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
                 ...TEST_CONFIG,
                 paths: {
                     ...TEST_CONFIG.paths,
-                    recipes: './non-existent-input'
-                }
+                    recipes: './non-existent-input',
+                },
             };
 
             vi.doMock('../../shared/config.js', () => ({
-                default: badConfig
+                default: badConfig,
             }));
 
             const { default: CuisinoAppClass } = await import('../../app.js');
@@ -247,8 +268,9 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
         });
 
         it('should handle different OpenAI error types', async () => {
-            const errorTypes: Array<'rate_limit' | 'quota_exceeded' | 'api_key' | 'network'> = 
-                ['rate_limit', 'quota_exceeded', 'api_key', 'network'];
+            const errorTypes: Array<
+                'rate_limit' | 'quota_exceeded' | 'api_key' | 'network'
+            > = ['rate_limit', 'quota_exceeded', 'api_key', 'network'];
 
             for (const errorType of errorTypes) {
                 openaiMock.reset();
@@ -264,12 +286,12 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
     describe('Performance Tests', () => {
         it('should complete processing within reasonable time', async () => {
             const startTime = Date.now();
-            
+
             await app.run();
-            
+
             const duration = Date.now() - startTime;
             const durationSeconds = Math.round(duration / 1000);
-            
+
             // Should complete within 60 seconds for test dataset
             expect(duration).toBeLessThan(60000);
             console.log(`Processing completed in ${durationSeconds} seconds`);
@@ -278,7 +300,7 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
         it('should handle concurrent processing limits', async () => {
             // This test verifies that the maxConcurrent setting is respected
             // Since our test config has maxConcurrent: 1, processing should be sequential
-            
+
             const startTime = Date.now();
             await app.run();
             const duration = Date.now() - startTime;
@@ -286,7 +308,9 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
             // Sequential processing should take longer than parallel
             // This is more of a smoke test to ensure no race conditions
             expect(duration).toBeGreaterThan(1000); // At least 1 second
-            console.log(`Sequential processing took ${Math.round(duration / 1000)} seconds`);
+            console.log(
+                `Sequential processing took ${Math.round(duration / 1000)} seconds`
+            );
         });
     });
 });
@@ -294,7 +318,7 @@ describe('Recipe Processing Pipeline Integration Tests', () => {
 // Helper function to clean up test directories
 async function cleanupTestDirectories(): Promise<void> {
     const testDirs = [TEST_CONFIG.paths.output, TEST_CONFIG.paths.temp];
-    
+
     for (const dir of testDirs) {
         if (await pathExists(dir)) {
             await rm(dir, { recursive: true, force: true });

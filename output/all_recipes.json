@@ -1,12 +1,12 @@
 {
     "metadata": {
         "totalRecipes": 34,
-        "generatedAt": "2025-05-29T21:24:21.697Z",
         "extractedRecipes": 34,
         "validatedRecipes": 34,
         "errorCount": 0,
         "successRate": "100%",
-        "qualityRate": "100%"
+        "qualityRate": "100%",
+        "generatedAt": "2025-09-18T22:05:21.805Z"
     },
     "recipes": [
         {
@@ -19,66 +19,39 @@
             "ingredients": [
                 {
                     "name": "Amandes effilées",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Paprika fumé en poudre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Lentilles corail",
-                    "quantity": {
-                        "value": 75,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 75, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Carotte",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Filet de lieu noir",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Épinards",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -127,8 +100,7 @@
                 "recipeIndex": 1,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:02:04.832Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:02:04.832Z"
             }
         },
         {
@@ -141,73 +113,40 @@
             "ingredients": [
                 {
                     "name": "Yaourt à la grecque",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Filet de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
-                {
-                    "name": "Ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
-                },
+                { "name": "Ail", "quantity": { "value": 1, "unit": "gousse" } },
                 {
                     "name": "Oignon séché",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 2, "unit": "cc" }
                 },
                 {
                     "name": "Tomate",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Pain pita",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Concombre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Huile d'olive",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Vinaigre balsamique noir",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 }
             ],
             "steps": [
@@ -248,8 +187,7 @@
                 "recipeIndex": 2,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:02:33.565Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:02:33.565Z"
             }
         },
         {
@@ -262,60 +200,33 @@
             "ingredients": [
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 0.5, "unit": "pièce" }
                 },
                 {
                     "name": "Pommes de terre",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Patate douce",
-                    "quantity": {
-                        "value": 300,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 300, "unit": "g" }
                 },
                 {
                     "name": "Filet de lieu noir",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Curry en poudre",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 5, "unit": "g" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                }
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } }
             ],
             "steps": [
                 {
@@ -363,8 +274,7 @@
                 "recipeIndex": 3,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:03:27.829Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:03:27.829Z"
             }
         },
         {
@@ -377,94 +287,51 @@
             "ingredients": [
                 {
                     "name": "Avocat",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Concentré de tomates",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Épices mexicaines",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 2, "unit": "sachet" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Filets de poulet",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Carotte",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Coupe d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Fromage à la grecque",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Haricots noirs",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 }
             ],
             "steps": [
-                {
-                    "text": "Faites cuire le riz."
-                },
+                { "text": "Faites cuire le riz." },
                 {
                     "text": "Épluchez et ciselez finement l'ail. Râpez la carotte."
                 },
-                {
-                    "text": "Préparez la sauce qui fait la différence."
-                },
-                {
-                    "text": "Coupez l'avocat, émincez le poulet."
-                },
-                {
-                    "text": "Ajoutez les haricots noirs aux légumes."
-                },
-                {
-                    "text": "Servez le tout avec le riz et l'avocat."
-                }
+                { "text": "Préparez la sauce qui fait la différence." },
+                { "text": "Coupez l'avocat, émincez le poulet." },
+                { "text": "Ajoutez les haricots noirs aux légumes." },
+                { "text": "Servez le tout avec le riz et l'avocat." }
             ],
             "nutrition": {
                 "calories": "717",
@@ -492,8 +359,7 @@
                 "recipeIndex": 4,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:03:59.603Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:03:59.603Z"
             }
         },
         {
@@ -506,73 +372,43 @@
             "ingredients": [
                 {
                     "name": "Viande hachée de boeuf",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 0.5, "unit": "pièce" }
                 },
                 {
                     "name": "Piment",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 0.5, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon nouveau",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Nouilles de blé",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 150, "unit": "g" }
                 },
                 {
                     "name": "Carotte",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Coriandre",
-                    "quantity": {
-                        "value": 10,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 10, "unit": "g" }
                 },
                 {
                     "name": "Sauce asiatique sucrée",
-                    "quantity": {
-                        "value": 35,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 35, "unit": "g" }
                 },
                 {
                     "name": "Sauce soja",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 20, "unit": "ml" }
                 }
             ],
             "steps": [
@@ -615,8 +451,7 @@
                 "recipeIndex": 5,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:04:29.628Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:04:29.628Z"
             }
         },
         {
@@ -629,59 +464,32 @@
             "ingredients": [
                 {
                     "name": "Graines de sésame",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 5, "unit": "g" }
                 },
                 {
                     "name": "Pak choï",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Émincés de boeuf",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Sauce soja",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 },
                 {
                     "name": "Gingembre frais",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -728,8 +536,7 @@
                 "recipeIndex": 6,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:04:58.144Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:04:58.144Z"
             }
         },
         {
@@ -740,75 +547,39 @@
             "difficulty": 2,
             "servings": 2,
             "ingredients": [
-                {
-                    "name": "Orzo",
-                    "quantity": {
-                        "value": 170,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Orzo", "quantity": { "value": 170, "unit": "g" } },
                 {
                     "name": "Épinards",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 0.5, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
-                {
-                    "name": "Ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
-                },
+                { "name": "Ail", "quantity": { "value": 1, "unit": "gousse" } },
                 {
                     "name": "Blanc de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Bouillon de volaille",
-                    "quantity": {
-                        "value": 400,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 400, "unit": "ml" }
                 },
                 {
                     "name": "Fromage frais",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Herbes de Provence",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 },
                 {
                     "name": "Amandes effilées",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 }
             ],
             "steps": [
@@ -852,8 +623,7 @@
                 "recipeIndex": 7,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:05:30.191Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:05:30.191Z"
             }
         },
         {
@@ -866,59 +636,35 @@
             "ingredients": [
                 {
                     "name": "Filet de saumon avec peau",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Curry en poudre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 },
                 {
                     "name": "Brocoli",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Lait de coco",
-                    "quantity": {
-                        "value": 250,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 250, "unit": "ml" }
                 },
                 {
                     "name": "Lentilles corail",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Poudre de gingembre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 },
                 {
                     "name": "Gousse d’ail",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -961,8 +707,7 @@
                 "recipeIndex": 8,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:05:52.501Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:05:52.501Z"
             }
         },
         {
@@ -975,66 +720,36 @@
             "ingredients": [
                 {
                     "name": "Chapluche panko",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Huile de sésame",
-                    "quantity": {
-                        "value": 4,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 4, "unit": "cc" }
                 },
                 {
                     "name": "Sauce soja",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 2, "unit": "cc" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Mayonnaise",
-                    "quantity": {
-                        "value": 4,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 4, "unit": "cs" }
                 },
                 {
                     "name": "Mix de carotte, chou rouge et blanc",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 150, "unit": "g" }
                 },
                 {
                     "name": "Filet de poulet",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Gomasio",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 }
             ],
             "steps": [
@@ -1077,8 +792,7 @@
                 "recipeIndex": 9,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:06:19.704Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:06:19.704Z"
             }
         },
         {
@@ -1091,53 +805,26 @@
             "ingredients": [
                 {
                     "name": "Noix de cajou concassées",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Crevettes",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Curry en poudre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Poireau",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                }
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } }
             ],
             "steps": [
                 {
@@ -1179,8 +866,7 @@
                 "recipeIndex": 10,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:06:46.382Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:06:46.382Z"
             }
         },
         {
@@ -1193,66 +879,39 @@
             "ingredients": [
                 {
                     "name": "Salade",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Pain naan",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Chair de tomates",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Origan séché",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Champignons de Paris",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Jambon blanc",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "tranche"
-                    }
+                    "quantity": { "value": 2, "unit": "tranche" }
                 },
                 {
                     "name": "Échalote",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Fromage râpé à l'italienne",
-                    "quantity": {
-                        "value": 25,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 25, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -1293,8 +952,7 @@
                 "recipeIndex": 11,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:07:12.775Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:07:12.775Z"
             }
         },
         {
@@ -1307,73 +965,43 @@
             "ingredients": [
                 {
                     "name": "Cheddar râpé",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Crème épaisse",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Sucrine",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Épices mexicaines",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 },
                 {
                     "name": "Tortillas",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Chair de tomates",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Enchiladas de porc marinées à la mexicaine",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Haricots noirs",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -1416,8 +1044,7 @@
                 "recipeIndex": 12,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:07:33.273Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:07:33.273Z"
             }
         },
         {
@@ -1430,59 +1057,32 @@
             "ingredients": [
                 {
                     "name": "Gouda râpé",
-                    "quantity": {
-                        "value": 25,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 25, "unit": "g" }
                 },
                 {
                     "name": "Persil",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "tige"
-                    }
+                    "quantity": { "value": 2, "unit": "tige" }
                 },
                 {
                     "name": "Filet de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Noix de muscade",
-                    "quantity": {
-                        "value": null,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": null, "unit": "cc" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Gousse d’ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Poireau",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -1526,8 +1126,7 @@
                 "recipeIndex": 13,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:07:57.725Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:07:57.725Z"
             }
         },
         {
@@ -1540,67 +1139,40 @@
             "ingredients": [
                 {
                     "name": "Thym séché",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Pavé de boeuf",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Champignons de Paris",
-                    "quantity": {
-                        "value": 250,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 250, "unit": "g" }
                 },
                 {
                     "name": "Rigatoni",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
-                {
-                    "text": "Émincez l'ail et l'oignon en petits dés."
-                },
+                { "text": "Émincez l'ail et l'oignon en petits dés." },
                 {
                     "text": "Faites dorer le pavé de boeuf et l'ail dans de l'huile."
                 },
-                {
-                    "text": "Ajoutez les rigatoni à la sauce et mélangez."
-                },
-                {
-                    "text": "Servez la tagliata de boeuf avec les rigatoni."
-                }
+                { "text": "Ajoutez les rigatoni à la sauce et mélangez." },
+                { "text": "Servez la tagliata de boeuf avec les rigatoni." }
             ],
             "nutrition": {
                 "calories": "797 kJ / 190 kcal",
@@ -1628,8 +1200,7 @@
                 "recipeIndex": 14,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:08:19.393Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:08:19.393Z"
             }
         },
         {
@@ -1642,51 +1213,31 @@
             "ingredients": [
                 {
                     "name": "Pain de campagne",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "tranche"
-                    }
+                    "quantity": { "value": 2, "unit": "tranche" }
                 },
                 {
                     "name": "Émincés de filet de poulet",
-                    "quantity": {
-                        "value": 70,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 70, "unit": "g" }
                 },
                 {
                     "name": "Gouda au lait de vache",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Pesto rosso",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Carotte",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Sucrine",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
-                {
-                    "text": "Émincez les filets de poulet et râpez le gouda."
-                },
+                { "text": "Émincez les filets de poulet et râpez le gouda." },
                 {
                     "text": "Étalez le pesto sur les tranches de pain, ajoutez le poulet et le gouda. Fermez les croques."
                 },
@@ -1721,8 +1272,7 @@
                 "recipeIndex": 15,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:08:42.842Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:08:42.842Z"
             }
         },
         {
@@ -1735,52 +1285,31 @@
             "ingredients": [
                 {
                     "name": "Filet de lieu noir",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Thym séché",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 2, "unit": "cs" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Grenailles",
-                    "quantity": {
-                        "value": 400,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 400, "unit": "g" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Poireau",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -1799,9 +1328,7 @@
                 {
                     "text": "Disposez les grenailles dans les assiettes. Servez le poisson avec la fondue de poireaux. Arrosez d'un filet de citron."
                 },
-                {
-                    "text": "Servez avec un peu de thym séché."
-                }
+                { "text": "Servez avec un peu de thym séché." }
             ],
             "nutrition": {
                 "calories": "625 kcal",
@@ -1830,8 +1357,7 @@
                 "recipeIndex": 16,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:09:12.377Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:09:12.377Z"
             }
         },
         {
@@ -1844,80 +1370,44 @@
             "ingredients": [
                 {
                     "name": "Carotte",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Filet de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Concentré de tomates",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Gingembre frais",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cm"
-                    }
+                    "quantity": { "value": 2, "unit": "cm" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Mélange d'épices africaines",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Bouillon de volaille",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cube"
-                    }
+                    "quantity": { "value": 1, "unit": "cube" }
                 },
                 {
                     "name": "Beurre de cacahuètes",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 2, "unit": "cs" }
                 },
                 {
                     "name": "Cacahuètes non salées",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 }
             ],
             "steps": [
@@ -1958,8 +1448,7 @@
                 "recipeIndex": 17,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:09:39.266Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:09:39.266Z"
             }
         },
         {
@@ -1972,88 +1461,51 @@
             "ingredients": [
                 {
                     "name": "Demi-baguette",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Curry en poudre",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 2, "unit": "cc" }
                 },
                 {
                     "name": "Lait de coco",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 150, "unit": "ml" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Carotte",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Yaourt à la grecque",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } },
                 {
                     "name": "Curcuma en poudre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Patate douce",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 150, "unit": "g" }
                 },
                 {
                     "name": "Gousses d'ail",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 2, "unit": "gousse" }
                 }
             ],
             "steps": [
-                {
-                    "text": "Préparez l'oignon et la carotte. Hachez l'ail."
-                },
+                { "text": "Préparez l'oignon et la carotte. Hachez l'ail." },
                 {
                     "text": "Faites cuire l'oignon, la carotte et la patate douce dans une casserole."
                 },
                 {
                     "text": "Faites toaster la baguette avec de l'ail et du persil."
                 },
-                {
-                    "text": "Mélangez le yaourt avec le curcuma et réservez."
-                },
+                { "text": "Mélangez le yaourt avec le curcuma et réservez." },
                 {
                     "text": "Mixez les légumes avec le lait de coco et le curry."
                 },
@@ -2085,8 +1537,7 @@
                 "recipeIndex": 18,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:10:33.694Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:10:33.694Z"
             }
         },
         {
@@ -2099,73 +1550,40 @@
             "ingredients": [
                 {
                     "name": "Conchiglie",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Champignons de Paris",
-                    "quantity": {
-                        "value": 250,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 250, "unit": "g" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 150, "unit": "ml" }
                 },
                 {
                     "name": "Saucisse de porc",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } },
                 {
                     "name": "Fromage râpé",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Huile de tournesol",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 },
                 {
                     "name": "Bouillon de volaille",
-                    "quantity": {
-                        "value": 300,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 300, "unit": "ml" }
                 }
             ],
             "steps": [
@@ -2210,8 +1628,7 @@
                 "recipeIndex": 19,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:10:59.112Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:10:59.112Z"
             }
         },
         {
@@ -2224,66 +1641,39 @@
             "ingredients": [
                 {
                     "name": "Blanc de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Épinards",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Haricots blancs",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Thym séché",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 0.5, "unit": "cc" }
                 },
                 {
                     "name": "Fricassée de champignons émincés",
-                    "quantity": {
-                        "value": 125,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 125, "unit": "g" }
                 },
                 {
                     "name": "Persil",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "botte"
-                    }
+                    "quantity": { "value": 1, "unit": "botte" }
                 }
             ],
             "steps": [
@@ -2326,8 +1716,7 @@
                 "recipeIndex": 20,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:11:20.714Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:11:20.714Z"
             }
         },
         {
@@ -2338,68 +1727,38 @@
             "difficulty": 2,
             "servings": 2,
             "ingredients": [
-                {
-                    "name": "Penne",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Penne", "quantity": { "value": 180, "unit": "g" } },
                 {
                     "name": "Salade",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Radis",
-                    "quantity": {
-                        "value": 6,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 6, "unit": "pièce" }
                 },
                 {
                     "name": "Thon au naturel",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Olives noires dénoyautées",
-                    "quantity": {
-                        "value": 30,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 30, "unit": "g" }
                 },
                 {
                     "name": "Fromage à la grecque",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Bouillon de légumes",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "cube"
-                    }
+                    "quantity": { "value": 0.5, "unit": "cube" }
                 },
                 {
                     "name": "Origan séché",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 }
             ],
             "steps": [
@@ -2412,9 +1771,7 @@
                 {
                     "text": "Mélangez la salade avec l’origan, les radis, le thon émietté, les olives, le fromage à la grecque en morceaux, un filet d’huile d’olive et le jus de citron selon votre goût."
                 },
-                {
-                    "text": "Servez le tout avec les penne chaudes ou froides."
-                }
+                { "text": "Servez le tout avec les penne chaudes ou froides." }
             ],
             "nutrition": {
                 "calories": "650 kcal",
@@ -2440,8 +1797,7 @@
                 "recipeIndex": 21,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:11:48.110Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:11:48.110Z"
             }
         },
         {
@@ -2454,52 +1810,31 @@
             "ingredients": [
                 {
                     "name": "Noix concassées",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 },
                 {
                     "name": "Rigatoni",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Tranches de poitrine fumée",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Ciboulette",
-                    "quantity": {
-                        "value": 3,
-                        "unit": "tige"
-                    }
+                    "quantity": { "value": 3, "unit": "tige" }
                 },
                 {
                     "name": "Fromage bleu",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 }
             ],
             "steps": [
@@ -2540,8 +1875,7 @@
                 "recipeIndex": 22,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:12:13.608Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:12:13.608Z"
             }
         },
         {
@@ -2554,59 +1888,32 @@
             "ingredients": [
                 {
                     "name": "Poudre de champignons",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } },
                 {
                     "name": "Riz pour risotto",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 150, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Huile d'olive saveur truffe",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 2, "unit": "cs" }
                 },
                 {
                     "name": "Parmigiano Reggiano AOP",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Champignons de Paris",
-                    "quantity": {
-                        "value": 250,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 250, "unit": "g" }
                 },
                 {
                     "name": "Échalote",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -2653,8 +1960,7 @@
                 "recipeIndex": 23,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:12:47.598Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:12:47.598Z"
             }
         },
         {
@@ -2667,45 +1973,27 @@
             "ingredients": [
                 {
                     "name": "Saucisses de Toulouse",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 2, "unit": "pièce" }
                 },
                 {
                     "name": "Cantal AOP",
-                    "quantity": {
-                        "value": 75,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 75, "unit": "g" }
                 },
                 {
                     "name": "Champignons émincés",
-                    "quantity": {
-                        "value": 125,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 125, "unit": "g" }
                 },
                 {
                     "name": "Pommes de terre",
-                    "quantity": {
-                        "value": 300,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 300, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Thym séché",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 }
             ],
             "steps": [
@@ -2724,9 +2012,7 @@
                 {
                     "text": "Dorez les champignons et l'oignon dans la même poêle. Ajoutez le thym."
                 },
-                {
-                    "text": "Servez les saucisses avec la purée et les légumes."
-                }
+                { "text": "Servez les saucisses avec la purée et les légumes." }
             ],
             "nutrition": {
                 "calories": "705 kcal",
@@ -2755,8 +2041,7 @@
                 "recipeIndex": 24,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:13:12.368Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:13:12.368Z"
             }
         },
         {
@@ -2769,67 +2054,37 @@
             "ingredients": [
                 {
                     "name": "Pâtes cavatelli",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Gouda râpé",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Thym séché",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Lardons fumés",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Carotte râpée",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                }
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } }
             ],
             "steps": [
                 {
@@ -2874,8 +2129,7 @@
                 "recipeIndex": 25,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:13:35.682Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:13:35.682Z"
             }
         },
         {
@@ -2888,59 +2142,35 @@
             "ingredients": [
                 {
                     "name": "Pesto vert alla genovese",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Citron",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Rigatoni",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Burrata",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Épinards",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Noisettes grillées",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 }
             ],
             "steps": [
@@ -2950,12 +2180,8 @@
                 {
                     "text": "Faites revenir l'ail et l'oignon dans une poêle avec l'huile d'olive."
                 },
-                {
-                    "text": "Ajoutez les rigatoni cuits à la poêle."
-                },
-                {
-                    "text": "Servez les rigatoni avec le pesto et la burrata."
-                }
+                { "text": "Ajoutez les rigatoni cuits à la poêle." },
+                { "text": "Servez les rigatoni avec le pesto et la burrata." }
             ],
             "nutrition": {
                 "calories": "909 kJ / 217 kcal",
@@ -2981,8 +2207,7 @@
                 "recipeIndex": 26,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:14:02.274Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:14:02.274Z"
             }
         },
         {
@@ -2995,68 +2220,36 @@
             "ingredients": [
                 {
                     "name": "Poireau",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Filet de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 100, "unit": "ml" }
                 },
                 {
                     "name": "Gouda râpé",
-                    "quantity": {
-                        "value": 25,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 25, "unit": "g" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } },
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Noix de muscade",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cs"
-                    }
+                    "quantity": { "value": 1, "unit": "cs" }
                 }
             ],
             "steps": [
                 {
                     "text": "Coupez le poireau en fines rondelles. Pressez ou émincez l'ail."
                 },
-                {
-                    "text": "Coupez le poulet en dés de 2 cm."
-                },
+                { "text": "Coupez le poulet en dés de 2 cm." },
                 {
                     "text": "Ajoutez le poireau et l'ail au poulet et faites-les revenir 10 minutes à feu moyen."
                 },
@@ -3091,8 +2284,7 @@
                 "recipeIndex": 27,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:14:26.264Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:14:26.264Z"
             }
         },
         {
@@ -3105,67 +2297,37 @@
             "ingredients": [
                 {
                     "name": "Yaourt à la grecque",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Avocat",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Coriandre",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 5, "unit": "g" }
                 },
                 {
                     "name": "Blanc de poulet",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Épices mexicaines",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Maïs en conserve",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 150, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
-                {
-                    "name": "Riz",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                }
+                { "name": "Riz", "quantity": { "value": 150, "unit": "g" } }
             ],
             "steps": [
                 {
@@ -3207,8 +2369,7 @@
                 "recipeIndex": 28,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:14:46.362Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:14:46.362Z"
             }
         },
         {
@@ -3221,66 +2382,36 @@
             "ingredients": [
                 {
                     "name": "Conchiglie",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Herbes de Provence",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Cubes d'ail",
-                    "quantity": {
-                        "value": 2,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 2, "unit": "cc" }
                 },
                 {
                     "name": "Chair à saucisse",
-                    "quantity": {
-                        "value": 160,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 160, "unit": "g" }
                 },
                 {
                     "name": "Champignons de Paris",
-                    "quantity": {
-                        "value": 250,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 250, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 200, "unit": "ml" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } },
                 {
                     "name": "Fromage râpé",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 }
             ],
             "steps": [
@@ -3324,8 +2455,7 @@
                 "recipeIndex": 29,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:15:14.787Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:15:14.787Z"
             }
         },
         {
@@ -3338,72 +2468,40 @@
             "ingredients": [
                 {
                     "name": "Salade",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Fromage bleu",
-                    "quantity": {
-                        "value": 50,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 50, "unit": "g" }
                 },
                 {
                     "name": "Crème épaisse",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Gnocchi",
-                    "quantity": {
-                        "value": 300,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 300, "unit": "g" }
                 },
                 {
                     "name": "Noix concassées",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 },
                 {
                     "name": "Noix de muscade",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "à râper"
-                    }
+                    "quantity": { "value": 1, "unit": "à râper" }
                 },
                 {
                     "name": "Poireau",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
-                {
-                    "name": "Beurre",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
-                }
+                { "name": "Beurre", "quantity": { "value": 20, "unit": "g" } }
             ],
             "steps": [
-                {
-                    "text": "Coupez le poireau."
-                },
+                { "text": "Coupez le poireau." },
                 {
                     "text": "Faites chauffer du beurre dans une poêle à feu moyen. Ajoutez le poireau et l'ail. Faites revenir 7 min."
                 },
@@ -3438,8 +2536,7 @@
                 "recipeIndex": 30,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:15:34.196Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:15:34.196Z"
             }
         },
         {
@@ -3452,80 +2549,47 @@
             "ingredients": [
                 {
                     "name": "Viande hachée au bœuf",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Sauce soja",
-                    "quantity": {
-                        "value": 15,
-                        "unit": "ml"
-                    }
+                    "quantity": { "value": 15, "unit": "ml" }
                 },
                 {
                     "name": "Pak choï",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Piment",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Nouilles de blé",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 150, "unit": "g" }
                 },
                 {
                     "name": "Coriandre moulue",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 1, "unit": "cc" }
                 },
                 {
                     "name": "Beurre de cacahuètes",
-                    "quantity": {
-                        "value": 20,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 20, "unit": "g" }
                 },
                 {
                     "name": "Cacahuètes non salées",
-                    "quantity": {
-                        "value": 10,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 10, "unit": "g" }
                 },
                 {
                     "name": "Gingembre frais",
-                    "quantity": {
-                        "value": 10,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 10, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -3566,8 +2630,7 @@
                 "recipeIndex": 31,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:16:02.918Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:16:02.918Z"
             }
         },
         {
@@ -3580,59 +2643,32 @@
             "ingredients": [
                 {
                     "name": "Épinards",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Copeaux de grana padano AOP",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
-                {
-                    "name": "Orzo",
-                    "quantity": {
-                        "value": 150,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Orzo", "quantity": { "value": 150, "unit": "g" } },
                 {
                     "name": "Crevettes",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "gousse"
-                    }
+                    "quantity": { "value": 1, "unit": "gousse" }
                 },
                 {
                     "name": "Épices italiennes",
-                    "quantity": {
-                        "value": 0.5,
-                        "unit": "cc"
-                    }
+                    "quantity": { "value": 0.5, "unit": "cc" }
                 },
                 {
                     "name": "Tomates semi-séchées",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -3682,8 +2718,7 @@
                 "recipeIndex": 32,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:16:30.040Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:16:30.040Z"
             }
         },
         {
@@ -3696,66 +2731,39 @@
             "ingredients": [
                 {
                     "name": "Fromage râpé à l'italienne",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Paprika fumé en poudre",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Dés de chorizo",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Crème liquide",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
                 {
                     "name": "Noix concassées",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "sachet"
-                    }
+                    "quantity": { "value": 1, "unit": "sachet" }
                 },
                 {
                     "name": "Épinards",
-                    "quantity": {
-                        "value": 100,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 100, "unit": "g" }
                 },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Linguine",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
                 {
                     "name": "Oignon",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -3799,8 +2807,7 @@
                 "recipeIndex": 33,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:16:53.280Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:16:53.280Z"
             }
         },
         {
@@ -3813,52 +2820,25 @@
             "ingredients": [
                 {
                     "name": "Chut de tomates",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "boîte"
-                    }
+                    "quantity": { "value": 1, "unit": "boîte" }
                 },
                 {
                     "name": "Tagliatelle fraîches",
-                    "quantity": {
-                        "value": 200,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 200, "unit": "g" }
                 },
-                {
-                    "name": "Piment",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "cc"
-                    }
-                },
+                { "name": "Piment", "quantity": { "value": 1, "unit": "cc" } },
                 {
                     "name": "Crevettes",
-                    "quantity": {
-                        "value": 180,
-                        "unit": "g"
-                    }
+                    "quantity": { "value": 180, "unit": "g" }
                 },
-                {
-                    "name": "Persil",
-                    "quantity": {
-                        "value": 5,
-                        "unit": "g"
-                    }
-                },
+                { "name": "Persil", "quantity": { "value": 5, "unit": "g" } },
                 {
                     "name": "Gousse d'ail",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 },
                 {
                     "name": "Échalote",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "pièce"
-                    }
+                    "quantity": { "value": 1, "unit": "pièce" }
                 }
             ],
             "steps": [
@@ -3902,8 +2882,7 @@
                 "recipeIndex": 34,
                 "extracted": true,
                 "validated": true,
-                "extractedAt": "2025-05-29T11:17:18.375Z",
-                "error": null
+                "extractedAt": "2025-05-29T11:17:18.375Z"
             }
         }
     ]
