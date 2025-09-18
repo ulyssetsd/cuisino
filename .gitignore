@@ -15,9 +15,6 @@ build/
 .env.test.local
 .env.production.local
 
-# Input
-input/
-
 # Output
 output/*
 !output/all_recipes.json
