@@ -40,5 +40,5 @@ async function validateQuality(): Promise<void> {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    validateQuality();
+    void validateQuality();
 }

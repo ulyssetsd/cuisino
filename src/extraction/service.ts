@@ -35,10 +35,11 @@ class ExtractionService {
         try {
             info(`Extracting recipe ${recipe.id}`);
 
-            const images = await this.prepareImages(
+            const images = this.prepareImages(
                 recipe.rectoPath,
                 recipe.versoPath
             );
+            
             const completion = await this.openai.chat.completions.create({
                 model: this.model,
                 max_tokens: this.maxTokens,
@@ -55,8 +56,7 @@ class ExtractionService {
                                 text: this.createExtractionPrompt(),
                             },
                             ...images,
-                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                        ] as any, // OpenAI types issue - this is correct at runtime
+                        ],
                     },
                 ],
             });
@@ -71,32 +71,50 @@ class ExtractionService {
 
             success(`Recipe ${recipe.id} extracted successfully`);
         } catch (error) {
-            _error(
-                `Failed to extract recipe ${recipe.id}:`,
-                (error as Error).message
-            );
+            // Enhanced error handling for OpenAI API
+            if (error instanceof Error) {
+                if (error.message.includes('API key')) {
+                    _error(
+                        `OpenAI API key error for recipe ${recipe.id}:`,
+                        error.message
+                    );
+                } else if (error.message.includes('rate limit')) {
+                    _error(
+                        `OpenAI rate limit error for recipe ${recipe.id}:`,
+                        error.message
+                    );
+                } else {
+                    _error(
+                        `Failed to extract recipe ${recipe.id}:`,
+                        error.message
+                    );
+                }
+            } else {
+                _error(
+                    `Unknown error extracting recipe ${recipe.id}:`,
+                    String(error)
+                );
+            }
             recipe.setError(error as Error);
         }
     }
 
     // Prepare images for OpenAI
-    private async prepareImages(
+    private prepareImages(
         rectoPath: string,
         versoPath: string
-    ): Promise<
-        Array<{ type: 'image_url'; image_url: { url: string; detail: string } }>
-    > {
-        const images = [];
+    ): Array<{ type: 'image_url'; image_url: { url: string; detail: 'high' } }> {
+        const images: Array<{ type: 'image_url'; image_url: { url: string; detail: 'high' } }> = [];
 
         for (const imagePath of [rectoPath, versoPath]) {
             const imageBuffer = readFileSync(imagePath);
             const base64Image = imageBuffer.toString('base64');
 
             images.push({
-                type: 'image_url' as const,
+                type: 'image_url',
                 image_url: {
                     url: `data:image/jpeg;base64,${base64Image}`,
-                    detail: 'high' as const,
+                    detail: 'high',
                 },
             });
         }
